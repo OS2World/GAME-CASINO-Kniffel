@@ -1,0 +1,162 @@
+/* Event Form events, Opened */
+Arg window 
+
+/* 
+   dient zur Eingabe der Spielernamen;
+   wird gerufen von main;
+  
+   nutzt global var:
+     1. anzahl
+     2. show_typ
+     3, ggf. weiter_bmp, tips_bmp
+   
+   setzt global var:  
+     1. spl_lst.
+        (als default "Spieler ?")
+     2. form_typ (=name)
+*/
+
+/* wg FP17 */
+CALL VpWindow window,'ACTIVATE'
+
+/* spl_lst enth„lt zum einen den Namen der Spieler    */
+/* und zum anderen den Zeiger auf das ausgew„hlte zu- */
+/* geh”rige Symbol  - init in Main auf '' */
+
+/* form-var gesetzt */
+gesetzt=0
+
+/* 
+   es scheint, als ob man icons nicht "l”schen" 
+   kann, bevor eine neue Ausgabe erfolgt - da manche
+   icons jedoch durchsichtig sind, bleiben oft
+   Artefakte des vorherigen zurck. Brutale Methode:
+   es gibt ein "leeres" Icon zum L”schen namens
+   LEER.ICO - dies muá gesondert geladen werden
+*/
+
+call sysfiletree '*.ico', 'ico_files.', 'FO'
+
+/* init form-var f. icon-pointer */
+icons.=''
+
+anz_ico=ico_files.0
+
+/* es kann sein, daá das aktuelle Verzeichnis keine */
+/* Icons enth„lt - dann gibts 5 default-Icons aus der */
+/* ressource */
+if anz_ico \= 0 then
+ do
+  do i = 1 to anz_ico
+    if pos('LEER.ICO',ico_files.i)>0 then
+      if i < ico_files.0 then
+       do
+        /* swappe letzten auf position */
+        ico_files.i=ico_files.anz_ico
+        anz_ico=anz_ico - 1
+        ico_files.0=anz_ico
+        leave
+       end
+      else
+       do
+        /* swappen unn”tig */
+        anz_ico=anz_ico - 1
+        ico_files.0=anz_ico
+        leave
+       end
+      /* endif */
+    else
+      iterate
+    /* endif */
+
+  end /* end do */
+
+  icons.=''
+  icons.0=anz_ico
+
+  do i = 1 to anz_ico
+    icons.i = VpLoadPicture('FILEICON',ico_files.i)
+  end /* end do */
+
+  drop ico_files.
+ end
+else
+  nop
+/*endif */
+
+if anz_ico < 5 then
+ do
+ 
+  do i = anz_ico+1 to 5
+    /* im aktuellen Verzeichnis gibts keine */
+    /* oder zu wenig Icons -                */
+    /* zurckgreifen auf die 5 defaults     */
+    
+    /* die ressource-icons tragen die nr    */
+    /* 3007 bis 3011 */
+    icons.i=VpLoadPicture('RESICON',value(3006 + i))
+  end
+
+  icons.0=5
+  anz_ico=5
+ end
+
+/* endif */
+
+if stream(pfad_name||'LEER.ICO','c','query exists') \= '' then
+  leer_ico = VpLoadPicture('FILEICON',pfad_name||'LEER.ICO')
+else
+  leer_ico = VpLoadPicture('RESICON',3000)
+/* endif */
+
+/* man muá mit zwei icon-pointer-listen arbeiten - */
+/* eine - icons. - zum sp„teren deload und eine um */
+/* den spin nach auswahl neu zu setzen, um nicht   */
+/* mehrere Spieler dasselbe icon ausw„hlen zu lassen */
+/* das g„be nachher Probleme                       */
+
+do i = 1 to icons.0
+  spin_lst.i=icons.i
+end /* end do */
+spin_lst.0=icons.0
+
+/* lade entwede bmp oder text in die buttons */
+if show_typ='SYM' then
+ do
+  /* die button-bmp sind schon von main geladen */
+  /* Set item value BMP_NAME_OK_CMD Graphic */
+  CALL VpSetItemValue window,'BMP_NAME_OK_CMD',weiter_bmp
+  /* Set item value BMP_NAME_TIPCMD Graphic */
+  CALL VpSetItemValue window,'BMP_NAME_TIPCMD',tips_bmp
+ end
+else
+ do
+  /* bmp hide ... */
+  /* Hide item BMP_NAME_OK_CMD Graphic */
+  CALL VpItem window,'BMP_NAME_OK_CMD','HIDE'
+  /* Hide item BMP_NAME_TIPCMD Graphic */
+  CALL VpItem window,'BMP_NAME_TIPCMD','HIDE'
+  
+  /* Set item value CMD_NAME_FERTIG Push Button */
+  CALL VpSetItemValue window,'CMD_NAME_FERTIG','~Fertig/Weiter'
+  
+  /* Set item value CMD_NAME_TIPS Push Button */
+  CALL VpSetItemValue window,'CMD_NAME_TIPS','~Tips'
+ end
+/* endif */
+
+/* Add items from list SPN_ICO_SHW Spin Button */
+index=VpAddItem(window, 'SPN_ICO_SHW', 'LIST', 'spin_lst.')
+
+/* irgendwie funktioniert das spinnen nicht so toll -
+   nur als schaltfl„che nutzen */
+/* Get item value SPN_ICO_SHW Spin Button */
+/* value = VpGetItemValue(window,'SPN_ICO_SHW') */
+akt_icn = 1
+
+/* Set item value BMP_ICO_SHW Graphic */
+CALL VpSetItemValue window,'BMP_ICO_SHW',spin_lst.akt_icn
+
+/* Select item CMD_NAME_FERTIG Push Button */
+CALL VpSelect window,'CMD_NAME_FERTIG'
+

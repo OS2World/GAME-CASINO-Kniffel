@@ -1,0 +1,26 @@
+/* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* hierher kommen die sekund„ren Fenster der Form */
+
+/* in jedem Fall ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* nachschauen, was los ist (fromtopic ist immer */
+/* uppercase) */
+
+SELECT
+   WHEN fromtopic = 'SCHLUSS' THEN
+    do
+     /* Feierabend */
+     CALL VpWindow window,'CLOSE'
+     return
+    end
+   WHEN fromtopic = 'NOCHMAL' THEN
+    do
+     call nochmal
+     return
+    end
+   OTHERWISE
+     nop
+END

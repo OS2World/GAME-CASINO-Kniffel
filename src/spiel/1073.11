@@ -1,0 +1,11 @@
+/* Event Graphic BMP_AENDERN_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_WRFL_INVERT Push Button */
+CALL VpSelect window,'CMD_WRFL_INVERT'
+
+/* Set button highlight off CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','SENDMSG','0x0123','0','0'

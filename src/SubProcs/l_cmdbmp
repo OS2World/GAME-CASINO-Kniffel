@@ -1,0 +1,100 @@
+/* routine lade cmd mit bitmaps (start) */
+/*   routine wird gerufen durch ein chg- */
+/*   event der rad-buttons, aber es darf */
+/*   nur einmal ein ladeproze· erfolgen  */
+
+/* wenn die bmp geladen sind, ist eine var */
+/* besetzt, sonst '' */
+
+if abbruch_bmp = '' then
+ do
+  /* diese werden schon in main gebraucht */
+  if stream(pfad_name||'ABBRUCH.BMP','c','query exists') \= '' then
+    abbruch_bmp = VpLoadPicture('FILE',pfad_name||'ABBRUCH.BMP')
+  else
+    abbruch_bmp = VpLoadPicture('RESBMP',1031)
+  /* endif */
+
+  if stream(pfad_name||'WUERFELN.BMP','c','query exists') \= '' then
+    wuerfeln_bmp = VpLoadPicture('FILE',pfad_name||'WUERFELN.BMP')
+  else
+    wuerfeln_bmp = VpLoadPicture('RESBMP',1028)
+  /* endif */
+
+  if stream(pfad_name||'TIPS.BMP','c','query exists') \= '' then
+    tips_bmp = VpLoadPicture('FILE',pfad_name||'TIPS.BMP')
+  else
+    tips_bmp = VpLoadPicture('RESBMP',1030)
+  /* endif */
+
+  if stream(pfad_name||'SIEGER.BMP','c','query exists') \= '' then
+    list_bmp = VpLoadPicture('FILE',pfad_name||'SIEGER.BMP')
+  else
+    list_bmp = VpLoadPicture('RESBMP',1032)
+  /* endif */
+
+  /* jetzt noch die, die in anderen forms zentral */
+  /* benîtigt werden */
+  if stream(pfad_name||'WEITER.BMP','c','query exists') \= '' then
+    weiter_bmp = VpLoadPicture('FILE',pfad_name||'WEITER.BMP')
+  else
+    weiter_bmp = VpLoadPicture('RESBMP',1029)
+  /* endif */
+
+  if stream(pfad_name||'AENDERN.BMP','c','query exists') \= '' then
+    aendern_bmp = VpLoadPicture('FILE',pfad_name||'AENDERN.BMP')
+  else
+    aendern_bmp = VpLoadPicture('RESBMP',1027)
+  /* endif */
+  
+  /* bei start zwar laden, aber nicht unbedingt */
+  /* zeigen */
+  /* Set item value BMP_LIST_CMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_CMD',list_bmp
+
+ end
+/* endif */
+
+/* evtl. vorhandene texte auf cmd lîschen */
+/* Set item value CMD_START Push Button */
+CALL VpSetItemValue window,'CMD_START',''
+/* Set item value CMD_ENDE Push Button */
+CALL VpSetItemValue window,'CMD_ENDE',''
+/* Set item value CMD_BOOK Push Button */
+CALL VpSetItemValue window,'CMD_BOOK',''
+
+/* immer erst bmp show, da Åber hide umschal- */
+/* tung txt/bmp stattfindet - bei allem ande- */
+/* reagieren die Bitmaps weiter auf events    */
+/* Show item BMP_START_CMD Graphic */
+CALL VpItem window,'BMP_START_CMD','SHOW'
+/* Show item BMP_ENDE_CMD Graphic */
+CALL VpItem window,'BMP_ENDE_CMD','SHOW'
+/* Show item BMP_BOOK_CMD Graphic */
+CALL VpItem window,'BMP_BOOK_CMD','SHOW'
+
+/* Set item value BMP_ENDE_CMD Graphic */
+CALL VpSetItemValue window,'BMP_ENDE_CMD',abbruch_bmp
+
+/* Set item value BMP_START_CMD Graphic */
+CALL VpSetItemValue window,'BMP_START_CMD',wuerfeln_bmp
+
+/* Set item value BMP_BOOK_CMD Graphic */
+CALL VpSetItemValue window,'BMP_BOOK_CMD',tips_bmp
+
+/* Is item showing? CMD_LISTE Push Button */
+if VpItem(window,'CMD_LISTE','ISSHOWING') = 1 then
+ do
+  /* Set item value CMD_LISTE Push Button */
+  CALL VpSetItemValue window,'CMD_LISTE',''
+ 
+  /* Show item BMP_LIST_CMD Graphic */
+  CALL VpItem window,'BMP_LIST_CMD','SHOW'
+
+ end
+/* endif */
+
+/* setzt global var show_typ */
+/* legt fest: sym als anzeige */
+show_typ='SYM'
+

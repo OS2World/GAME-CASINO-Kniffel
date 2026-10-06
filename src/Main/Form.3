@@ -1,0 +1,82 @@
+/* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* wird gerufen bei Ende einer secondary Form ... */
+/* main-fenster ist in jedem Fall zur Zeit hided */
+
+/* 
+   Welches Fenster hat denn zugemacht ??? - RÅckgabe
+   der sec-forms Åber gobal var form_typ:
+       Namen: "name",
+       Spiel: "spiel"
+       shw_hitlist: "shw_list"
+*/
+
+SELECT
+   WHEN form_typ='name' THEN
+    do
+    
+     /* main-form tarnen, wird nicht gebraucht */
+     CALL VpWindow window,'HIDE'
+
+     /* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\spiel */
+     value=VpOpenForm(window, 258, '')
+    end
+
+   WHEN form_typ='spiel' THEN
+    /* kommt vom Spiel zurÅck */
+
+    do
+     CALL VpWindow window,'SHOW'
+     /* In jedem Fall wg. FP17: */
+     CALL VpWindow window,'ACTIVATE'
+    end
+
+   WHEN form_typ='show_list' THEN
+    /* kommt von der hitlist zurÅck */
+    do
+     /* In jedem Fall wg. FP17: */
+     CALL VpWindow window,'ACTIVATE'
+    end
+   OTHERWISE
+     /* kommt von hilfe */
+     /* In jedem Fall wg. FP17: */
+     CALL VpWindow window,'ACTIVATE'
+   /* end when */
+END
+
+/* wenns die Bestenliste nicht mehr gibt, weil */
+/* in shw-list gelîscht, button invisible      */
+/* ansonsten, wenn neu angelegt im Spielverlauf */
+/* visible */
+/* Is item showing? CMD_LISTE Push Button */
+value=VpItem(window,'CMD_LISTE','ISSHOWING')
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+  if value = 0 then
+   do
+    /* Show item CMD_LISTE Push Button */
+    CALL VpItem window,'CMD_LISTE','SHOW'
+    
+    if show_typ='SYM' then
+      /* Show item BMP_LIST_CMD Graphic */
+      CALL VpItem window,'BMP_LIST_CMD','SHOW'
+    else
+      nop
+    /* endif */
+   end
+  else
+    nop
+  /* endif */
+else
+  if value = 1 then
+   do
+    /* Hide item CMD_LISTE Push Button */
+    CALL VpItem window,'CMD_LISTE','HIDE'
+    /* Hide item BMP_LIST_CMD Graphic */
+    CALL VpItem window,'BMP_LIST_CMD','HIDE'
+   end   
+  else
+    nop
+  /* endif */
+/* endif */
+

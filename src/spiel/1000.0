@@ -1,0 +1,5 @@
+/* Event Abbruch CMD_ABBRUCH, Clicked/selected */
+Arg window self
+
+/* macht in jedem Fall den Laden zu */
+CALL VpWindow window,'CLOSE'

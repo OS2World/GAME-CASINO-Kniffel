@@ -1,0 +1,11 @@
+/* Event Bestenliste ~l”schen CMD_LOESCHEN, Clicked/selected */
+Arg window self
+
+/* REXXUTIL ist geladen ... */
+
+rc = sysfiledelete(pfad_name||'hitlist.hgh')
+
+/* Disable item CMD_LOESCHEN Push Button */
+CALL VpItem window,'CMD_LOESCHEN','DISABLE'
+/* Hide item BMP_LIST_DELCMD Graphic */
+CALL VpItem window,'BMP_LIST_DELCMD','HIDE'

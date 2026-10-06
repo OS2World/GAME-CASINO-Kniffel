@@ -1,0 +1,47 @@
+/* Event ~Full-House CMD_FULLHOUSE, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.9 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf FullHouse - wenn ja, 25 -  */
+/* ansonsten 0                          */
+
+/* Sortierung .. */
+tmp=sort()
+
+/* es dÅrfen nur 2 Zahlen sein oder 1 bei */
+/* Spezialfall kniffel auf fullhouse */
+
+klein=min(wurf.1.wert, wurf.2.wert, wurf.3.wert, wurf.4.wert, wurf.5.wert)
+gross=max(wurf.1.wert, wurf.2.wert, wurf.3.wert, wurf.4.wert, wurf.5.wert)
+
+vgl1=copies(klein,3)||copies(gross,2)
+vgl2=copies(klein,2)||copies(gross,3)
+
+gef=0
+if tmp=vgl1 | tmp=vgl2 then
+  gef=25
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_FULLHOUSE Push Button */
+CALL VpItem window,'CMD_FULLHOUSE','DISABLE'
+/* Hide item BMP_FULLHOUSE_CMD Graphic */
+CALL VpItem window,'BMP_FULLHOUSE_CMD','HIDE'
+
+drop tmp klein gross vgl1 vgl2
+
+call setzen '9', gef

@@ -1,0 +1,133 @@
+/* Event Form events, Opened */
+Arg window 
+
+/* Form gibt die Ergebnisse der Spieler aus    */
+/* nutzt:                                      */
+/*     1. anzahl (der Spieler)                 */
+/*     2. spl_lst. u. wert_lst.                */
+/*     3. pfad_name                            */
+/*     4. cr                                   */
+/*     5. list_bmp                             */
+/*     6. abbruch_bmp                          */
+/*     7. weiter_bmp                           */
+/*     8. tips_bmp                             */
+/*     9. show_typ                             */
+
+/* form gibt ber Kennzeichen an caller (=     */
+/* Form Spiel) zurck, ob aufh”ren oder noch-  */
+/* mal spielen                                 */
+
+/* fp17 ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* form-var ausgabe */
+ausgabe.=''
+
+/* name in der Reihenfolge vor sort behalten */
+tmp.=''
+do i= 1 to anzahl
+  tmp.i=spl_lst.i.name
+end /* end do */
+
+if anzahl > 1 then
+  /* Spezialform von sort (mit parameter Ergebnis) */
+  /* sortiert direkt spl_lst.?.name und wert_lst.?.16 in */
+  /* aufsteigender Form */
+  call sort 'ERGEBNIS'
+/* endif */
+
+do i = 1 to anzahl
+  if wert_lst.i.14 > 62 then
+    ausgabe.i=left(spl_lst.i.name,15)||right(wert_lst.i.16,4)||' (mit Bonus)'
+  else
+    ausgabe.i=left(spl_lst.i.name,15)||right(wert_lst.i.16,4)
+  /* endif */
+end /* end do */
+
+/* Namen fr evtl. Spielwiederholung restaurieren */
+do i = 1 to anzahl
+  spl_lst.i.name=tmp.i
+end /* end do */
+
+drop tmp.
+
+/* Ausgabe-strings enthalten:                */
+/*      Name (1-15) Punkte (16-20)           */
+/* in der Rangfolge nach Punkten             */
+
+/* kleine Sieger-Bitmap von main */
+/* Set item value BTM_SIEGERICO Graphic */
+CALL VpSetItemValue window,'BTM_SIEGERICO',list_bmp
+
+ergsich_bmp=''
+if show_typ = 'SYM' then
+ do
+  /* Set item value BMP_ERG_ZURUECKCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_ZURUECKCMD',abbruch_bmp
+  /* Set item value BMP_ERG_WEITERCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_WEITERCMD',weiter_bmp
+  /* Set item value BMP_ERG_TIPCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_TIPCMD',tips_bmp
+  
+  /* spezielle BMP f. Ergebnis */
+  if stream(pfad_name||'ERG_SICH.BMP','c','query exists') \= '' then
+    ergsich_bmp = VpLoadPicture('FILE',pfad_name||'ERG_SICH.BMP')
+  else
+    ergsich_bmp = VpLoadPicture('RESBMP',1033)
+  /* endif */
+
+  /* Set item value BMP_ERG_SPEICHCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_SPEICHCMD',ergsich_bmp
+ end
+else
+ do
+  /* Hide item BMP_ERG_ZURUECKCMD Graphic */
+  CALL VpItem window,'BMP_ERG_ZURUECKCMD','HIDE'
+  /* Hide item BMP_ERG_SPEICHCMD Graphic */
+  CALL VpItem window,'BMP_ERG_SPEICHCMD','HIDE'
+  /* Hide item BMP_ERG_WEITERCMD Graphic */
+  CALL VpItem window,'BMP_ERG_WEITERCMD','HIDE'
+  /* Hide item BMP_ERG_TIPCMD Graphic */
+  CALL VpItem window,'BMP_ERG_TIPCMD','HIDE'
+  
+  /* Set item value CMD_ZRCK_ENDE Push Button */
+  CALL VpSetItemValue window,'CMD_ZRCK_ENDE','~Zurck, Ende'
+  /* Set item value CMD_SPEICHERN Push Button */
+  CALL VpSetItemValue window,'CMD_SPEICHERN','~Ergebnis speichern'
+  /* Set item value CMD_NEU_SPIEL Push Button */
+  CALL VpSetItemValue window,'CMD_NEU_SPIEL','~Weiterspielen'
+  /* Set item value CMD_ERG_TIP Push Button */
+  CALL VpSetItemValue window,'CMD_ERG_TIP','~Tips'
+ end
+/* endif */  
+
+parse value date('E') with tag '/' monat '/' jahr
+datum=tag||'.'||monat||'.'||jahr
+parse value time('N') with stunde ':' minute ':' .
+zeit=stunde||':'||minute
+
+msg=cr||'Ergebnis vom '||datum||' um '||zeit||' Uhr:'||cr
+/*        Ergebnis vom 01.01.96 um 17:25 Uhr:           */         
+msg=msg||'==================================='||cr
+msg=msg||cr
+
+/* Sieger-Ausgabe nur, wenn mehr als ein Spieler */
+if anzahl > 1 then
+ do
+  msg=msg||copies(' ',4)||'Gewinner:'||cr
+  msg=msg||copies(' ',8)||ausgabe.1||cr||cr
+  msg=msg||copies(' ',4)||'Verlierer:'||cr
+
+  do i = 2 to anzahl
+    msg=msg||copies(' ',8)||ausgabe.i||cr
+  end /* end do */
+ 
+ end
+
+else
+  msg=msg||copies(' ',8)||ausgabe.1||cr
+/* endif */
+
+/* Set item value TXT_ERGEBNISSE Multi-Line Entry Field */
+CALL VpSetItemValue window,'TXT_ERGEBNISSE',msg
+

@@ -1,0 +1,13 @@
+/* Event Form events, Closed */
+Arg window 
+
+/* TOPIC wird in den buttons gesetzt ! */
+
+/* evtl. deload spezial-bmp */
+if ergsich_bmp \= '' then
+  CALL VpFreePicture ergsich_bmp
+/* endif */
+
+drop msg zeit minute datum jahr monat tag
+drop ausgabe. ergsich_bmp
+

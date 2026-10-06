@@ -1,0 +1,277 @@
+
+Allgemeine Hinweise zum Programm KNIFFEL.EXE fr OS/2
+=====================================================
+
+  (Dieser Text ist eine Erg„nzung der Dokumentation und beschreibt Einstell-
+   bzw. nderungsm”glichkeiten durch einen m”glichen Nutzer und gibt allge-
+   meine Erl„uterungen zum Zweck und zur Entstehung des Programms)
+
+
+  Man kann die Darstellung der Spieloberfl„che wie folgt beeinflussen:
+
+    1. Im Spiel selbst kann man statt Bildern fr Befehlskn”pfe Textbezeich-
+       nungen als Anzeige einstellen.
+
+    2. Man kann die Icons, die die Spieler repr„sentieren, dem Programm da-
+       durch vorgeben, daá man Icons nach freier Wahl (in mehr oder weniger
+       beliebiger Anzahl) in das Programmverzeichnis kopiert.
+       Findet das Programm in seinem Verzeichnis weniger als fnf Icon-Da-
+       teien, bietet es aus seinem Ressource-Bereich die an der Menge Fnf
+       fehlende Zahl an.
+
+    3. Man kann (und sollte ?) alle im Programm verwendeten Bitmaps durch
+       eigengefertigte Bitmaps ersetzen. Findet das Programm in seinem Ver-
+       zeichnis Bitmaps mit bestimmten Namen, l„dt es diese anstatt der im
+       Ressource-Bereich mitgelieferten (Default-) Bitmaps.
+
+       Die im Ressource-Bereich enthaltenen Bitmaps sind dem Programmpaket
+       in einer gesonderten Datei (BILDER.ZIP) beigefgt und m”gen als
+       Ausgangspunkt fr "Versch”nerungen" bzw. als schlechtes Beispiel
+       dienen.
+
+       Es handelt sich um folgende Bitmaps:
+
+       Dateiname     Bitmap-Gr”áe  Zweck
+       ---------------------------------------------------------------------
+       wrfl.BMP      120x100       Wrfel ohne Augen, nicht invertiert
+
+       wrfl_1.BMP	   120x100       Wrfel mit 1 Auge,  nicht invertiert
+       wrfl_2.BMP	   120x100       Wrfel mit 2 Augen, nicht invertiert
+       wrfl_3.BMP	   120x100       Wrfel mit 3 Augen, nicht invertiert
+       wrfl_4.BMP	   120x100       Wrfel mit 4 Augen, nicht invertiert
+       wrfl_5.BMP	   120x100       Wrfel mit 5 Augen, nicht invertiert
+       wrfl_6.BMP	   120x100       Wrfel mit 6 Augen, nicht invertiert
+
+       wrfl_h1.BMP   120x100       Wrfel mit 1 Auge,  invertiert
+       wrfl_h2.BMP   120x100       Wrfel mit 2 Augen, invertiert
+       wrfl_h3.BMP   120x100       Wrfel mit 3 Augen, invertiert
+       wrfl_h4.BMP   120x100       Wrfel mit 4 Augen, invertiert
+       wrfl_h5.BMP   120x100       Wrfel mit 5 Augen, invertiert
+       wrfl_h6.BMP   120x100       Wrfel mit 6 Augen, invertiert
+
+       ABBRUCH.BMP   32x32         allgemein fr Ende/Abschluá/Abbruch
+       AENDERN.BMP   32x32         Wrfel invertieren
+       BEST_WEG.BMP  32x32         L”sche Bestenliste
+       ERG_SICH.BMP  60x32         Sichere Ergebnis in Bestenliste
+       RUECKNAH.BMP  32x32         Setz-Rcknahme
+       SIEGER.BMP    32x32         allgemein fr Ergebnis-/Bestenliste
+       TIPS.BMP      32x32         allgemein fr "Tips"/Info
+       WEITER.BMP    32x32         allgemein fr "Weiter"
+       WUERFELN.BMP  32x32         Spielstart und Befehl "Wrfeln"
+
+       EINS.BMP      28x28         Setz-Befehlsknopf, 1
+       ZWEI.BMP      28x28         Setz-Befehlsknopf, 2
+       DREI.BMP      28x28         Setz-Befehlsknopf, 3
+       VIER.BMP      28x28         Setz-Befehlsknopf, 4
+       FUENF.BMP     28x28         Setz-Befehlsknopf, 5
+       SECHS.BMP     28x28         Setz-Befehlsknopf, 6
+
+       DRILLING.BMP  60x28         Setz-Befehlsknopf, Drilling
+       VIERLING.BMP  60x28         Setz-Befehlsknopf, Vierling
+       FULLHOUS.BMP  60x28         Setz-Befehlsknopf, Fullhouse
+       KL_STR.BMP    60x28         Setz-Befehlsknopf, Kleine Straáe
+       GR_STR.BMP    60x28         Setz-Befehlsknopf, Groáe Straáe
+       KNIFFEL.BMP   60x28         Setz-Befehlsknopf, Kniffel
+       CHANCE.BMP    60x28         Setz-Befehlsknopf, Chance
+
+
+       W„hrend die Wrfel-Bitmaps durchaus skalierbar sind (in Grenzen,
+       versteht sich) und daher nicht unbedingt die vorgegebenen Gr”áen-
+       bedingungen erfllen mssen, empfiehlt es sich nicht, von den ange-
+       gebenen Bitmap-Gr”áen fr die Befehlskn”pfe abzuweichen. Die definier-
+       ten Fenster haben zugemessene Gr”áen (ausgelegt im brigen auf Bildauf-
+       l”sungen von 640x480 und 800x600) und die in ihren Abmessungen darauf
+       abgestellten Befehlskn”pfe vertragen andere als die angegeben Gr”áen
+       wenig.
+       Trotzdem kann man sicherlich ein wenig experimentieren - es gibt durch-
+       aus noch "Luft".
+
+       Um es noch einmal zu betonen:
+
+	    Alternativen zu den Ressource-Dateien mssen
+
+		  - denselben Namen wie diese tragen und
+		  - im dem Verzeichnis stehen, in dem die Datei KNIFFEL.EXE
+		    gespeichert ist
+
+    4. Es gibt eine spezielle Icon-Datei (keine Bitmap !), die das Programm
+       dringlich zur Funktion ben”tigt - es ist die Datei LEER.ICO. Auch
+       diese Icon-Datei ist selbstverst„ndlich als Ressource enthalten, je-
+       doch k”nnten Sie bei der Nutzung auf ein Problem stoáen, bei dessen
+       Auftauchen Sie eine neue Datei LEER.ICO als L”sung erzeugen sollten.
+
+       Das zur Erstellung von KNIFFEL benutzte Programmierwerkzeug, soweit
+       es die GUI betrifft, ist VisPro REXX 3.0. Es gibt in diesem Werkzeug
+       keine direkte M”glichkeit, ein dargestelltes Icon nach der Nutzung
+       "rckstandslos" wieder vom sichtbaren Bereich zu entfernen. Im allge-
+       meinen ist dies bedeutungslos oder zumindest ohne Folgen - jedoch im
+       vorliegenden Fall muá (z.T. in rascher Folge) ein neues Icon ber dem
+       alten angezeigt werden. Icons haben jedoch einen ansonsten sehr ge-
+       sch„tzten "Charakterzug" - sie sind u. U. zum Teil "durchsichtig" und
+       berdecken damit das alte Icon manchmal nicht vollst„ndig.
+
+       Deshalb wird zum "L”schen" des alten Icons das spezielle Icon LEER.ICO
+       ben”tigt - es ist ein Icon in Standardgr”áe mit der Standardhintergrund-
+       farbe eines Fensters unter OS/2 (hellgrau oder wie auch immer man es
+       nennen mag).
+
+       Sollte diese Art der Farbgebung auf Ihrer Anlage nicht zutreffen oder
+       falls Sie aufgrund einer (h”heren) Bildschirmaufl”sung Bild-Artefakte
+       in den Fenstern "Nameneingabe" und "Spiel" feststellen sollten, dann
+       máten Sie ein neues Icon unter dem Namen "LEER.ICO" bauen, das Ihren
+       Verh„ltnissen (Gr”áe/Art bzw. Farbe) gerecht wird.
+       Auch diese Icon-Datei wird nur in dem Verzeichnis gesucht, in dem sich
+       KNIFFEL.EXE befindet.
+
+    5. Sie k”nnen des weiteren unter dem Namen KNIFFEL.TXT einen mehr oder
+       weniger beliebigen Text (ASCII) anlegen und diesen w„hrend des Programms
+       bei Nutzung der Funktion "Tips" anzeigen lassen. In der mitgelieferten
+       Datei KNIFFEL.TXT steht zu Beginn, wann und warum dies sinnvoll sein
+       k”nnte zusammen mit einem Hinweis auf spezielle Eigenschaften.
+
+
+
+  Sonstige Hinweise
+  -----------------
+
+  Das "Projekt" KNIFFEL entstand aus drei Grnden (aufsteigende Gewichtung :-):
+
+
+     1. Ungef„hr 1984 hatte ich dienstlich an einer SINIX-Anlage zu arbeiten
+	und wir fanden dort wie bei allen IX'en diverse Beispiel-Programme bzw.
+	Kodesammlungen (in diesem elenden C) vor. Dazu geh”rte auch ein Kniffel,
+	welches ganz ungef„hr die Bildschirmaufteilung zeigte, die auch das
+	vorliegende Programm verwendet (selbstverst„ndlich in gemeiáeltem
+	ASCII). Wegen der vielf„ltigen M”glichkeiten eines 'IX-Systems (z.B.
+	Termcap oder Curses und anderen) war das Spiel durchaus sch”n anzu-
+	sehen und zu spielen - so hatte die SINIX-Maschine beispielsweise
+	"runde" ASCII-Ecken, etwas, das auf PC frhestens praktikabel machbar
+	ab VGA war und dann trotzdem als allgemeine M”glichkeit fr den Normal-
+	menschen nicht er”ffnet wurde (stattdessen kam es nur zur bekannten
+	Verkaufs-Hype wie bei PCTOOLS mit einer "vollgrafischen Oberfl„che").
+
+	Angesichts der (leider nicht sehr vielen) angenehmen Stunden, die wir
+	seinerzeit w„hrend des Dienstes mit Kniffel vertr”delten, hatte ich
+	eigentlich immer vor, als eine Art Reminiszenz ein eigenes Kniffel
+	zu schreiben - sic.
+
+     2. Seit einem guten Jahr nutze ich nun (nach langem, langem Z”gern)
+	OS/2 als Standardbetriebssystem - Warp erschien mir endlich eine ausge-
+	reifte OS/2-Version zu sein, die den Namen eines DOS-Nachfolgers zu
+	Recht tr„gt (man sollte sich immer wieder daran erinnern, daá es dies
+	von Anfang an sein sollte und wollte). (Dies wurde Anfang 96 geschrieben,
+	da sah es eigentlich noch ganz gut aus fr OS/2)
+	
+	Ein (eigentlich sogar DER) Grund fr den Wechsel war und ist REXX -
+	dieser Programmiersprache bin ich sozusagen seit 1990 "verfallen",
+	als ich Mr. Cowlishaw's Referenz in einer Auslage sah mit dem ent-
+	scheidenden Untertitel "A practical approach to programming". Das
+	war es, was ich immer wollte und suchte - nicht schnell, nicht
+	hardware-nah, nicht abstrakt, nicht objektorientiert usw. - nein,
+	"practical" war das Stichwort.
+	Ich besorgte mir das nach wie vor verfgbare Programmpaket "Personal
+	REXX" fr DOS (und OS/2), welches ich immer noch durchaus unter
+	bestimmten Umst„nden empfehlen kann (haupts„chlich, wenn die Um-
+	st„nde Windows heiáen) und wurde nicht entt„uscht. Nach wie vor ist
+	es faszinierend, mit REXX zu arbeiten - im besonderen unter seinen
+	"nativen" Umgebungen, auf denen es seinerzeit entwickelt wurde bzw.
+	unter OS/2, das ganz ausgezeichnet die Vorzge von REXX f”rdert
+	(und die zweifellos vorhandenen Schw„chen mindert).
+
+	Es ist daher nicht weiter verwunderlich, daá ich mich auf meinem
+	Weg des Hineinfindens in eine neue Umgebung (=OS/2) auch gerne mit
+	beispielhaften Problemen besch„ftige, die manchmal auch zu etwas
+	vielleicht ebenfalls fr andere Ntzlichem fhren.
+	Im besonderen seit ich zus„tzlich zu dem mit OS/2 gelieferten REXX
+	einen GUI-Aufsatz zukaufte, bin ich mit den M”glichkeiten eines
+	rein privat Programmierenden unter OS/2 sehr zufrieden.
+
+     3. Seit einigen Jahren verkauft sich mit im letzten Jahr stark anstei-
+	gender Tendenz eine Software-Gattung namens "Edutainment". Was auch
+	immer solche Kunstbegriffe aussagen wollen und sollen, ist doch
+	deutlich, daá es zum einen um einen weiteren (groáen) Schritt zur
+	Marktdurchdringung (= abzocken) geht und zum anderen um eine
+	vielleicht durchaus brauchbare Idee - (speziell) Kindern bzw. (all-
+	gemein) Lernenden mit den vielf„ltige M”glichkeiten heutiger Stan-
+	dard-PC's Wissen oder Erkenntnisse (oder auch einfach Vergngen) auf
+	eine Weise zu vermitteln, die "leichter" zug„nglich ist, ohne auf den
+	Anspruch auf Qualit„t zu verzichten.
+
+	Als Elternteil von drei Kindern (z. Zt. 5, 7 u. 14) habe ich mir das
+	aktuelle Angebot angesehen, soweit es mir meine (vor allem finanziell)
+	beschr„nkten M”glichkeiten erlauben - und es hat mich bislang nicht
+	berzeugen k”nnen.
+
+	Bei unserem "Halbwchsigen" erlebe ich das Ph„nomen, daá er sich mit
+	gutem Instinkt von allem, das auch nur entfernt nach Wissensvermitt-
+	lung riecht und nicht in der morgendlichen Zwangsanstalt angeboten
+	wird, weit entfernt h„lt (seit er 11 oder 12 ist). Dasselbe gilt wohl
+	auch fr seine Freunde.
+	Dazu z„hlt interessanterweise auch die "ernsthafte", selbstgesteuerte
+	Besch„ftigung mit dem PC als Symbol moderner Technik - er ist voll-
+	kommen desinteressiert, beispielsweise hinter die Funktion oder die
+	M”glichkeiten einer modernen Textverarbeitung oder Tabellenkalkula-
+	tion zu kommen - von grundlegenden Dingen (BS-Funktionen, Programmier-
+	sprachen ...) einmal ganz abgesehen.
+	Auf der anderen Seite stecken er und seine Freunde eine beinahe uner-
+	sch”pfliche Energie und Aufwand in die Erlangung und das Spielen von
+	Produkten, die entweder den Namen "Spiel" wirklich nicht verdienen
+	und als Klassifizierung bestenfalls unter "gut gemachter Dreck" fir-
+	mieren k”nnen oder aber keinesfalls fr ihre Altersstufe gemacht/ge-
+	dacht und nach landl„ufiger Ansicht auch nicht fr sie geeignet
+	sind. Dabei berwinden sie sogar (scheinbar ohne groáe Mhe) Schwie-
+	rigkeiten, die im Grunde einen Zugang selbst fr einen Erwachsenen
+	verhindern wrden (zum Beispiel Sprachbarrieren sind hier gemeint).
+	(Nur anekdotisch angemerkt sei hier der Vorwurf des Burschen an mich,
+	 daá ich es unversch„mterweise nicht zulieáe, ihn an den wohl b-
+	 lichen Raubkopierereien durch meine Zugangsverbote angemessen
+	 partizipieren zu lassen - das sei schier eine Einschr„nkung seiner
+	 Pers”nlichkeitsentfaltung, da es ihn im Freundeskreis benachteilige!)
+
+	Bei den kleinen Kindern, vor allem denjenigen, die das Medium "Schrift-
+	sprache" noch nicht oder nicht gut handhaben k”nnen, berrascht dage-
+	gen den Erwachsenen oft die Mhelosigkeit, mit der diese einen PC zu-
+	mindest bedienen k”nnen bzw. die Grundfunktionalit„t eines Programmes
+	erfassen (auch dann, wenn es keinesfalls als "kindgerechtes" Programm
+	ausgelegt ist oder vermarktet wird).
+
+	Jedoch ist festzustellen, daá bei "Edutainment"-Software, die fr diese
+	Altersgruppe angeboten wird, schier uns„gliche Maást„be gelten - bei
+	Snden wie ausfhrlicher und notwendiger Dokumentation in reiner
+	Schriftform angefangen (.. und dann noch in diesem unm”glichen Ton:
+	"Wenn du ein Problem hast, binde einfach das device ein - dan klappt
+	das schon." Zitat !!!) bis zu greulicher Usability und einem unbedien-
+	baren Interface (gut gemachte Ausnahmen best„tigen hier eigentlich nur
+	die Regel). Wrde man sich als Eltern tats„chlich auf die Angaben auf
+	der Verpackung bzw. auf die Produktwerbung (gemeint sind die gesch”nten
+	Artikel der monatlichen/w”chentlichen Werbe-Postillen, die sich "unab-
+	h„ngige Anwendermagazine" nennen und berdies die Chuzpe haben, in
+	ihren Lobeshymnen immer wieder auf die Notwendigkeit der Elternbeglei-
+	tetheit als ihr Fluchttrchen hinzuweisen) verlassen, g„be man in der
+	Relation zum Zweck unsinnige Summen fr unbrauchbare Produkte aus.
+
+	Nun k”nnte aus dem bislang Gesagten der falsche Schluá gezogen werden,
+	ich wollte ein kindgerechtes Programm fertigen (und das in bezug auf
+	Kniffel!) - dies war jedoch nicht die Absicht.
+	Mich interessiert aktuell, wie man Produkte (egal, welche) gestalten
+	kann, so daá sie *selbst* durch Kinder mit gutem Gewinn bedient wer-
+	den k”nnen. Mir scheint dies eine unabdingbare Voraussetzung fr das
+	Gelingen einer wie auch immer gearteten "Edutainment"-Software zu sein.
+
+	In diesem Sinne habe ich bei dem Projekt "Kniffel" Erkenntnisse ber
+	den Bedarf gewonnen und bin dadurch sicherer geworden in bezug auf die
+	Maást„be, die ich bei zu kaufenden Produkten anlegen werde. Bei wei-
+	tem nicht alle Erkenntnisse und Feststellungen konnten in dieses
+	Programm einflieáen oder hier verwirklicht werden - jedoch haben es
+	meine werten T”chter zu verantworten, daá es so wie vorgestellt aus-
+	sieht und funktioniert. KNIFFEL hat insofern seine Nagelprobe bestan-
+	den, als es in meinem Haushalt durch die Kinder gespielt wird und
+	dies ohne besondere Hilfestellungen.
+
+
+  Wenn Ihnen das Spiel ab und an hilft, die Zeit unntz, aber angenehm zu ver-
+  treiben, w„re auch ein vierter Grund zus„tzlich gegeben - in diesem Sinne
+  verbleibe ich mit freundlichen Gráen
+
+  A. Kieser (1996)
+

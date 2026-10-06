@@ -1,0 +1,29 @@
+/* routine lade cmd mit Text (start) */
+
+/* die buttons mit Text laden */
+/* Set item value CMD_START Push Button */
+CALL VpSetItemValue window,'CMD_START','~Spielstart'
+/* Set item value CMD_LISTE Push Button */
+CALL VpSetItemValue window,'CMD_LISTE','~Bestenliste'
+/* Set item value CMD_ENDE Push Button */
+CALL VpSetItemValue window,'CMD_ENDE','~Ende'
+/* Set item value CMD_BOOK Push Button */
+CALL VpSetItemValue window,'CMD_BOOK','~Tips'
+
+/* alle Bitmaps hiden - sonst reagieren sie */
+/* weiter auf events */
+/* Hide item BMP_START_CMD Graphic */
+CALL VpItem window,'BMP_START_CMD','HIDE'
+/* Hide item BMP_LIST_CMD Graphic */
+CALL VpItem window,'BMP_LIST_CMD','HIDE'
+/* Hide item BMP_ENDE_CMD Graphic */
+CALL VpItem window,'BMP_ENDE_CMD','HIDE'
+/* Hide item BMP_BOOK_CMD Graphic */
+CALL VpItem window,'BMP_BOOK_CMD','HIDE'
+
+/* setzt global var show_typ */
+/* legt fest: text als anzeige */
+show_typ='TXT'
+
+
+

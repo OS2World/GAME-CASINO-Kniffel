@@ -1,0 +1,9 @@
+/* Event Graphic BMP_ERG_SPEICHCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_SPEICHERN Push Button */
+CALL VpItem window,'CMD_SPEICHERN','SENDMSG','0x0123','1','0'
+/* Select item CMD_SPEICHERN Push Button */
+CALL VpSelect window,'CMD_SPEICHERN'
+/* Set button highlight off CMD_SPEICHERN Push Button */
+CALL VpItem window,'CMD_SPEICHERN','SENDMSG','0x0123','0','0'

@@ -1,0 +1,7 @@
+/* Event  CMD_ERG_TIP, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "5." =Spielergebnis */
+TOPIC='5. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC

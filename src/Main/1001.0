@@ -1,0 +1,6 @@
+/* Event ~Ende CMD_ENDE, Clicked/selected */
+Arg window self
+
+/* Spielende */
+
+CALL VpWindow window,'CLOSE'

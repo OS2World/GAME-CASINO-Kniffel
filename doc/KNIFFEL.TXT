@@ -1,0 +1,424 @@
+
+Spielanleitung fr Kniffel unter OS/2
+=====================================
+
+ Dieser Text dient sowohl als unabh„ngi-
+ ge Dokumentation als auch als spielin-
+ terne "poor man's help". Die letztere
+ Funktion sollte eigentlich unn”tig sein,
+ da wohl ein jeder das Wrfelspiel
+ Kniffel oder Yahtzee kennt und, so hoffe
+ ich, die Programmfunktionen im groáen
+ und ganzen selbsterkl„rend sind.
+
+ Wie jeder andere textuelle Zusammenhang
+ ist diese Hilfe zur Untersttzung des Er-
+ lernens einer Sache fr (kleine) Kinder
+ vollkommen ungeeignet - also ist er auch
+ nicht mit diesem falschen, angeblich
+ kindhaften "Easy-Speak" formuliert, wie
+ man es bei heute so vielen Dingen sehen
+ muá, die sich direkt an die kindliche
+ Erlebniswelt richten und damit den An-
+ schein erwecken, als k”nne jedes Kind
+ ohne weiteres Verst„ndnis nach den ge-
+ br„uchlichen Methoden eines Erwachsenen
+ erlangen.
+
+ Sollten Sie trotzdem einen Text als Pro-
+ grammhilfe ben”tigen oder gar einem Kind
+ an die Hand geben mssen, sollten Sie
+ unter dem Namen KNIFFEL.TXT einen ASCII-
+ Text erstellen, der in einfacher und
+ auf die jeweilige Person bezogenen Weise
+ die notwendigen Hilfen gibt.
+ Wie in diesem vorliegen Text geschehen,
+ k”nnen Sie durch die Verwendung des Auf-
+ z„hlungstyps (1., 2., ... bis 5.) die
+ Gliederung so bernehmen, daá die Tips
+ je nach verwendetem Fenster angesprungen
+ werden.
+
+ Gute Unterhaltung !
+
+
+1. Spielstart
+=============
+
+ In diesem Fenster legt man vor allem die
+ Anzahl der Mitspieler fest. Es k”nnen bis
+ zu fnf Spieler mitmachen.
+
+ Man kann einstellen, ob die Befehlskn”pfe
+ mit "Bildchen" gefllt sind oder mit nor-
+ malem Text.
+ Fr Kinder im Vorschulalter empfiehlt
+ sich eher die Bildanzeige - sie ist daher
+ die Voreinstellung.
+
+ Wenn es im Programmverzeichnis eine Datei
+ gibt, die "HITLIST.HGH" heiát, enth„lt
+ sie die Spielergebnisse von alten Spielen.
+ Ein Druck auf den mittleren Befehlsknopf
+ zeigt diese Datei an.
+ Falls es keine solche Datei gibt, wird
+ der Knopf nicht gezeigt.
+
+ Der rechte Befehlsknopf beendet das Spiel.
+
+ Mit dem linken Befehlsknopf geht es wei-
+ ter zur Spielereingabe.
+
+
+2. Bestenliste
+==============
+
+ In diesem Fenster kann man sich die
+ Groátaten vergangener Spiele erneut an-
+ sehen, wenn deren Ergebnisse gesichert
+ sind.
+
+ Damit st„ndige Verluste nicht auf Dauer
+ qu„len, kann man mit dem rechten Be-
+ fehlsknopf eine unangenehme (oder zu
+ groáe und unbersichtliche) Bestenliste
+ in das elektronische Nichts versetzen.
+
+ (Vorsicht: man kann sich einen unglaub-
+	    lichen rger einhandeln,
+	    wenn man ein tolles Ergebnis
+	    eines Kindes l”scht, ohne
+	    vorher gefragt zu haben !)
+
+ Mit dem rechten Befehlsknopf oder
+ durch Eingabe der Taste ENTER geht es
+ zurck zum Fenster Spielstart. Wenn
+ die Bestenliste gel”scht wurde, wird
+ der mittlere Befehlsknopf dort deak-
+ tiviert.
+
+
+3. Spielereingabe
+=================
+
+ In diesem Fenster geben die Mitspieler
+ einen Namen an und suchen sich eins der
+ Symbole als visuelles Kennzeichen aus.
+
+ Man kann bis zu 12 Zeichen fr den Na-
+ men benutzen. Das Programm vergibt
+ immer eine Voreinstellung, die sehr ein-
+ fach berschrieben werden kann, da sie
+ markiert ist und beim ersten Eintippen
+ gel”scht wird.
+ Auch einem sehr kleinen Kind kann man
+ durchaus beibringen, einen bestimmten
+ Buchstaben als st„ndiges Zeichen einzu-
+ geben.
+
+ Die Symbole sind einfache Standard-OS/2-
+ Icons, welche sich in dem Programmver-
+ zeichnis befinden. Alle Icons in diesem
+ Verzeichnis werden hier zur Auswahl an-
+ geboten.
+ Falls es im Kniffel-Verzeichnis keine
+ Icons gibt, enth„lt der Ressourcebereich
+ des Programms fnf Standard-Icons.
+
+ Es ist eine klare Erfahrung, daá sich be-
+ sonders Kinder ("Gr”áere" eigentlich
+ auch) im Spielverlauf absttzen auf diese
+ Bilder - es ist daher beim Spielen von
+ oder mit Kindern geraten, bestimmte, be-
+ liebte Icons in das Verzeichnis zu geben.
+ Es sollten auch nicht zu viele sein.
+
+ Nach der Nameneingabe geht es mit Anwahl
+ des linken Befehlsknopfes oder durch Be-
+ t„tigen der ENTER-Taste weiter zum ei-
+ gentlichen Spiel.
+
+
+
+4. Spielfeld und Regeln
+=======================
+
+ Das Spielfeld ist aufgeteilt in folgende
+ Bereiche:
+
+   - ein Informationsbereich (oben)
+   - der Wrfelbereich (mitte, oben)
+   - der Setzbereich (mitte, unten)
+   - der Punktebereich (unten)
+   - der Aktionsbereich (rechts)
+
+ W„hrend im Informations- und Punktebe-
+ reich entweder keine Aktionen erforder-
+ lich sind oder eine gewisse Handhabungs-
+ f„higkeit verlangen, die in der Regel
+ die Fertigkeit von (kleinen) Kindern
+ bersteigt (d. h. ein Doppelklick auf
+ ein freies Feld im Punktebereich setzt
+ auch), finden die wesentlichen Aktivi-
+ t„ten im Wrfel-, Setz- und Aktions-
+ bereich statt.
+
+ Die je nach Spielsituation erlaubten
+ Befehlskn”pfe oder Aktionen sind akti-
+ viert, die jeweils unzul„ssigen werden
+ abgefangen oder sind deaktiviert (hoffe
+ ich).
+ Dadurch sollte auch fr kleine Kinder
+ ein stringentes und sukzessives Spiel-
+ verhalten m”glich sein.
+
+ Aktionsbereich
+ --------------
+
+ Im Aktionsbereich stehen folgende Be-
+ fehlskn”pfe je nach Lage zur Auswahl:
+
+ * Abbruch (oben):
+
+   bricht zu jedem Zeitpunkt das aktu-
+   elle Spiel zum Fenster Spielstart
+   hin ab; ein Ergebnis wird nicht
+   gezeigt
+
+ * Alle „ndern (Wrfelbereich oben):
+
+   ein Druck auf diesen Knopf inver-
+   tiert die Wrfel von "halten" zu
+   "wrfeln" bzw. andersherum;
+   das ist dann praktisch, wenn nur
+   ein einziger Wrfel wrfeln soll
+   und noch keine weiteren markiert
+   sind - "Gr”áere" k”nnen sich hier-
+   durch Klicks sparen
+   (fr Kinder scheint diese Funktion
+    bis zu einem bestimmten Alter
+    praktisch nicht anwendbar zu
+    sein)
+
+ * Wrfeln (Wrfelbereich unten):
+
+   dieser Knopf wrfelt die _nicht_
+   markierten Wrfel - das sind bei
+   Nutzung der Standardwrfel die
+   gelben (wenn ein Wrfeln denn
+   berhaupt noch erlaubt ist)
+
+ * Weiter (Setzbereich):
+
+   dieser Knopf kann bet„tigt werden,
+   wenn der aktuelle Spieler gesetzt
+   hat;
+   er muá bet„tigt werden, damit der
+   n„chste an die Reihe kommt
+
+ * Rcknahme (Punktebereich):
+
+   nachdem ein Spieler gesetzt, aber
+   noch nicht mit dem Befehlsknopf
+   "Weiter" an den N„chsten berge-
+   ben hat, kann er das letzte
+   Setzen rckg„ngig machen und
+   eine neue Entscheidung treffen;
+   ein Wrfeln ist jetzt nicht mehr
+   m”glich, auch wenn vor dem
+   Setzen nicht alle drei Wrfe
+   ausgenutzt wurden
+
+ Wrfelbereich
+ -------------
+
+ Wrfel k”nnen auf mehrere Arten
+ markiert/demarkiert werden:
+
+ * ein Klick/Doppelklick auf die
+   groáe Wrfelfl„che „ndert
+   (leider nur meistens) die Mar-
+    kierung
+   (Der Grund liegt in der Art,
+    wie VisPro Tabellen steuert.
+    Es drfte sinnlos sein, einem
+    Kind erkl„ren zu wollen, daá
+    ein Klick/Doppelklick dann
+    funktioniert, wenn das nicht
+    aktive Tabellenfeld angeklickt
+    wird. Richtig drfte die Be-
+    helfserkl„rung "Klicke solange,
+    bis sich die Farbe „ndert"
+    sein)
+
+ * ein Anw„hlen der Befehlskn”pfe
+   unter den Wrfelfl„chen
+
+ * ein Anw„hlen des Befehlsknopfes
+   "Alle „ndern"
+
+ * ein neuer Spielzug
+
+
+ Setzbereich
+ -----------
+
+ Es gelten die blichen Kniffelre-
+ geln:
+
+ * fr das Setzen der Augenfelder
+   werden mindestes drei gleiche
+   Wrfel ben”tigt; gez„hlt werden
+   nur die gleichen Wrfel, ab-
+   weichende Augenzahlen z„hlen
+   als Null
+ * erreicht man als Summe der ge-
+   setzten Augenfelder mindestens
+   63 Augen, so addiert sich ein
+   Bonus von 35 Punkten;
+   man erkennt, ob man den Bonus
+   erh„lt oder nicht, am Summen-
+   feld der Augenfelder ("S u" =
+   "Summe unten"), da ein Minus-
+   zeichen angegeben ist, solange
+   der Z„hlerstand von 63 noch
+   nicht erreicht ist
+ * bei den Felder Drilling und
+   Vierling sind drei bzw. vier
+   gleiche Wrfel erforderlich;
+   ist dies der Fall, z„hlen alle
+   fnf Wrfel
+ * das Feld Fullhouse ben”tigt
+   einen Drilling (Pasch) _und_
+   einen "Zwilling" (Paar);
+   das Fullhouse z„hlt 25 Punkte
+ * die Kleine Straáe ben”tigt
+   vier Augenzahlen in Folge (z.
+   B. "1234" oder "3456");
+   sie z„hlt 30 Punkte
+ * die Groáe Straáe ben”tigt fnf
+   Augenzahlen in Folge (es gibt
+   zwei Groáe Straáen: "12345" und
+   "23456");
+   sie z„hlt 40 Punkte
+ * der Kniffel besteht aus fnf
+   gleichen Augenwerten und z„hlt
+   50 Punkte
+ * die Chance gibt die M”glichkeit
+   zum beliebigen Setzen ohne Regel;
+   jeder Wrfel z„hlt
+
+ Bei korrekter Befllung (reine
+ Theorie !) erg„ben sich folgende
+ Minimal- und Maximalpunktzahlen:
+
+     Art              ³  Min  ³  Max
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     1                ³    3  ³    5
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     2                ³    6  ³   10
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     3                ³    9  ³   15
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     4                ³   12  ³   20
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     5                ³   15  ³   25
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     6                ³   18  ³   30
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Summe, unten:    ³   63  ³  105
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     + Bonus:         ³   35  ³   35
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Summe, unten:    ³   98  ³  140
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Drilling         ³    5  ³   30
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Vierling         ³    5  ³   30
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Fullhouse        ³   25  ³   25
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     kl. Str.         ³   30  ³   30
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     gr. Str.         ³   40  ³   40
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Kniffel          ³   50  ³   50
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Chance           ³    5  ³   30
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Summe, oben:     ³  160  ³  235
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄ
+     Summe, gesamt:   ³  258  ³  375
+
+
+ Diese beiden Kniffel-Ergebnisse drften
+ die absolut unwahrscheinlichsten ber-
+ haupt sein.
+
+ Interessanterweise kann man Kindern re-
+ lativ gut klarmachen (bzw. sie werden
+ sich wohl eher selber klar), daá ein
+ Kniffel oder ein Vierling auch auf ein
+ Augenfeld oder auf den jeweils niedrige-
+ ren Typ Vierling oder Drilling gesetzt
+ werden kann, jedoch haben sie, soweit ich
+ bei den "Beta-Testern" sah, Probleme da-
+ mit, einen Kniffel m”glicherweise auch
+ auf ein Fullhouse zu setzen - das scheint
+ einfach etwas vollkommen anderes zu sein.
+
+ Das Konzept der (ungewollten) Null-Set-
+ zung hingegen scheint schnell und konse-
+ quent rezipierbar zu sein.
+
+
+5. Spielergebnis
+================
+
+ Wie zu jedem Spiel (oder einer beliebigen
+ aktiven Handlung), geh”rt auch zu Kniffel
+ ein Ergebnis, das hier auch nach Durch-
+ lauf angezeigt wird.
+
+ Spielen mehr als ein einziger Spieler,
+ wird ein Gewinner ausgewiesen.
+
+ (Hierbei kommt es zu einem Fehler in
+  folgendem speziellen Fall:
+
+  es ist ohne weiteres denkbar, daá zwei
+  oder mehr Spieler das gleiche Punkter-
+  gebnis erzielen - in einem "echten"
+  Wettkampf k”nnte und máte man die Wer-
+  tung anhand von solchen Unterschieden
+  wie "vorgelegt/nachgelegt" vornehmen;
+
+  dies ist hier leider nicht m”glich (die
+  Faulheit ... ) - bei gleichen Punktwer-
+  ten "gewinnt" der erste Spieler mit dem
+  Mehrfach-Punktwert)
+
+ Man kann durch Anwahl des mittleren Be-
+ fehlsknopfes das Ergebnis in einer Datei
+ ("HITLIST.HGH" im Kniffel-Verzeichnis)
+ abspeichern bzw. eine evtl. existierende
+ Datei um das Ergebnis erweitern.
+
+ Die Datei ist eine reine ASCII-Datei ohne
+ besonderes Format - sie kann daher als
+ "Beweis" gedruckt oder unter einem ande-
+ ren Namen gespeichert (und auch leicht
+ "gef„lscht") werden.
+
+ Der linke Befehlsknopf verl„át das aktu-
+ elle Fenster zurck bis zum Fenster Spiel-
+ start, von wo aus das Spiel verlassen oder
+ mit neuen Einstellungen neu begonnen wer-
+ den kann.
+
+ Der rechte Befehlsknopf verl„át das Fens-
+ ter und beginnt mit den aktuellen Spieler-
+ namen und Symbolen direkt ein neues Spiel.
+
+
+************** Textende ****************

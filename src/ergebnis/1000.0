@@ -1,0 +1,9 @@
+/* Event ~ZurÅck, beenden CMD_ZRCK_ENDE, Clicked/selected */
+Arg window self
+
+/* gesehen, diese Kniffel-Runde bis zur 
+   Start-Form beenden */
+
+/* Kennzeichen: schluss */
+TOPIC='schluss'   
+CALL VpWindow window,'CLOSE'

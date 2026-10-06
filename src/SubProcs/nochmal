@@ -1,0 +1,167 @@
+/* routine nochmal startet mit den jetzigen */
+/* Werten auf 0 nochal */
+
+/* form-var anz_wurf - wÅrfe pro spieler max 3 - */ 
+/* gleichzeitig PrÅf-var ob setzen mîglich (>0)    */
+anz_wurf=0
+
+/* form-stem wurf. - enthÑlt kennung halten und wert */
+/* nach wurf - wird gesetzt durch werfen bzw. die     */
+/* button-routinen/dpclick auf WÅrferl                */
+wurf. = '0'
+
+/* spl_nr = aktueller spieler */
+spl_nr=1
+
+/* wert_lst: tail1 = spieler,                    */
+/* tail2= inkrement 1 - werte 1-13, zw-summe-lo, */
+/*        zw-summe-hi, su_ges                    */
+/* init auf '' -  erreichte Punkte u. Summen u.  */
+/* 0 (!) mÅssen gesetzt werden */
+wert_lst.=''
+
+/* runde init */
+runde=1
+
+/* Set item value LBL_SPL_NAME Text */
+CALL VpSetItemValue window,'LBL_SPL_NAME',spl_lst.spl_nr.name
+
+/* Spieler-Icon mu· kÅnstlich gelîscht werden ... */
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',leer_ico
+
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',spl_lst.spl_nr.symbol
+
+/* Set item value LBL_SPL_WURF Text */
+CALL VpSetItemValue window,'LBL_SPL_WURF','1.'
+
+/* Set item value LBL_SPL_RUNDE Text */
+CALL VpSetItemValue window,'LBL_SPL_RUNDE',runde
+
+/* Set item value LBL_NAME1 Text */
+CALL VpSetItemValue window,'LBL_NAME1',spl_lst.spl_nr.name
+
+/* init Spielfeld */
+
+/* erneut leere WÅrfel zeigen ... */
+
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,1
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,2
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,3
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,4
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,5
+
+/* wÅrfel-status zurÅck */
+do i = 1 to 5
+  /* Set item value CMD_WURF? Push Button */
+  CALL VpSetItemValue window,'CMD_WURF'||i,'*wÅrfeln*'
+  wurf.i.halten=0
+end /* end do */
+
+/* init Spielertabellen */
+call init_tbl
+
+/* alle buttons enabled */
+do i = 1 to 13
+  if show_typ = 'SYM' then
+    /* Show item BMP_???_CMD Graphic */
+    CALL VpItem window,buttons_list.i.bmp,'SHOW'
+    
+  /* Enable item CMD_??? Push Button */
+  CALL VpItem window,buttons_list.i.cmd,'ENABLE'
+end
+
+/* alle Spieler-EintrÑge auf - und spieler-namen */  
+do i = 1 to anzahl
+  do j = 1 to 6
+    /* Set cell value TBL_SPL?_LO Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_LO'),'-',1,j
+  end /* end do */
+
+  /* Set item foreground color TXT_SPL?_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||i||'_INFLO','FORECOLOR','RED'
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||i||'_INFLO','- 0'
+
+  do j = 1 to 7
+    /* Set cell value TBL_SPL?_HI Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_HI'),'-',1,j
+  end /* end do */
+
+  /* Set item value TXT_SPL?_INFHI Text */
+  CALL VpSetItemValue window,'TXT_SPL'||i||'_INFHI','0'
+  
+  /* Set item value TXT_SPL?_INFGES Text */
+  CALL VpSetItemValue window,'TXT_SPL'||i||'_INFGES','0'
+  
+  /* Set item value LBL_NAME? Text */
+  CALL VpSetItemValue window,'LBL_NAME'||i,spl_lst.i.name
+
+  /* Set item background color LBL_NAME? Text */
+  CALL VpItem window,'LBL_NAME'||i,'BACKCOLOR','PALEGRAY'
+  /* Set item foreground color LBL_NAME? Text */
+  CALL VpItem window,'LBL_NAME'||i,'FORECOLOR','BLUE'
+
+  /* Foreground der Tabellen ist schon richtig gesetzt */
+
+  /* Set item background color TBL_SPL?_LO Value Set */
+  CALL VpItem window,'TBL_SPL'||i||'_LO','BACKCOLOR','PALEGRAY'
+
+  /* Set item background color TBL_SPL?_HI Value Set */
+  CALL VpItem window,'TBL_SPL'||i||'_HI','BACKCOLOR','PALEGRAY'
+
+end /* end do */
+
+drop j
+
+/* aktiver Spieler ist der erste - farblich markieren */
+/* Foreground der Tabellen ist von Haus aus schwarz */
+
+/* Set item background color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','BACKCOLOR','BLUE'
+/* Set item foreground color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','FORECOLOR','WHITE'
+/* Set item background color TBL_SPL1_LO Value Set */
+CALL VpItem window,'TBL_SPL1_LO','BACKCOLOR','WHITE'
+/* Set item background color TBL_SPL1_HI Value Set */
+CALL VpItem window,'TBL_SPL1_HI','BACKCOLOR','WHITE'
+
+/* Rundenzeiger (windowtitle) setzen - mit global */
+/* var runde, titel_vorn, titel_hint              */
+CALL VpWindow window,'SETTITLE',titel_vorn||runde||titel_hint
+
+/* der erste Spieler mu· wÅrfeln, invertieren kann */
+/* er noch nicht - weiter und invert disablen */
+if show_typ='SYM' then
+  /* Show item BMP_WUERFELN_CMD Graphic */
+  CALL VpItem window,'BMP_WUERFELN_CMD','SHOW'
+  
+/* Enable item CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','ENABLE'
+/* Hide item BMP_AENDERN_CMD Graphic */
+CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+/* Disable item CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+/* Disable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','DISABLE'
+
+/* RÅcknahme setzen ist nur mîglich zwischen gesetzt */
+/* und weiter - disablen */
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+/* Disable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','DISABLE'
+
+/* Give item focus CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','FOCUS'
+
+
+

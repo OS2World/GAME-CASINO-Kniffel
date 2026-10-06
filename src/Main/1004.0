@@ -1,0 +1,7 @@
+/* Event ~Bestenliste CMD_LISTE, Clicked/selected */
+Arg window self
+
+/* Bestenliste existiert, Button wird gezeigt */
+
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\shw_hitlist */
+value=VpOpenForm(window, 260, '')

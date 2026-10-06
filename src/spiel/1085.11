@@ -1,0 +1,9 @@
+/* Event Graphic BMP_KLSTR_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_KLEINE Push Button */
+CALL VpItem window,'CMD_KLEINE','SENDMSG','0x0123','1','0'
+/* Select item CMD_KLEINE Push Button */
+CALL VpSelect window,'CMD_KLEINE'
+/* Set button highlight off CMD_KLEINE Push Button */
+CALL VpItem window,'CMD_KLEINE','SENDMSG','0x0123','0','0'

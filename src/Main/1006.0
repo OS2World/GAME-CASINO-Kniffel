@@ -1,0 +1,6 @@
+/* Event Text-Anzeige RAD_TEXT, Clicked/selected */
+Arg window self
+
+/* ruft txt_lade-routine */
+call l_cmdtxt
+

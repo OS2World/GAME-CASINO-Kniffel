@@ -1,0 +1,61 @@
+/* Event ~kl. Straáe CMD_KLEINE, Clicked/selected */
+Arg window self
+
+/* die "Zul„ssigkeitsprfungen" sind im Grunde ber-
+   flssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prfe, ob schon gewrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.10 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prft auf kleine Straáe - wenn ja, 30 -      */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+/* Rckgabe: 11234, 12234, 12334, 123445 etc.  */
+/* die doppel mssen weg */
+SELECT
+   WHEN pos('11',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('11',tmp),1)
+   WHEN pos('22',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('22',tmp),1)
+   WHEN pos('33',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('33',tmp),1)
+   WHEN pos('44',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('44',tmp),1)
+   WHEN pos('55',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('55',tmp),1)
+   WHEN pos('66',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('66',tmp),1)
+   OTHERWISE
+     nop
+END
+
+if pos('1234',tmp)>0 | pos('2345',tmp)>0 | pos('3456',tmp)>0 then
+  gef=30
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_KLEINE Push Button */
+CALL VpItem window,'CMD_KLEINE','DISABLE'
+/* Hide item BMP_KLSTR_CMD Graphic */
+CALL VpItem window,'BMP_KLSTR_CMD','HIDE'
+
+drop tmp
+
+call setzen '10', gef
+ 
+

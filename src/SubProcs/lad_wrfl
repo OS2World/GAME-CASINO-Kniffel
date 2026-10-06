@@ -1,0 +1,89 @@
+/* routine lÑdt WÅrfel-bilder */
+
+/* init Bitmaps - Vorgehen: wenns im Verzeichnis */
+/* Bitmaps mit bestimmten Namen gibt, diese la-  */
+/* den, ansonsten die ressourcen                 */
+if stream(pfad_name||'wrfl.bmp','c','query exists') \= '' then
+  wrfl_leer = VpLoadPicture('FILE','wrfl.bmp')
+else
+  wrfl_leer = VpLoadPicture('RESBMP',1000)
+  
+if stream(pfad_name||'wrfl_1.bmp','c','query exists') \= '' then
+  wrfl_1 = VpLoadPicture('FILE','wrfl_1.bmp')
+else
+  wrfl_1 = VpLoadPicture('RESBMP',1001)
+  
+if stream(pfad_name||'wrfl_2.bmp','c','query exists') \= '' then
+  wrfl_2 = VpLoadPicture('FILE','wrfl_2.bmp')
+else
+  wrfl_2 = VpLoadPicture('RESBMP',1002)
+
+if stream(pfad_name||'wrfl_3.bmp','c','query exists') \= '' then
+  wrfl_3 = VpLoadPicture('FILE','wrfl_3.bmp')
+else
+  wrfl_3 = VpLoadPicture('RESBMP',1003)
+
+if stream(pfad_name||'wrfl_4.bmp','c','query exists') \= '' then
+  wrfl_4 = VpLoadPicture('FILE','wrfl_4.bmp')
+else
+  wrfl_4 = VpLoadPicture('RESBMP',1004)
+
+if stream(pfad_name||'wrfl_5.bmp','c','query exists') \= '' then
+  wrfl_5 = VpLoadPicture('FILE','wrfl_5.bmp')
+else
+  wrfl_5 =VpLoadPicture('RESBMP',1005)
+
+if stream(pfad_name||'wrfl_6.bmp','c','query exists') \= '' then
+  wrfl_6 = VpLoadPicture('FILE','wrfl_6.bmp')
+else
+  wrfl_6 = VpLoadPicture('RESBMP',1006)
+
+/* die halten-bmp ... */
+
+/* halten-leer wird nie gebraucht */
+/* wrfl_h_leer = VpLoadPicture('RESBMP',1007) */
+
+if stream(pfad_name||'wrfl_h1.bmp','c','query exists') \= '' then
+  wrfl_h1 = VpLoadPicture('FILE','wrfl_h1.bmp')
+else
+  wrfl_h1 = VpLoadPicture('RESBMP',1008)
+
+if stream(pfad_name||'wrfl_h2.bmp','c','query exists') \= '' then
+  wrfl_h2 = VpLoadPicture('FILE','wrfl_h2.bmp')
+else
+  wrfl_h2 = VpLoadPicture('RESBMP',1010)
+
+if stream(pfad_name||'wrfl_h3.bmp','c','query exists') \= '' then
+  wrfl_h3 = VpLoadPicture('FILE','wrfl_h3.bmp')
+else
+  wrfl_h3 = VpLoadPicture('RESBMP',1009)
+
+if stream(pfad_name||'wrfl_h4.bmp','c','query exists') \= '' then
+  wrfl_h4 = VpLoadPicture('FILE','wrfl_h4.bmp')
+else
+  wrfl_h4 = VpLoadPicture('RESBMP',1011)
+
+if stream(pfad_name||'wrfl_h5.bmp','c','query exists') \= '' then
+  wrfl_h5 = VpLoadPicture('FILE','wrfl_h5.bmp')
+else
+  wrfl_h5 = VpLoadPicture('RESBMP',1012)
+
+if stream(pfad_name||'wrfl_h6.bmp','c','query exists') \= '' then
+  wrfl_h6 = VpLoadPicture('FILE','wrfl_h6.bmp')
+else
+  wrfl_h6 = VpLoadPicture('RESBMP',1013)
+  
+
+/* wÅrfel zeigen ... */
+
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,1
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,2
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,3
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,4
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,5
+

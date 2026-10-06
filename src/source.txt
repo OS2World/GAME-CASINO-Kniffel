@@ -1,0 +1,4475 @@
+Help-Line text (no. are VP-Ressource no.):
+
+Spiel starten ... 1008 Anzeige der Hitliste 1009 Kniffel beenden 1010 Anzeige der Programm-Info 1011 Spiel starten ... 1000 Anzeige der Hitliste 1004 Kniffel beenden 1001 Anzeige der Programm-Info 1012 Anzahl der Mitspieler 1003 Befehlsknîpfe mit Bildern 1005 Befehlsknîpfe mit Text 1006 Nameneingabe fertig, weiter ... 1007 Anzeige der Programm-Info 1008 Nameneingabe fertig, weiter ... 1003 Anzeige der Programm-Info 1000 Eingabefeld fÅr Spielernamen 1001 Spielersymbol aussuchen 1005 Spielersymbol aussuchen 1004 WÅrfeln - viel GlÅck ! 1072 nÑchster Spieler / weiter ... 1074 Alle WÅrfel auf den gegenteiligen Status Ñndern 1073 RÅcknahme des Setzens 1070 Setze Einer ... 1076 Setze Zweier ... 1077 Setze Dreier ... 1078 Setze Vierer ... 1079 Setze FÅnfer ... 1080 Setze Sechser ... 1081 Setze auf Drilling ... 1082 Setze auf Vierling ... 1083 Setze auf Fullhouse ... 1084 Setze auf Kleine Stra·e ... 1085 Setze auf Gro·e Stra·e ... 1086 Setze auf Kniffel/Yahtzee ... 1087 Setze auf Chance ... 1088 Spiel beenden/abbrechen 1075 Anzeige der Programm-Info 1069 WÅrfeln - viel GlÅck ! 1044 nÑchster Spieler / weiter ... 1067 Alle WÅrfel auf den gegenteiligen Status Ñndern 1066 RÅcknahme des Setzens 1071 Setze Einer ... 1010 Setze Zweier ... 1011 Setze Dreier ... 1012 Setze Vierer ... 1013 Setze FÅnfer ... 1014 Setze Sechser ... 1015 Setze auf Drilling ... 1016 Setze auf Vierling ... 1017 Setze auf Fullhouse ... 1018 Setze auf Kleine Stra·e ... 1019 Setze auf Gro·e Stra·e ... 1020 Setze auf Kniffel/Yahtzee ... 1021 Setze auf Chance ... 1022 Spiel beenden/abbrechen 1000 Anzeige der Programm-Info 1068 ZurÅck zum Programmstart ... 1007 Ergebnis speichern in der Hitliste 1008 Neues Spiel mit den aktuellen Spielern 1009 Anzeige der Programm-Info 1006 ZurÅck zum Programmstart ... 1000 Ergebnis speichern in der Hitliste 1004 Neues Spiel mit den aktuellen Spielern 1001 Anzeige der Programm-Info 1005 Anzeige des Spielergebnisses (nur lesen) 1002 Anzeige der Hitliste beenden 1004 Hitliste vollstÑndig lîschen 1005 Anzeige der Programm-Info 1007 Anzeige der Hitliste beenden 1000 Hitliste vollstÑndig lîschen 1003 Anzeige der Programm-Info 1006   Anzeige der Programm-Info beenden 1002 Anzeige der Programm-Info beenden 1000
+
+Ressources (Icons & Graphics):
+
+BMP_BOOK_CMD 1011 BMP_ENDE_CMD 1010 BMP_LIST_CMD 1009 BMP_START_CMD 1008 SPN_ANZAHL 1003 RAD_SYMBOLE 1005 RAD_TEXT 1006 LBL_ANZAHL 1002 GRP_TXTSYM 1007 CMD_START 1000 CMD_LISTE 1004 CMD_ENDE 1001 CMD_BOOK 1012                                       BMP_NAME_OK_CMD 1007 BMP_NAME_TIPCMD 1008 CMD_NAME_FERTIG 1003 CMD_NAME_TIPS 1000 TXT_NAMEN 1001 BMP_ICO_SHW 1005 LBL_SPL_INFO 1002 LBL_SYMBOL 1006 LBL_NAME_INFO 1009 SPN_ICO_SHW 1004                                 BMP_WUERFELN_CMD 1072 BMP_WEITER_CMD 1074 BMP_AENDERN_CMD 1073 BMP_EINS_CMD 1076 BMP_ZWEI_CMD 1077 BMP_DREI_CMD 1078 BMP_VIER_CMD 1079 BMP_FUENF_CMD 1080 BMP_SECHS_CMD 1081 BMP_DRILLING_CMD 1082 BMP_VIERLING_CMD 1083 BMP_FULLHOUSE_CMD 1084 BMP_KLSTR_CMD 1085 BMP_GRSTR_CMD 1086 BMP_KNIFFEL_CMD 1087 BMP_CHANCE_CMD 1088 BMP_ABBRUCH_CMD 1075 BMP_SPIEL_TIPSCMD 1069 CMD_WUERFELN 1044 CMD_NEXT_SPL 1067 CMD_WRFL_INVERT 1066 CMD_EINS 1010 CMD_ZWEI 1011 CMD_DREI 1012 CMD_VIER 1013 CMD_FUENF 1014 CMD_SECHS 1015 CMD_DRILLING 1016 CMD_VIERLING 1017 CMD_FULLHOUSE 1018 CMD_KLEINE 1019 CMD_GROSSE 1020 CMD_KNIFFEL 1021 CMD_CHANCE 1022 TBL_WRFL 1001 CMD_WURF1 1037 CMD_WURF2 1033 CMD_WURF3 1034 CMD_WURF4 1035 CMD_WURF5 1036 CMD_ABBRUCH 1000 CMD_SPIEL_TIPS 1068 LBL_NAME1 1025 LBL_NAME2 1026 LBL_NAME3 1027 BMP_SPIEL_RUECKNCMD 1070 CMD_SPIEL_RUECKN 1071 LBL_NAME4 1028 LBL_NAME5 1029 TBL_SPL1_LO 1039 TBL_SPL2_LO 1040 TBL_SPL3_LO 1041 TBL_SPL4_LO 1042 TBL_SPL5_LO 1043 TXT_SPL1_INFLO 1045 TXT_SPL2_INFLO 1046 TXT_SPL3_INFLO 1047 TXT_SPL4_INFLO 1048 TXT_SPL5_INFLO 1049 TBL_SPL1_HI 1050 TBL_SPL2_HI 1051 TBL_SPL3_HI 1052 TBL_SPL4_HI 1053 TBL_SPL5_HI 1054 TXT_SPL1_INFHI 1055 TXT_SPL2_INFHI 1056 TXT_SPL3_INFHI 1057 TXT_SPL4_INFHI 1058 TXT_SPL5_INFHI 1059 TXT_SPL1_INFGES 1060 TXT_SPL2_INFGES 1061 TXT_SPL3_INFGES 1062 TXT_SPL4_INFGES 1063 TXT_SPL5_INFGES 1064 TBL_SPALTEN_LO 1002 TXT_SPALTEN_INF_LO 1003 TBL_SPALTEN_HI 1004 TXT_SPALTEN_INF_SUHI 1005 TXT_SPALTEN_SUGES 1038 LBL_SPL1 1006 LBL_SPL_NAME 1007 BTM_SPL_ICO 1008 LBL_SPL2 1009 LBL_SPL_WURF 1030 LBL_SPL3 1031 LBL_SPL_RUNDE 1065 GRP_WUERFEL 1023 GRP_CMDS 1024 GRP_SPL_INFO 1032                                                                                                                                                                                                                                            BMP_ERG_ZURUECKCMD 1007 BMP_ERG_SPEICHCMD 1008 BMP_ERG_WEITERCMD 1009 BMP_ERG_TIPCMD 1006 CMD_ZRCK_ENDE 1000 CMD_SPEICHERN 1004 CMD_NEU_SPIEL 1001 CMD_ERG_TIP 1005 TXT_ERGEBNISSE 1002 BTM_SIEGERICO 1003                                              BMP_LIST_OKCMD 1004 BMP_LIST_DELCMD 1005 BMP_LIST_TIPCMD 1007 CMD_ENDE 1000 CMD_LOESCHEN 1003 CMD_LIST_TIP 1006 TXT_LISTE 1001 BTMP_SIEGERICO 1002                                  BMP_TIPS_ZURUECKCMD 1002 CMD_TIPS_ENDE 1000 TXT_TIPS_DOC 1001                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+Application flow:
+
+/* VisPro/REXX */
+
+_VPAppHandle = VpInit()
+if _VPAppHandle='' then exit
+_VPAppReturn = 0
+
+/* Open first form */
+Parse arg topic
+_VPMainWindow = VpOpenForm('', 256, topic)
+if _VPMainWindow='' then do
+   call VpMessageBox 0,'VisPro/REXX','Unable to open Main form.  Verify that there is a Main form, that it has an id of 256, and that the form has controls within it.'
+   signal _VPAppExit
+end
+
+do until ( _VPEventCall=='')
+   _VPEventCall = VpGetMsg(_VPAppHandle)
+   Interpret _VpEventCall
+end
+/* Terminate application */
+_VPAppExit:
+call VpQuit _VPAppHandle
+return _VPAppReturn
+
+
+/* ##259_1000.0 */
+259_1000.0: /* Event ~ZurÅck, beenden CMD_ZRCK_ENDE, Clicked/selected */
+Arg window self
+
+/* gesehen, diese Kniffel-Runde bis zur 
+   Start-Form beenden */
+
+/* Kennzeichen: schluss */
+TOPIC='schluss'   
+CALL VpWindow window,'CLOSE'
+
+return
+
+/* ##259_1001.0 */
+259_1001.0: /* Event ~Weiter, neues Spiel CMD_NEU_SPIEL, Clicked/selected */
+Arg window self
+
+/* gesehen, neues Spiel mit den jetzigen
+   Einstellungen (Leuten) */
+   
+/* Kennung: nochmal */
+TOPIC='nochmal'
+CALL VpWindow window,'CLOSE'
+
+return
+
+/* ##259_1004.0 */
+259_1004.0: /* Event Ergebnis speichern CMD_SPEICHERN, Clicked/selected */
+Arg window self
+
+/* die jetzigen Ergebnisse sollen abgespeichert */
+/* werden - es wird die Datei hitlist.hgh geschrieben */
+/* oder fortgeschrieben */
+
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+ do
+   /* hitlist existiert, ans ende schreiben */
+
+   /* zur Zeit schreibt OS2-REXXSAA IMMER ans Ende */
+   /* einer existierenden Datei - auch ohne explizit */
+   /* den filepointer dorthin zu setzen.             */
+   /* Das ist aber in Cowlishaw's Sprachdefinition   */
+   /* nicht vorgegeben/verlangt und kann sich auch   */
+   /* mal Ñndern - also auf der sicheren Seite blei- */
+   /* ben.                                           */
+ 
+   r=stream(pfad_name||'hitlist.hgh','c','open')
+   g=stream(pfad_name||'hitlist.hgh','c','query size')
+   
+   /* Get item value TXT_ERGEBNISSE Multi-Line Entry Field */
+   value = VpGetItemValue(window,'TXT_ERGEBNISSE')
+   call charout pfad_name||'hitlist.hgh', value, g
+   
+   r=stream(pfad_name||'hitlist.hgh','c','close')
+
+   drop value g r
+   
+ end
+else
+ do
+  /* es gibt keine hitlist, neu ... */
+   
+  r=stream(pfad_name||'hitlist.hgh','c','open')
+  
+  /* Get item value TXT_ERGEBNISSE Multi-Line Entry Field */
+  value = VpGetItemValue(window,'TXT_ERGEBNISSE')
+  call charout pfad_name||'hitlist.hgh', value
+   
+  r=stream(pfad_name||'hitlist.hgh','c','close')
+
+  drop value r
+
+ end
+/* endif */
+
+/* action gelaufen, button wird nicht mehr ge- */
+/* braucht */
+/* Disable item CMD_SPEICHERN Push Button */
+CALL VpItem window,'CMD_SPEICHERN','DISABLE'
+/* Hide item BMP_ERG_SPEICHCMD Graphic */
+CALL VpItem window,'BMP_ERG_SPEICHCMD','HIDE'
+
+return
+
+/* ##259_1005.0 */
+259_1005.0: /* Event  CMD_ERG_TIP, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "5." =Spielergebnis */
+TOPIC='5. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC
+
+return
+
+/* ##259_1006.11 */
+259_1006.11: /* Event Graphic BMP_ERG_TIPCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_ERG_TIP Push Button */
+CALL VpItem window,'CMD_ERG_TIP','SENDMSG','0x0123','1','0'
+/* Select item CMD_ERG_TIP Push Button */
+CALL VpSelect window,'CMD_ERG_TIP'
+/* Set button highlight off CMD_ERG_TIP Push Button */
+CALL VpItem window,'CMD_ERG_TIP','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##259_1007.11 */
+259_1007.11: /* Event Graphic BMP_ERG_ZURUECKCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_ZRCK_ENDE Push Button */
+CALL VpItem window,'CMD_ZRCK_ENDE','SENDMSG','0x0123','1','0'
+/* Select item CMD_ZRCK_ENDE Push Button */
+CALL VpSelect window,'CMD_ZRCK_ENDE'
+/* Set button highlight off CMD_ZRCK_ENDE Push Button */
+CALL VpItem window,'CMD_ZRCK_ENDE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##259_1008.11 */
+259_1008.11: /* Event Graphic BMP_ERG_SPEICHCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_SPEICHERN Push Button */
+CALL VpItem window,'CMD_SPEICHERN','SENDMSG','0x0123','1','0'
+/* Select item CMD_SPEICHERN Push Button */
+CALL VpSelect window,'CMD_SPEICHERN'
+/* Set button highlight off CMD_SPEICHERN Push Button */
+CALL VpItem window,'CMD_SPEICHERN','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##259_1009.11 */
+259_1009.11: /* Event Graphic BMP_ERG_WEITERCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NEU_SPIEL Push Button */
+CALL VpItem window,'CMD_NEU_SPIEL','SENDMSG','0x0123','1','0'
+/* Select item CMD_NEU_SPIEL Push Button */
+CALL VpSelect window,'CMD_NEU_SPIEL'
+/* Set button highlight off CMD_NEU_SPIEL Push Button */
+CALL VpItem window,'CMD_NEU_SPIEL','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##259_Form.1 */
+259_Form.1: /* Event Form events, Opened */
+Arg window 
+
+/* Form gibt die Ergebnisse der Spieler aus    */
+/* nutzt:                                      */
+/*     1. anzahl (der Spieler)                 */
+/*     2. spl_lst. u. wert_lst.                */
+/*     3. pfad_name                            */
+/*     4. cr                                   */
+/*     5. list_bmp                             */
+/*     6. abbruch_bmp                          */
+/*     7. weiter_bmp                           */
+/*     8. tips_bmp                             */
+/*     9. show_typ                             */
+
+/* form gibt Åber Kennzeichen an caller (=     */
+/* Form Spiel) zurÅck, ob aufhîren oder noch-  */
+/* mal spielen                                 */
+
+/* fp17 ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* form-var ausgabe */
+ausgabe.=''
+
+/* name in der Reihenfolge vor sort behalten */
+tmp.=''
+do i= 1 to anzahl
+  tmp.i=spl_lst.i.name
+end /* end do */
+
+if anzahl > 1 then
+  /* Spezialform von sort (mit parameter Ergebnis) */
+  /* sortiert direkt spl_lst.?.name und wert_lst.?.16 in */
+  /* aufsteigender Form */
+  call sort 'ERGEBNIS'
+/* endif */
+
+do i = 1 to anzahl
+  if wert_lst.i.14 > 62 then
+    ausgabe.i=left(spl_lst.i.name,15)||right(wert_lst.i.16,4)||' (mit Bonus)'
+  else
+    ausgabe.i=left(spl_lst.i.name,15)||right(wert_lst.i.16,4)
+  /* endif */
+end /* end do */
+
+/* Namen fÅr evtl. Spielwiederholung restaurieren */
+do i = 1 to anzahl
+  spl_lst.i.name=tmp.i
+end /* end do */
+
+drop tmp.
+
+/* Ausgabe-strings enthalten:                */
+/*      Name (1-15) Punkte (16-20)           */
+/* in der Rangfolge nach Punkten             */
+
+/* kleine Sieger-Bitmap von main */
+/* Set item value BTM_SIEGERICO Graphic */
+CALL VpSetItemValue window,'BTM_SIEGERICO',list_bmp
+
+ergsich_bmp=''
+if show_typ = 'SYM' then
+ do
+  /* Set item value BMP_ERG_ZURUECKCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_ZURUECKCMD',abbruch_bmp
+  /* Set item value BMP_ERG_WEITERCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_WEITERCMD',weiter_bmp
+  /* Set item value BMP_ERG_TIPCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_TIPCMD',tips_bmp
+  
+  /* spezielle BMP f. Ergebnis */
+  if stream(pfad_name||'ERG_SICH.BMP','c','query exists') \= '' then
+    ergsich_bmp = VpLoadPicture('FILE',pfad_name||'ERG_SICH.BMP')
+  else
+    ergsich_bmp = VpLoadPicture('RESBMP',1033)
+  /* endif */
+
+  /* Set item value BMP_ERG_SPEICHCMD Graphic */
+  CALL VpSetItemValue window,'BMP_ERG_SPEICHCMD',ergsich_bmp
+ end
+else
+ do
+  /* Hide item BMP_ERG_ZURUECKCMD Graphic */
+  CALL VpItem window,'BMP_ERG_ZURUECKCMD','HIDE'
+  /* Hide item BMP_ERG_SPEICHCMD Graphic */
+  CALL VpItem window,'BMP_ERG_SPEICHCMD','HIDE'
+  /* Hide item BMP_ERG_WEITERCMD Graphic */
+  CALL VpItem window,'BMP_ERG_WEITERCMD','HIDE'
+  /* Hide item BMP_ERG_TIPCMD Graphic */
+  CALL VpItem window,'BMP_ERG_TIPCMD','HIDE'
+  
+  /* Set item value CMD_ZRCK_ENDE Push Button */
+  CALL VpSetItemValue window,'CMD_ZRCK_ENDE','~ZurÅck, Ende'
+  /* Set item value CMD_SPEICHERN Push Button */
+  CALL VpSetItemValue window,'CMD_SPEICHERN','~Ergebnis speichern'
+  /* Set item value CMD_NEU_SPIEL Push Button */
+  CALL VpSetItemValue window,'CMD_NEU_SPIEL','~Weiterspielen'
+  /* Set item value CMD_ERG_TIP Push Button */
+  CALL VpSetItemValue window,'CMD_ERG_TIP','~Tips'
+ end
+/* endif */  
+
+parse value date('E') with tag '/' monat '/' jahr
+datum=tag||'.'||monat||'.'||jahr
+parse value time('N') with stunde ':' minute ':' .
+zeit=stunde||':'||minute
+
+msg=cr||'Ergebnis vom '||datum||' um '||zeit||' Uhr:'||cr
+/*        Ergebnis vom 01.01.96 um 17:25 Uhr:           */         
+msg=msg||'==================================='||cr
+msg=msg||cr
+
+/* Sieger-Ausgabe nur, wenn mehr als ein Spieler */
+if anzahl > 1 then
+ do
+  msg=msg||copies(' ',4)||'Gewinner:'||cr
+  msg=msg||copies(' ',8)||ausgabe.1||cr||cr
+  msg=msg||copies(' ',4)||'Verlierer:'||cr
+
+  do i = 2 to anzahl
+    msg=msg||copies(' ',8)||ausgabe.i||cr
+  end /* end do */
+ 
+ end
+
+else
+  msg=msg||copies(' ',8)||ausgabe.1||cr
+/* endif */
+
+/* Set item value TXT_ERGEBNISSE Multi-Line Entry Field */
+CALL VpSetItemValue window,'TXT_ERGEBNISSE',msg
+
+
+return
+
+/* ##259_Form.2 */
+259_Form.2: /* Event Form events, Closed */
+Arg window 
+
+/* TOPIC wird in den buttons gesetzt ! */
+
+/* evtl. deload spezial-bmp */
+if ergsich_bmp \= '' then
+  CALL VpFreePicture ergsich_bmp
+/* endif */
+
+drop msg zeit minute datum jahr monat tag
+drop ausgabe. ergsich_bmp
+
+
+return
+
+/* ##259_Form.3 */
+259_Form.3: /* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* wg FP17 u. Tips */
+CALL VpWindow window,'ACTIVATE'
+
+return
+
+/* ##256_1000.0 */
+256_1000.0: /* Event ~Spielstart  1000, Clicked/selected */
+Arg window self
+
+/* ermittle Anzahl der Spieler .. */
+/* Get item value SPN_ANZAHL Spin Button */
+anzahl = VpGetItemValue(window,'SPN_ANZAHL')
+
+CALL VpWindow window,'HIDE'
+
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\namen_holen */
+/* namen spÑter in sec-close weitergeben Åber queue ! */
+value=VpOpenForm(window, 257, '')
+
+return
+
+/* ##256_1001.0 */
+256_1001.0: /* Event ~Ende CMD_ENDE, Clicked/selected */
+Arg window self
+
+/* Spielende */
+
+CALL VpWindow window,'CLOSE'
+
+return
+
+/* ##256_1004.0 */
+256_1004.0: /* Event ~Bestenliste CMD_LISTE, Clicked/selected */
+Arg window self
+
+/* Bestenliste existiert, Button wird gezeigt */
+
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\shw_hitlist */
+value=VpOpenForm(window, 260, '')
+
+return
+
+/* ##256_1005.0 */
+256_1005.0: /* Event Anzeige mit Symbolen RAD_SYMBOLE, Clicked/selected */
+Arg window self
+
+/* ruft bitmap-lade-routine */
+call l_cmdbmp
+
+
+return
+
+/* ##256_1006.0 */
+256_1006.0: /* Event Text-Anzeige RAD_TEXT, Clicked/selected */
+Arg window self
+
+/* ruft txt_lade-routine */
+call l_cmdtxt
+
+
+return
+
+/* ##256_1008.11 */
+256_1008.11: /* Event Graphic BMP_START_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_START Push Button */
+CALL VpItem window,'CMD_START','SENDMSG','0x0123','1','0'
+/* Select item CMD_START Push Button */
+CALL VpSelect window,'CMD_START'
+/* Set button highlight off CMD_START Push Button */
+CALL VpItem window,'CMD_START','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##256_1009.11 */
+256_1009.11: /* Event Graphic BMP_LIST_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_LISTE Push Button */
+CALL VpItem window,'CMD_LISTE','SENDMSG','0x0123','1','0'
+/* Select item CMD_LISTE Push Button */
+CALL VpSelect window,'CMD_LISTE'
+/* Set button highlight off CMD_LISTE Push Button */
+CALL VpItem window,'CMD_LISTE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##256_1010.11 */
+256_1010.11: /* Event Graphic BMP_ENDE_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_ENDE Push Button */
+CALL VpItem window,'CMD_ENDE','SENDMSG','0x0123','1','0'
+/* Select item CMD_ENDE Push Button */
+CALL VpSelect window,'CMD_ENDE'
+/* Set button highlight off CMD_ENDE Push Button */
+CALL VpItem window,'CMD_ENDE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##256_1011.11 */
+256_1011.11: /* Event Graphic BMP_BOOK_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_BOOK Push Button */
+CALL VpItem window,'CMD_BOOK','SENDMSG','0x0123','1','0'
+/* Select item CMD_BOOK Push Button */
+CALL VpSelect window,'CMD_BOOK'
+/* Set button highlight off CMD_BOOK Push Button */
+CALL VpItem window,'CMD_BOOK','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##256_1012.0 */
+256_1012.0: /* Event  CMD_BOOK, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "1." = Spielstart */
+TOPIC='1. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC
+
+return
+
+/* ##256_Form.1 */
+256_Form.1: /* Event Form events, Opened */
+Arg window 
+
+/* 
+   start-form fÅr Kniffel - bietet die Eingabe der
+   Anzahl der Spieler an, holt mit einer 2. Form
+   die Namen und startet danach das eigentliche
+   Spiel 
+   
+   benîtigt REXXUTIL wg. Datei-Operationen
+   
+*/
+
+/* Ermittlung diverser Standard-Infos */
+/* ********************************** */
+parse source akt_os routine_ident source_name
+pfad_name=left(source_name,lastpos('\',source_name))
+/* ************************************* */
+/* Im allgemeinen stehen jetzt folgende  */
+/* Werte zur VerfÅgung:                  */
+/* pfad_name     = lw+pfad mit schl. BSl */
+/* ************************************* */
+drop source akt_os routine_ident source_name
+
+/* ********************************** */
+/* prÅfe/lade RexxUtil, setze var:    */
+/* rexxutil_state=0 nicht geladen     */
+/*                1 geladen/entladen  */
+/*                2 vorher geladen,   */
+/*                  nicht entladen    */
+/* ********************************** */
+rexxutil_state=0
+rc=rxfuncquery('SysOS2Ver')     /* Test ...*/
+if rc=1 then
+  /* RexxUtil nicht geladen ... */
+  do
+    rc=RxFuncAdd('SysLoadFuncs', 'RexxUtil', 'SysLoadFuncs')
+    if rc=0 then
+      /* RexxUtil laden gelungen, initialisieren ... */
+      do
+        call SysLoadFuncs
+        rc=rxfuncquery('SysOS2Ver')
+        if rc=0 then
+          rexxutil_state=1
+        else
+          /* irgendwas hat nicht geklappt */
+          do
+            call rxfuncdrop 'SysLoadFuncs'
+            rexxutil_state=0
+          end
+        /* endiff */
+      end
+    else
+      /* RexxUtil laden nicht gekungen - kînnte */
+      /* theoretisch sein, da· RexxUtil geladen, */
+      /* aber nicht registriert */
+      do
+        call SysLoadFuncs
+        rc=rxfuncquery('SysOS2Ver')
+        if rc=1 then
+          /* RexxUtil ist definitiv NICHT ladbar */
+          rexxutil_state=0
+        else
+          /* alles klar - lie· sich doch laden */
+          /* da zwar die DLL geladen, jedoch nicht */
+          /* registriert war, wird Zustand als */
+          /* ungeladen angenommen */
+          rexxutil_state=1
+        /* endif */
+      end
+    /* endif */
+  end
+else
+  /* RexxUtil war schon vorher geladen und ist */
+  /* vollaktiv */
+  rexxutil_state=2
+/* endif */
+/* ************************************** */
+/* öber die var rexxutil_state kann jetzt */
+/* je nach Notwendigkeit eine Aktion      */
+/* stattfinden                            */
+/* ************************************** */
+
+if rexxutil_state=0 then
+ do
+  msg='Die zum Ablauf des Programms nîtige Zusatz-Datei REXXUTI '
+  msg=msg||'konnte nicht geladen werden. Das Programm mu· abgebrochen '
+  msg=msg||'werden.'
+  
+  response=VpMessageBox(window,'Probleme bei Programmstart ...',msg)
+  CALL VpWindow window,'CLOSE'
+  return
+ end
+
+/* rexxutil geladen - kann losgehen */
+
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+  /* Show item CMD_LISTE Push Button */
+  CALL VpItem window,'CMD_LISTE','SHOW'
+
+/* global var f. projekt */
+cr=d2c(13)||d2c(10)
+show_typ=''
+anzahl=0
+spl_lst.=''
+wert_lst.=''
+abbruch_bmp=''
+wuerfeln_bmp=''
+aendern_bmp=''
+weiter_bmp=''
+tips_bmp=''
+list_bmp=''
+   
+/* Set range SPN_ANZAHL Spin Button */
+CALL VpSetRange window,'SPN_ANZAHL',1,5  /* Set spin button range*/
+
+/* Set item value SPN_ANZAHL Spin Button */
+CALL VpSetItemValue window,'SPN_ANZAHL',1
+
+/* gibts eine hitlist.hgh - wenn ja, cmd */
+/* bestenliste enablen */
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+  /* Enable item CMD_LISTE Push Button */
+  CALL VpItem window,'CMD_LISTE','ENABLE'
+else
+  /* auch die zugehîrige Bitmap hiden - das */
+  /* lÑ·t sich Åber settings nicht machen */
+  /* Hide item BMP_LIST_CMD Graphic */
+  CALL VpItem window,'BMP_LIST_CMD','HIDE'
+/* endif */
+
+/* das Spielfeld kann entweder Åber Bildchen oder */
+/* Åber TexteintrÑge auf den Buttons gesteuert */
+/* werden - std: Symbole */
+/* der check ruft gleichzeitig ein Change-event */
+/* der die bmp in die buttons lÑdt */
+/* Check the item  RAD_SYMBOLE Radio Button */
+CALL VpSelect window,'RAD_SYMBOLE',1
+
+call l_cmdbmp
+
+return
+
+/* ##256_Form.2 */
+256_Form.2: /* Event Form events, Closed */
+Arg window 
+
+/* entlÑdt ggf. bei Programmende irgendwelche Dinge */
+/* andere Deload-Ma·nahmen (Icons u. Bilder werden  */
+/* z. T. in den jeweiligen Schlu·bearbeitungen      */
+/* entladen - zentrale hier)                        */
+
+CALL VpFreePicture abbruch_bmp
+CALL VpFreePicture wuerfeln_bmp
+CALL VpFreePicture tips_bmp
+CALL VpFreePicture list_bmp
+CALL VpFreePicture weiter_bmp
+CALL VpFreePicture aendern_bmp
+
+/* RexxUtil-Abschlu·behandlung */
+if rexxutil_state = 1 THEN
+  /* RexxUtil bei ProgStart geladen, wieder */
+  /* entladen */
+  do
+    call SysDropFuncs
+    rc=RxFuncDrop('SysLoadFuncs')
+  end
+/* endif - no else! */
+drop rc rexxutil_state
+/* RexxUtil-Abschlussbehandlung Ende */
+
+return
+
+/* ##256_Form.3 */
+256_Form.3: /* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* wird gerufen bei Ende einer secondary Form ... */
+/* main-fenster ist in jedem Fall zur Zeit hided */
+
+/* 
+   Welches Fenster hat denn zugemacht ??? - RÅckgabe
+   der sec-forms Åber gobal var form_typ:
+       Namen: "name",
+       Spiel: "spiel"
+       shw_hitlist: "shw_list"
+*/
+
+SELECT
+   WHEN form_typ='name' THEN
+    do
+    
+     /* main-form tarnen, wird nicht gebraucht */
+     CALL VpWindow window,'HIDE'
+
+     /* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\spiel */
+     value=VpOpenForm(window, 258, '')
+    end
+
+   WHEN form_typ='spiel' THEN
+    /* kommt vom Spiel zurÅck */
+
+    do
+     CALL VpWindow window,'SHOW'
+     /* In jedem Fall wg. FP17: */
+     CALL VpWindow window,'ACTIVATE'
+    end
+
+   WHEN form_typ='show_list' THEN
+    /* kommt von der hitlist zurÅck */
+    do
+     /* In jedem Fall wg. FP17: */
+     CALL VpWindow window,'ACTIVATE'
+    end
+   OTHERWISE
+     /* kommt von hilfe */
+     /* In jedem Fall wg. FP17: */
+     CALL VpWindow window,'ACTIVATE'
+   /* end when */
+END
+
+/* wenns die Bestenliste nicht mehr gibt, weil */
+/* in shw-list gelîscht, button invisible      */
+/* ansonsten, wenn neu angelegt im Spielverlauf */
+/* visible */
+/* Is item showing? CMD_LISTE Push Button */
+value=VpItem(window,'CMD_LISTE','ISSHOWING')
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+  if value = 0 then
+   do
+    /* Show item CMD_LISTE Push Button */
+    CALL VpItem window,'CMD_LISTE','SHOW'
+    
+    if show_typ='SYM' then
+      /* Show item BMP_LIST_CMD Graphic */
+      CALL VpItem window,'BMP_LIST_CMD','SHOW'
+    else
+      nop
+    /* endif */
+   end
+  else
+    nop
+  /* endif */
+else
+  if value = 1 then
+   do
+    /* Hide item CMD_LISTE Push Button */
+    CALL VpItem window,'CMD_LISTE','HIDE'
+    /* Hide item BMP_LIST_CMD Graphic */
+    CALL VpItem window,'BMP_LIST_CMD','HIDE'
+   end   
+  else
+    nop
+  /* endif */
+/* endif */
+
+
+return
+
+/* ##257_1000.0 */
+257_1000.0: /* Event  CMD_NAME_TIPS, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "3." = Spielereingabe */
+TOPIC='3. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC
+
+return
+
+/* ##257_1003.0 */
+257_1003.0: /* Event ~Fertig, weiter ... CMD_NAME_FERTIG, Clicked/selected */
+Arg window self
+
+/* ein Name - evtl. die Default-Vorgabe - wird */
+/* geholt (ggf. gesetzt) und das angezeigte Symbol */
+/* damit verknÅpft */
+
+/* Fall: nÑchster (..) Name */
+select
+  when gesetzt = 0 then
+   /* Init */
+   do
+    gesetzt=gesetzt+1
+  
+    /* Set item value LBL_SPL_INFO Text */
+    CALL VpSetItemValue window,'LBL_SPL_INFO','Spieler '||gesetzt||':'
+  
+    /* entry-field vorbesetzen mit selection */
+    CALL VpSetItemValue window,'TXT_NAMEN','Spieler '||gesetzt
+  
+    /* Select all items TXT_NAMEN Entry Field */
+    CALL VpSelect window,'TXT_NAMEN','ALL',1
+  
+    /* Give item focus TXT_NAMEN Entry Field */
+    CALL VpItem window,'TXT_NAMEN','FOCUS'
+  
+   end
+
+  otherwise
+   /* weiter ... */
+
+   do
+    /* Get item value TXT_NAMEN Entry Field */
+    value = VpGetItemValue(window,'TXT_NAMEN')
+    if strip(value) = '' then
+      spl_lst.gesetzt.name='Spieler' gesetzt
+    else
+      spl_lst.gesetzt.name=strip(value)
+    /* endif */
+
+    spl_lst.gesetzt.symbol = spin_lst.akt_icn
+     
+    /* es darf nicht ein icon fÅr mehrere Spieler vergeben */
+    /* werden - lîsche Icon aus Spin-Liste, deload wird */
+    /* Åber icons. gemacht */
+  
+    do i = 1 to spin_lst.0
+      if spin_lst.i = spl_lst.gesetzt.symbol then
+       do
+        if i < spin_lst.0 then
+         do
+          /* swappen */
+          tmp=spin_lst.0
+          spin_lst.i=spin_lst.tmp
+         end
+        /* endif */
+      
+        /* wenn es das letzte icon ist, nur anzahl */
+        /* dekremtieren */
+        spin_lst.0=spin_lst.0 - 1
+       end
+
+      else
+        iterate
+      /* endif */
+
+    end /* end do */
+
+    gesetzt=gesetzt+1
+
+    /* ggf. neu laden ... */
+    if gesetzt <= anzahl then
+     do
+      /* Add items from list SPN_ICO_SHW Spin Button */
+      /* wird als index-geber trotzdem gebraucht */
+      index=VpAddItem(window, 'SPN_ICO_SHW', 'LIST', 'spin_lst.')
+      akt_icn = 1
+      /* Set item value BMP_ICO_SHW Graphic */
+      CALL VpSetItemValue window,'BMP_ICO_SHW',spin_lst.akt_icn
+
+      /* Set item value LBL_SPL_INFO Text */
+      CALL VpSetItemValue window,'LBL_SPL_INFO','Spieler '||gesetzt||':'
+  
+      /* entry-field vorbesetzen mit selection */
+      CALL VpSetItemValue window,'TXT_NAMEN','Spieler '||gesetzt
+  
+      /* Select all items TXT_NAMEN Entry Field */
+      CALL VpSelect window,'TXT_NAMEN','ALL',1
+  
+      /* Give item focus TXT_NAMEN Entry Field */
+      CALL VpItem window,'TXT_NAMEN','FOCUS'
+
+     end
+
+   end
+
+end /* select */
+
+/* fertig ? */
+if gesetzt > anzahl then
+ do
+  /* fertig, raus - Rest macht closed ... */
+  CALL VpWindow window,'CLOSE'
+  return
+ end
+
+
+return
+
+/* ##257_1004.3 */
+257_1004.3: /* Event Spin Button SPN_ICO_SHW, Changed */
+Arg window self
+
+/* der spin ist ein blîdes control - man kriegt
+   es nicht sauber kontrolliert, um wieviel in-
+   dexe jeweils gespinnt wird - wÅnschenswert
+   wÑre der Change jeweils + oder - 1, tatsÑch-
+   lich lÑuft er aber viel schneller durch; der
+   change-event kommt da nicht mit
+*/
+
+/* 
+   spin_lst. enthÑlt zeiger auf Bitmaps - wenn chgd,
+   Icons in BMP_ICO_SHW anpassen
+*/
+
+/* 
+   es scheint, als ob man icons nicht "lîschen" 
+   kann, bevor eine neue Ausgabe erfolgt - da manche
+   icons jedoch durchsichtig sind, bleiben oft
+   Artefakte des vorherigen zurÅck. Brutale Methode:
+   es gibt ein "leeres" Icon zum Lîschen namens
+   LEER.ICO das immer erst mal zeigen, dann neu
+*/
+
+/* Painting disable SPN_ICO_SHW Spin Button */
+CALL VpItem window,'SPN_ICO_SHW','DISABLEPAINT'
+
+/* Set item value BMP_ICO_SHW Graphic */
+CALL VpSetItemValue window,'BMP_ICO_SHW',leer_ico
+
+/* Repaint item BMP_ICO_SHW Graphic */
+rc=VpItem(window,'BMP_ICO_SHW','PAINT')
+
+/* Get item value SPN_ICO_SHW Spin Button */
+/* value = VpGetItemValue(window,'SPN_ICO_SHW') */
+/* Get current index SPN_ICO_SHW Spin Button */
+value=VpGetItemValue(window, 'SPN_ICO_SHW', 'INDEX')
+
+if value >= akt_icn then
+ do
+  /* nach oben = addieren */
+  akt_icn = akt_icn + 1
+  if akt_icn > anz_ico then
+    akt_icn = 1
+ end
+else
+ do
+  /* nach unten = subtrahieren */
+  akt_icn = akt_icn - 1
+  if akt_icn <= 0 then
+    akt_icn = 1
+ end
+  
+/* Set item value BMP_ICO_SHW Graphic */
+CALL VpSetItemValue window,'BMP_ICO_SHW',spin_lst.akt_icn
+
+/* Painting enable SPN_ICO_SHW Spin Button */
+CALL VpItem window,'SPN_ICO_SHW','ENABLEPAINT'
+
+/* das Spin-Feld lÑ·t sich nicht ganz verdecken, */
+/* deshalb verursacht der Cursor Flashes unter- */
+/* halb/neben dem Icon - der Fokus wird aber so- */
+/* wieso im textfeld gebraucht */
+
+/* Painting disable TXT_NAMEN Entry Field */
+CALL VpItem window,'TXT_NAMEN','DISABLEPAINT'
+
+/* Give item focus TXT_NAMEN Entry Field */
+CALL VpItem window,'TXT_NAMEN','FOCUS'
+
+/* Painting enable TXT_NAMEN Entry Field */
+CALL VpItem window,'TXT_NAMEN','ENABLEPAINT'
+
+return
+
+/* ##257_1007.11 */
+257_1007.11: /* Event Graphic BMP_NAME_OK_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NAME_FERTIG Push Button */
+CALL VpItem window,'CMD_NAME_FERTIG','SENDMSG','0x0123','1','0'
+/* Select item CMD_NAME_FERTIG Push Button */
+CALL VpSelect window,'CMD_NAME_FERTIG'
+/* Set button highlight off CMD_NAME_FERTIG Push Button */
+CALL VpItem window,'CMD_NAME_FERTIG','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##257_1008.11 */
+257_1008.11: /* Event Graphic BMP_NAME_TIPCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NAME_TIPS Push Button */
+CALL VpItem window,'CMD_NAME_TIPS','SENDMSG','0x0123','1','0'
+/* Select item CMD_NAME_TIPS Push Button */
+CALL VpSelect window,'CMD_NAME_TIPS'
+/* Set button highlight off CMD_NAME_TIPS Push Button */
+CALL VpItem window,'CMD_NAME_TIPS','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##257_Form.1 */
+257_Form.1: /* Event Form events, Opened */
+Arg window 
+
+/* 
+   dient zur Eingabe der Spielernamen;
+   wird gerufen von main;
+  
+   nutzt global var:
+     1. anzahl
+     2. show_typ
+     3, ggf. weiter_bmp, tips_bmp
+   
+   setzt global var:  
+     1. spl_lst.
+        (als default "Spieler ?")
+     2. form_typ (=name)
+*/
+
+/* wg FP17 */
+CALL VpWindow window,'ACTIVATE'
+
+/* spl_lst enthÑlt zum einen den Namen der Spieler    */
+/* und zum anderen den Zeiger auf das ausgewÑhlte zu- */
+/* gehîrige Symbol  - init in Main auf '' */
+
+/* form-var gesetzt */
+gesetzt=0
+
+/* 
+   es scheint, als ob man icons nicht "lîschen" 
+   kann, bevor eine neue Ausgabe erfolgt - da manche
+   icons jedoch durchsichtig sind, bleiben oft
+   Artefakte des vorherigen zurÅck. Brutale Methode:
+   es gibt ein "leeres" Icon zum Lîschen namens
+   LEER.ICO - dies mu· gesondert geladen werden
+*/
+
+call sysfiletree '*.ico', 'ico_files.', 'FO'
+
+/* init form-var f. icon-pointer */
+icons.=''
+
+anz_ico=ico_files.0
+
+/* es kann sein, da· das aktuelle Verzeichnis keine */
+/* Icons enthÑlt - dann gibts 5 default-Icons aus der */
+/* ressource */
+if anz_ico \= 0 then
+ do
+  do i = 1 to anz_ico
+    if pos('LEER.ICO',ico_files.i)>0 then
+      if i < ico_files.0 then
+       do
+        /* swappe letzten auf position */
+        ico_files.i=ico_files.anz_ico
+        anz_ico=anz_ico - 1
+        ico_files.0=anz_ico
+        leave
+       end
+      else
+       do
+        /* swappen unnîtig */
+        anz_ico=anz_ico - 1
+        ico_files.0=anz_ico
+        leave
+       end
+      /* endif */
+    else
+      iterate
+    /* endif */
+
+  end /* end do */
+
+  icons.=''
+  icons.0=anz_ico
+
+  do i = 1 to anz_ico
+    icons.i = VpLoadPicture('FILEICON',ico_files.i)
+  end /* end do */
+
+  drop ico_files.
+ end
+else
+  nop
+/*endif */
+
+if anz_ico < 5 then
+ do
+ 
+  do i = anz_ico+1 to 5
+    /* im aktuellen Verzeichnis gibts keine */
+    /* oder zu wenig Icons -                */
+    /* zurÅckgreifen auf die 5 defaults     */
+    
+    /* die ressource-icons tragen die nr    */
+    /* 3007 bis 3011 */
+    icons.i=VpLoadPicture('RESICON',value(3006 + i))
+  end
+
+  icons.0=5
+  anz_ico=5
+ end
+
+/* endif */
+
+if stream(pfad_name||'LEER.ICO','c','query exists') \= '' then
+  leer_ico = VpLoadPicture('FILEICON',pfad_name||'LEER.ICO')
+else
+  leer_ico = VpLoadPicture('RESICON',3000)
+/* endif */
+
+/* man mu· mit zwei icon-pointer-listen arbeiten - */
+/* eine - icons. - zum spÑteren deload und eine um */
+/* den spin nach auswahl neu zu setzen, um nicht   */
+/* mehrere Spieler dasselbe icon auswÑhlen zu lassen */
+/* das gÑbe nachher Probleme                       */
+
+do i = 1 to icons.0
+  spin_lst.i=icons.i
+end /* end do */
+spin_lst.0=icons.0
+
+/* lade entwede bmp oder text in die buttons */
+if show_typ='SYM' then
+ do
+  /* die button-bmp sind schon von main geladen */
+  /* Set item value BMP_NAME_OK_CMD Graphic */
+  CALL VpSetItemValue window,'BMP_NAME_OK_CMD',weiter_bmp
+  /* Set item value BMP_NAME_TIPCMD Graphic */
+  CALL VpSetItemValue window,'BMP_NAME_TIPCMD',tips_bmp
+ end
+else
+ do
+  /* bmp hide ... */
+  /* Hide item BMP_NAME_OK_CMD Graphic */
+  CALL VpItem window,'BMP_NAME_OK_CMD','HIDE'
+  /* Hide item BMP_NAME_TIPCMD Graphic */
+  CALL VpItem window,'BMP_NAME_TIPCMD','HIDE'
+  
+  /* Set item value CMD_NAME_FERTIG Push Button */
+  CALL VpSetItemValue window,'CMD_NAME_FERTIG','~Fertig/Weiter'
+  
+  /* Set item value CMD_NAME_TIPS Push Button */
+  CALL VpSetItemValue window,'CMD_NAME_TIPS','~Tips'
+ end
+/* endif */
+
+/* Add items from list SPN_ICO_SHW Spin Button */
+index=VpAddItem(window, 'SPN_ICO_SHW', 'LIST', 'spin_lst.')
+
+/* irgendwie funktioniert das spinnen nicht so toll -
+   nur als schaltflÑche nutzen */
+/* Get item value SPN_ICO_SHW Spin Button */
+/* value = VpGetItemValue(window,'SPN_ICO_SHW') */
+akt_icn = 1
+
+/* Set item value BMP_ICO_SHW Graphic */
+CALL VpSetItemValue window,'BMP_ICO_SHW',spin_lst.akt_icn
+
+/* Select item CMD_NAME_FERTIG Push Button */
+CALL VpSelect window,'CMD_NAME_FERTIG'
+
+
+return
+
+/* ##257_Form.2 */
+257_Form.2: /* Event Form events, Closed */
+Arg window 
+
+tmp=''
+
+/* das spezielle Icon "LEER.ICO" wird auch von Spiel */
+/* gebraucht - Spiel soll nachher lîschen */
+
+/* namen und symbole sind in global var spl_lst */
+
+do i = 1 to anzahl
+  /* wird gleich zum Icon-deload gebraucht */
+  tmp=tmp||' '||spl_lst.i.symbol
+end /* end do */
+
+do i = 1 to anz_ico
+ if pos(strip(icons.i), tmp) = 0 then
+   CALL VpFreePicture icons.i
+ /* endif */
+end /* end do */
+
+drop icons. spin_lst. gesetzt anz_ico tmp i index value
+
+/* Form-Ident "name" zurÅck */
+form_typ='name'
+
+return
+
+/* ##257_Form.3 */
+257_Form.3: /* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* wg. FP17 u. Tips */
+CALL VpWindow window,'ACTIVATE'
+
+return
+
+/* ##260_1000.0 */
+260_1000.0: /* Event ~ZurÅck zum Spiel CMD_ENDE, Clicked/selected */
+Arg window self
+
+CALL VpWindow window,'CLOSE'
+
+return
+
+/* ##260_1003.0 */
+260_1003.0: /* Event Bestenliste ~lîschen CMD_LOESCHEN, Clicked/selected */
+Arg window self
+
+/* REXXUTIL ist geladen ... */
+
+rc = sysfiledelete(pfad_name||'hitlist.hgh')
+
+/* Disable item CMD_LOESCHEN Push Button */
+CALL VpItem window,'CMD_LOESCHEN','DISABLE'
+/* Hide item BMP_LIST_DELCMD Graphic */
+CALL VpItem window,'BMP_LIST_DELCMD','HIDE'
+
+return
+
+/* ##260_1004.11 */
+260_1004.11: /* Event Graphic BMP_LIST_OKCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_ENDE Push Button */
+CALL VpItem window,'CMD_ENDE','SENDMSG','0x0123','1','0'
+/* Select item CMD_ENDE Push Button */
+CALL VpSelect window,'CMD_ENDE'
+/* Set button highlight off CMD_ENDE Push Button */
+CALL VpItem window,'CMD_ENDE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##260_1005.11 */
+260_1005.11: /* Event Graphic BMP_LIST_DELCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_LOESCHEN Push Button */
+CALL VpItem window,'CMD_LOESCHEN','SENDMSG','0x0123','1','0'
+/* Select item CMD_LOESCHEN Push Button */
+CALL VpSelect window,'CMD_LOESCHEN'
+/* Set button highlight off CMD_LOESCHEN Push Button */
+CALL VpItem window,'CMD_LOESCHEN','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##260_1006.0 */
+260_1006.0: /* Event  CMD_LIST_TIP, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "2." = Bestenliste */
+TOPIC='2. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC
+
+return
+
+/* ##260_1007.11 */
+260_1007.11: /* Event Graphic BMP_LIST_TIPCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_LIST_TIP Push Button */
+CALL VpItem window,'CMD_LIST_TIP','SENDMSG','0x0123','1','0'
+/* Select item CMD_LIST_TIP Push Button */
+CALL VpSelect window,'CMD_LIST_TIP'
+/* Set button highlight off CMD_LIST_TIP Push Button */
+CALL VpItem window,'CMD_LIST_TIP','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##260_Form.1 */
+260_Form.1: /* Event Form events, Opened */
+Arg window 
+
+/* 
+   zeigt von Main her kommend die
+   aktuelle Bestenliste; wird nur
+   gerufen, wenn es eine Datei
+   hitlist.hgh im Verzeichnis gibt
+   
+   nutzt global var:
+     1. form_typ
+     2. pfad_name
+     3. show_typ
+     4. weiter_bmp
+     5. tips_bmp
+*/
+
+/* fp17 ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* sieger_bmp ist ein zentrales BMP von main */
+/* Set item value BTMP_SIEGERICO Graphic */
+CALL VpSetItemValue window,'BTMP_SIEGERICO',list_bmp
+
+weg_bmp=''
+
+if show_typ='SYM' then
+ do
+  /* eine spezielle BMP laden ... */
+  if stream(pfad_name||'BEST_WEG.BMP','c','query exists') \= '' then
+    weg_bmp = VpLoadPicture('FILE',pfad_name||'BEST_WEG.BMP')
+  else
+    weg_bmp = VpLoadPicture('RESBMP',1007)
+  /* endif */
+  
+  /* weiter_bmp u. tips_bmp von main */  
+  /* Set item value BMP_LIST_OKCMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_OKCMD',weiter_bmp
+  /* Set item value BMP_LIST_TIPCMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_TIPCMD',tips_bmp
+  
+  /* Set item value BMP_LIST_DELCMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_DELCMD',weg_bmp
+ end
+else
+ do
+  /* Hide item BMP_LIST_OKCMD Graphic */
+  CALL VpItem window,'BMP_LIST_OKCMD','HIDE'
+  /* Hide item BMP_LIST_DELCMD Graphic */
+  CALL VpItem window,'BMP_LIST_DELCMD','HIDE'
+  /* Hide item BMP_LIST_TIPCMD Graphic */
+  CALL VpItem window,'BMP_LIST_TIPCMD','HIDE'
+
+  /* Set item value CMD_ENDE Push Button */
+  CALL VpSetItemValue window,'CMD_ENDE','~ZurÅck zum Spiel'
+  /* Set item value CMD_LOESCHEN Push Button */
+  CALL VpSetItemValue window,'CMD_LOESCHEN','Bestenliste ~lîschen'
+  /* Set item value CMD_LIST_TIP Push Button */
+  CALL VpSetItemValue window,'CMD_LIST_TIP','~Tips'
+ end
+/* endif */
+
+dat_name=pfad_name||'hitlist.hgh'
+
+/* Load item from file TXT_LISTE Multi-Line Entry Field */
+
+CALL VpLoadFromFile window,'TXT_LISTE',dat_name
+
+drop dat_name
+
+
+return
+
+/* ##260_Form.2 */
+260_Form.2: /* Event Form events, Closed */
+Arg window 
+
+if weg_bmp \= '' then
+  CALL VpFreePicture weg_bmp
+/* endif */
+
+drop weg_bmp
+
+/* Ident-RÅckgabe */
+form_typ='show_list'
+return
+
+/* ##260_Form.3 */
+260_Form.3: /* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* wg. FP17 u. Tips */
+CALL VpWindow window,'ACTIVATE'
+
+return
+
+/* ##258_1000.0 */
+258_1000.0: /* Event Abbruch CMD_ABBRUCH, Clicked/selected */
+Arg window self
+
+/* macht in jedem Fall den Laden zu */
+CALL VpWindow window,'CLOSE'
+
+return
+
+/* ##258_1001.0 */
+258_1001.0: /* Event Value Set TBL_WRFL, Clicked/selected */
+Arg window self
+
+/* Get index of selected cell TBL_WRFL Value Set */
+rowcol=VpGetIndex(window,'TBL_WRFL')
+PARSE VAR rowcol row col
+
+/* select zutreffenden pushbutton */
+CALL VpSelect window,value('CMD_WURF'||col)
+
+drop rowcol row col
+return
+
+/* ##258_1001.16 */
+258_1001.16: /* Event Value Set TBL_WRFL, Mouse button 1 double click */
+Arg window self
+
+/* wie single click */
+
+/* Get index of selected cell TBL_WRFL Value Set */
+rowcol=VpGetIndex(window,'TBL_WRFL')
+PARSE VAR rowcol row col
+
+/* select zutreffenden pushbutton */
+CALL VpSelect window,value('CMD_WURF'||col)
+
+drop rowcol row col
+return
+
+/* ##258_1010.0 */
+258_1010.0: /* Event auf ~1 CMD_EINS, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+ 
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.1 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf min 3 * 1 - setzt gef * 1 - 0 ist */
+/* vorbesetzt - callt schlu·endlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=1 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 1
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_EINS Push Button */
+CALL VpItem window,'CMD_EINS','DISABLE'
+/* Hide item BMP_EINS_CMD Graphic */
+CALL VpItem window,'BMP_EINS_CMD','HIDE'
+
+call setzen '1', gef
+ 
+
+
+return
+
+/* ##258_1011.0 */
+258_1011.0: /* Event auf ~2 CMD_ZWEI, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.2 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf min 3 * 2 - setzt gef * 2 - 0 ist */
+/* vorbesetzt - callt schlu·endlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=2 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 2
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_ZWEI Push Button */
+CALL VpItem window,'CMD_ZWEI','DISABLE'
+/* Hide item BMP_ZWEI_CMD Graphic */
+CALL VpItem window,'BMP_ZWEI_CMD','HIDE'
+
+call setzen '2', gef
+ 
+
+
+return
+
+/* ##258_1012.0 */
+258_1012.0: /* Event auf ~3 CMD_DREI, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.3 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf min 3 * 3 - setzt gef * 3 - 0 ist */
+/* vorbesetzt - callt schlu·endlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=3 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 3
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_DREI Push Button */
+CALL VpItem window,'CMD_DREI','DISABLE'
+/* Hide item BMP_DREI_CMD Graphic */
+CALL VpItem window,'BMP_DREI_CMD','HIDE'
+
+call setzen '3', gef
+ 
+
+
+return
+
+/* ##258_1013.0 */
+258_1013.0: /* Event auf ~4 CMD_VIER, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.4 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf min 3 * 4 - setzt gef * 4 - 0 ist */
+/* vorbesetzt - callt schlu·endlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=4 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 4
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_VIER Push Button */
+CALL VpItem window,'CMD_VIER','DISABLE'
+/* Hide item BMP_VIER_CMD Graphic */
+CALL VpItem window,'BMP_VIER_CMD','HIDE'
+
+call setzen '4', gef
+ 
+
+
+return
+
+/* ##258_1014.0 */
+258_1014.0: /* Event auf ~5 CMD_FUENF, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.5 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf min 3 * 5 - setzt gef * 5 - 0 ist */
+/* vorbesetzt - callt schlu·endlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=5 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 5
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_FUENF Push Button */
+CALL VpItem window,'CMD_FUENF','DISABLE'
+/* Hide item BMP_FUENF_CMD Graphic */
+CALL VpItem window,'BMP_FUENF_CMD','HIDE'
+
+call setzen '5', gef
+ 
+
+
+
+return
+
+/* ##258_1015.0 */
+258_1015.0: /* Event auf ~6 CMD_SECHS, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.6 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf min 3 * 6 - setzt gef * 6 - 0 ist */
+/* vorbesetzt - callt schlu·endlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=6 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 6
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_SECHS Push Button */
+CALL VpItem window,'CMD_SECHS','DISABLE'
+/* Hide item BMP_SECHS_CMD Graphic */
+CALL VpItem window,'BMP_SECHS_CMD','HIDE'
+
+call setzen '6', gef
+ 
+
+
+return
+
+/* ##258_1016.0 */
+258_1016.0: /* Event ~Drilling CMD_DRILLING, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.7 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf drilling - wenn ja, addition aller */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+if pos('111',tmp)>0 | pos('222',tmp)>0 | pos('333',tmp)>0 | pos('444',tmp)>0 | pos('555',tmp)>0 | pos('666',tmp)>0 then
+ /* es ist ein Drilling drin, alle WÅrfel addieren */
+ do
+  gef=0
+  do i = 1 to 5
+    gef=gef+substr(tmp,i,1)
+  end /* end do */
+ end
+else
+ gef=0
+/* endif */
+
+/* Disable item CMD_DRILLING Push Button */
+CALL VpItem window,'CMD_DRILLING','DISABLE'
+/* Hide item BMP_DRILLING_CMD Graphic */
+CALL VpItem window,'BMP_DRILLING_CMD','HIDE'
+
+drop tmp
+
+call setzen '7', gef
+ 
+
+
+return
+
+/* ##258_1017.0 */
+258_1017.0: /* Event ~Vierling CMD_VIERLING, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.8 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf vierling - wenn ja, addition aller */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+if pos('1111',tmp)>0 | pos('2222',tmp)>0 | pos('3333',tmp)>0 | pos('4444',tmp)>0 | pos('5555',tmp)>0 | pos('6666',tmp)>0 then
+ /* vierling gefunden */
+ do
+  gef=0
+  do i = 1 to 5
+    gef=gef+substr(tmp,i,1)
+  end /* end do */
+ end
+else
+ gef=0
+/* endif */
+
+/* Disable item CMD_VIERLING Push Button */
+CALL VpItem window,'CMD_VIERLING','DISABLE'
+/* Hide item BMP_VIERLING_CMD Graphic */
+CALL VpItem window,'BMP_VIERLING_CMD','HIDE'
+
+drop tmp
+
+call setzen '8', gef
+ 
+
+
+return
+
+/* ##258_1018.0 */
+258_1018.0: /* Event ~Full-House CMD_FULLHOUSE, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.9 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf FullHouse - wenn ja, 25 -  */
+/* ansonsten 0                          */
+
+/* Sortierung .. */
+tmp=sort()
+
+/* es dÅrfen nur 2 Zahlen sein oder 1 bei */
+/* Spezialfall kniffel auf fullhouse */
+
+klein=min(wurf.1.wert, wurf.2.wert, wurf.3.wert, wurf.4.wert, wurf.5.wert)
+gross=max(wurf.1.wert, wurf.2.wert, wurf.3.wert, wurf.4.wert, wurf.5.wert)
+
+vgl1=copies(klein,3)||copies(gross,2)
+vgl2=copies(klein,2)||copies(gross,3)
+
+gef=0
+if tmp=vgl1 | tmp=vgl2 then
+  gef=25
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_FULLHOUSE Push Button */
+CALL VpItem window,'CMD_FULLHOUSE','DISABLE'
+/* Hide item BMP_FULLHOUSE_CMD Graphic */
+CALL VpItem window,'BMP_FULLHOUSE_CMD','HIDE'
+
+drop tmp klein gross vgl1 vgl2
+
+call setzen '9', gef
+
+return
+
+/* ##258_1019.0 */
+258_1019.0: /* Event ~kl. Stra·e CMD_KLEINE, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.10 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf kleine Stra·e - wenn ja, 30 -      */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+/* RÅckgabe: 11234, 12234, 12334, 123445 etc.  */
+/* die doppel mÅssen weg */
+SELECT
+   WHEN pos('11',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('11',tmp),1)
+   WHEN pos('22',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('22',tmp),1)
+   WHEN pos('33',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('33',tmp),1)
+   WHEN pos('44',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('44',tmp),1)
+   WHEN pos('55',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('55',tmp),1)
+   WHEN pos('66',tmp) > 0 THEN
+     tmp=delstr(tmp,pos('66',tmp),1)
+   OTHERWISE
+     nop
+END
+
+if pos('1234',tmp)>0 | pos('2345',tmp)>0 | pos('3456',tmp)>0 then
+  gef=30
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_KLEINE Push Button */
+CALL VpItem window,'CMD_KLEINE','DISABLE'
+/* Hide item BMP_KLSTR_CMD Graphic */
+CALL VpItem window,'BMP_KLSTR_CMD','HIDE'
+
+drop tmp
+
+call setzen '10', gef
+ 
+
+
+return
+
+/* ##258_1020.0 */
+258_1020.0: /* Event ~gr. Stra·e CMD_GROSSE, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.11 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf gro·e Stra·e - wenn ja, 40 -      */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+if pos('12345',tmp)>0 | pos('23456',tmp)>0 then
+  gef=40
+else
+ gef=0
+/* endif */
+
+/* Disable item CMD_GROSSE Push Button */
+CALL VpItem window,'CMD_GROSSE','DISABLE'
+/* Hide item BMP_GRSTR_CMD Graphic */
+CALL VpItem window,'BMP_GRSTR_CMD','HIDE'
+
+drop tmp
+
+call setzen '11', gef
+ 
+
+return
+
+/* ##258_1021.0 */
+258_1021.0: /* Event Kn~iffel CMD_KNIFFEL, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.12 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf Kniffel - wenn ja, 50 -            */
+/* ansonsten 0                                  */
+
+gef=''
+do i = 1 to 5
+  gef=gef||wurf.i.wert
+end /* end do */
+
+if gef=copies('1',5) | gef=copies('2',5) | gef=copies('3',5) | gef=copies('4',5) | gef=copies('5',5) | gef=copies('6',5) then
+  gef=50
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_KNIFFEL Push Button */
+CALL VpItem window,'CMD_KNIFFEL','DISABLE'
+
+/* Hide item BMP_KNIFFEL_CMD Graphic */
+CALL VpItem window,'BMP_KNIFFEL_CMD','HIDE'
+
+call setzen '12', gef
+
+return
+
+/* ##258_1022.0 */
+258_1022.0: /* Event ~Chance CMD_CHANCE, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.13 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* errechnet chance  */
+
+gef=0
+
+do i= 1 to 5
+ gef=gef + wurf.i.wert
+end /* end do */
+
+/* Disable item CMD_CHANCE Push Button */
+CALL VpItem window,'CMD_CHANCE','DISABLE'
+/* Hide item BMP_CHANCE_CMD Graphic */
+CALL VpItem window,'BMP_CHANCE_CMD','HIDE'
+
+call setzen '13', gef
+
+return
+
+/* ##258_1033.0 */
+258_1033.0: /* Event WÅrfeln CMD_WURF2, Clicked/selected */
+Arg window self
+
+if anz_wurf = 0 | anz_wurf = 4 then return
+
+call invert 2
+
+return
+
+/* ##258_1034.0 */
+258_1034.0: /* Event WÅrfeln CMD_WURF3, Clicked/selected */
+Arg window self
+
+if anz_wurf = 0 | anz_wurf = 4 then return
+
+call invert 3
+
+return
+
+/* ##258_1035.0 */
+258_1035.0: /* Event WÅrfeln CMD_WURF4, Clicked/selected */
+Arg window self
+
+if anz_wurf = 0 | anz_wurf = 4 then return
+
+call invert 4
+
+
+return
+
+/* ##258_1036.0 */
+258_1036.0: /* Event WÅrfeln CMD_WURF5, Clicked/selected */
+Arg window self
+
+if anz_wurf = 0 | anz_wurf = 4 then return
+
+call invert 5
+
+return
+
+/* ##258_1037.0 */
+258_1037.0: /* Event WÅrfeln CMD_WURF1, Clicked/selected */
+Arg window self
+
+if anz_wurf = 0 | anz_wurf = 4 then return
+
+call invert 1
+
+  
+return
+
+/* ##258_1039.16 */
+258_1039.16: /* Event Value Set TBL_SPL1_LO, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL1_LO Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL1_LO')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_EINS Push Button */
+     CALL VpSelect window,'CMD_EINS'
+   WHEN col = 2 then
+     /* Select item CMD_ZWEI Push Button */
+     CALL VpSelect window,'CMD_ZWEI'
+   WHEN col = 3 then
+     /* Select item CMD_DREI Push Button */
+     CALL VpSelect window,'CMD_DREI'
+   WHEN col = 4 then
+     /* Select item CMD_VIER Push Button */
+     CALL VpSelect window,'CMD_VIER'
+   WHEN col = 5 then
+     /* Select item CMD_FUENF Push Button */
+     CALL VpSelect window,'CMD_FUENF'
+   WHEN col = 6 then
+     /* Select item CMD_SECHS Push Button */
+     CALL VpSelect window,'CMD_SECHS'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+return
+
+/* ##258_1040.16 */
+258_1040.16: /* Event Value Set TBL_SPL2_LO, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL2_LO Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL2_LO')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_EINS Push Button */
+     CALL VpSelect window,'CMD_EINS'
+   WHEN col = 2 then
+     /* Select item CMD_ZWEI Push Button */
+     CALL VpSelect window,'CMD_ZWEI'
+   WHEN col = 3 then
+     /* Select item CMD_DREI Push Button */
+     CALL VpSelect window,'CMD_DREI'
+   WHEN col = 4 then
+     /* Select item CMD_VIER Push Button */
+     CALL VpSelect window,'CMD_VIER'
+   WHEN col = 5 then
+     /* Select item CMD_FUENF Push Button */
+     CALL VpSelect window,'CMD_FUENF'
+   WHEN col = 6 then
+     /* Select item CMD_SECHS Push Button */
+     CALL VpSelect window,'CMD_SECHS'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1041.16 */
+258_1041.16: /* Event Value Set TBL_SPL3_LO, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL3_LO Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL3_LO')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_EINS Push Button */
+     CALL VpSelect window,'CMD_EINS'
+   WHEN col = 2 then
+     /* Select item CMD_ZWEI Push Button */
+     CALL VpSelect window,'CMD_ZWEI'
+   WHEN col = 3 then
+     /* Select item CMD_DREI Push Button */
+     CALL VpSelect window,'CMD_DREI'
+   WHEN col = 4 then
+     /* Select item CMD_VIER Push Button */
+     CALL VpSelect window,'CMD_VIER'
+   WHEN col = 5 then
+     /* Select item CMD_FUENF Push Button */
+     CALL VpSelect window,'CMD_FUENF'
+   WHEN col = 6 then
+     /* Select item CMD_SECHS Push Button */
+     CALL VpSelect window,'CMD_SECHS'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1042.16 */
+258_1042.16: /* Event Value Set TBL_SPL4_LO, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL4_LO Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL4_LO')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_EINS Push Button */
+     CALL VpSelect window,'CMD_EINS'
+   WHEN col = 2 then
+     /* Select item CMD_ZWEI Push Button */
+     CALL VpSelect window,'CMD_ZWEI'
+   WHEN col = 3 then
+     /* Select item CMD_DREI Push Button */
+     CALL VpSelect window,'CMD_DREI'
+   WHEN col = 4 then
+     /* Select item CMD_VIER Push Button */
+     CALL VpSelect window,'CMD_VIER'
+   WHEN col = 5 then
+     /* Select item CMD_FUENF Push Button */
+     CALL VpSelect window,'CMD_FUENF'
+   WHEN col = 6 then
+     /* Select item CMD_SECHS Push Button */
+     CALL VpSelect window,'CMD_SECHS'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1043.16 */
+258_1043.16: /* Event Value Set TBL_SPL5_LO, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL1_LO Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL1_LO')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_EINS Push Button */
+     CALL VpSelect window,'CMD_EINS'
+   WHEN col = 2 then
+     /* Select item CMD_ZWEI Push Button */
+     CALL VpSelect window,'CMD_ZWEI'
+   WHEN col = 3 then
+     /* Select item CMD_DREI Push Button */
+     CALL VpSelect window,'CMD_DREI'
+   WHEN col = 4 then
+     /* Select item CMD_VIER Push Button */
+     CALL VpSelect window,'CMD_VIER'
+   WHEN col = 5 then
+     /* Select item CMD_FUENF Push Button */
+     CALL VpSelect window,'CMD_FUENF'
+   WHEN col = 6 then
+     /* Select item CMD_SECHS Push Button */
+     CALL VpSelect window,'CMD_SECHS'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+
+
+return
+
+/* ##258_1044.0 */
+258_1044.0: /* Event WÅrfeln ... CMD_WUERFELN, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* zuerst prÅfen, ob schon gesetzt - nur setzen */
+/* vergibt 4                                    */
+if anz_wurf > 3 then
+  do
+   return
+  end
+
+/* anz_wurf ist bei start oder Spielerwechsel auf 0; */
+/* dadurch ist ein Setzen ohne Wurf nicht mîglich - */
+/* zur Unterscheidung darf jedoch nur setzen auf 4 */
+/* wechseln */
+if anz_wurf < 3 then
+  anz_wurf=anz_wurf + 1
+else
+  /* hat schon 3 ... */
+  do
+    return
+  end
+/* endif */
+
+/* bei anz_wurf > 3 kommts nicht bis hierher ... */
+
+/* wÅrfeln lassen */
+call werfen 
+
+/* wenn 1. oder mehr WÅrfe gemacht invert aktivieren */
+/* falls inaktiv */
+/* Is item enabled? CMD_WRFL_INVERT Push Button */
+if VpItem(window,'CMD_WRFL_INVERT','ISENABLED')=0 then
+ do
+  if show_typ='SYM' then
+    /* Show item BMP_AENDERN_CMD Graphic */
+    CALL VpItem window,'BMP_AENDERN_CMD','SHOW'
+    
+  /* Enable item CMD_WRFL_INVERT Push Button */
+  CALL VpItem window,'CMD_WRFL_INVERT','ENABLE'
+ end   
+
+/* Info auf nÑchstkommenden Wurf setzen */
+if anz_wurf < 3 then
+  /* Set item value LBL_SPL_WURF Text */
+  CALL VpSetItemValue window,'LBL_SPL_WURF',value(anz_wurf+1)||'.'
+else
+ do
+  /* Set item value LBL_SPL_WURF Text */
+  CALL VpSetItemValue window,'LBL_SPL_WURF','-'
+  
+  /* temporÑr wÅrfel- und - invert-button au·er */
+  /* Kraft setzen */
+  
+  /* Disable item CMD_WUERFELN Push Button */
+  CALL VpItem window,'CMD_WUERFELN','DISABLE'
+  /* Hide item BMP_WUERFELN_CMD Graphic */
+  CALL VpItem window,'BMP_WUERFELN_CMD','HIDE'
+  /* Disable item CMD_WRFL_INVERT Push Button */
+  CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+  /* Hide item BMP_AENDERN_CMD Graphic */
+  CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+ end
+  
+
+
+return
+
+/* ##258_1050.16 */
+258_1050.16: /* Event Value Set TBL_SPL1_HI, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL1_HI Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL1_HI')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_DRILLING Push Button */
+     CALL VpSelect window,'CMD_DRILLING'
+   WHEN col = 2 then
+     /* Select item CMD_VIERLING Push Button */
+     CALL VpSelect window,'CMD_VIERLING'
+   WHEN col = 3 then
+     /* Select item CMD_FULLHOUSE Push Button */
+     CALL VpSelect window,'CMD_FULLHOUSE'
+   WHEN col = 4 then
+     /* Select item CMD_KLEINE Push Button */
+     CALL VpSelect window,'CMD_KLEINE'
+   WHEN col = 5 then
+     /* Select item CMD_GROSSE Push Button */
+     CALL VpSelect window,'CMD_GROSSE'
+   WHEN col = 6 then
+     /* Select item CMD_KNIFFEL Push Button */
+     CALL VpSelect window,'CMD_KNIFFEL'
+   WHEN col = 7 then
+     /* Select item CMD_CHANCE Push Button */
+     CALL VpSelect window,'CMD_CHANCE'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1051.16 */
+258_1051.16: /* Event Value Set TBL_SPL2_HI, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL2_HI Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL2_HI')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_DRILLING Push Button */
+     CALL VpSelect window,'CMD_DRILLING'
+   WHEN col = 2 then
+     /* Select item CMD_VIERLING Push Button */
+     CALL VpSelect window,'CMD_VIERLING'
+   WHEN col = 3 then
+     /* Select item CMD_FULLHOUSE Push Button */
+     CALL VpSelect window,'CMD_FULLHOUSE'
+   WHEN col = 4 then
+     /* Select item CMD_KLEINE Push Button */
+     CALL VpSelect window,'CMD_KLEINE'
+   WHEN col = 5 then
+     /* Select item CMD_GROSSE Push Button */
+     CALL VpSelect window,'CMD_GROSSE'
+   WHEN col = 6 then
+     /* Select item CMD_KNIFFEL Push Button */
+     CALL VpSelect window,'CMD_KNIFFEL'
+   WHEN col = 7 then
+     /* Select item CMD_CHANCE Push Button */
+     CALL VpSelect window,'CMD_CHANCE'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1052.16 */
+258_1052.16: /* Event Value Set TBL_SPL3_HI, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL3_HI Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL3_HI')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_DRILLING Push Button */
+     CALL VpSelect window,'CMD_DRILLING'
+   WHEN col = 2 then
+     /* Select item CMD_VIERLING Push Button */
+     CALL VpSelect window,'CMD_VIERLING'
+   WHEN col = 3 then
+     /* Select item CMD_FULLHOUSE Push Button */
+     CALL VpSelect window,'CMD_FULLHOUSE'
+   WHEN col = 4 then
+     /* Select item CMD_KLEINE Push Button */
+     CALL VpSelect window,'CMD_KLEINE'
+   WHEN col = 5 then
+     /* Select item CMD_GROSSE Push Button */
+     CALL VpSelect window,'CMD_GROSSE'
+   WHEN col = 6 then
+     /* Select item CMD_KNIFFEL Push Button */
+     CALL VpSelect window,'CMD_KNIFFEL'
+   WHEN col = 7 then
+     /* Select item CMD_CHANCE Push Button */
+     CALL VpSelect window,'CMD_CHANCE'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1053.16 */
+258_1053.16: /* Event Value Set TBL_SPL4_HI, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL4_HI Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL4_HI')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_DRILLING Push Button */
+     CALL VpSelect window,'CMD_DRILLING'
+   WHEN col = 2 then
+     /* Select item CMD_VIERLING Push Button */
+     CALL VpSelect window,'CMD_VIERLING'
+   WHEN col = 3 then
+     /* Select item CMD_FULLHOUSE Push Button */
+     CALL VpSelect window,'CMD_FULLHOUSE'
+   WHEN col = 4 then
+     /* Select item CMD_KLEINE Push Button */
+     CALL VpSelect window,'CMD_KLEINE'
+   WHEN col = 5 then
+     /* Select item CMD_GROSSE Push Button */
+     CALL VpSelect window,'CMD_GROSSE'
+   WHEN col = 6 then
+     /* Select item CMD_KNIFFEL Push Button */
+     CALL VpSelect window,'CMD_KNIFFEL'
+   WHEN col = 7 then
+     /* Select item CMD_CHANCE Push Button */
+     CALL VpSelect window,'CMD_CHANCE'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1054.16 */
+258_1054.16: /* Event Value Set TBL_SPL5_HI, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL5_HI Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL5_HI')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_DRILLING Push Button */
+     CALL VpSelect window,'CMD_DRILLING'
+   WHEN col = 2 then
+     /* Select item CMD_VIERLING Push Button */
+     CALL VpSelect window,'CMD_VIERLING'
+   WHEN col = 3 then
+     /* Select item CMD_FULLHOUSE Push Button */
+     CALL VpSelect window,'CMD_FULLHOUSE'
+   WHEN col = 4 then
+     /* Select item CMD_KLEINE Push Button */
+     CALL VpSelect window,'CMD_KLEINE'
+   WHEN col = 5 then
+     /* Select item CMD_GROSSE Push Button */
+     CALL VpSelect window,'CMD_GROSSE'
+   WHEN col = 6 then
+     /* Select item CMD_KNIFFEL Push Button */
+     CALL VpSelect window,'CMD_KNIFFEL'
+   WHEN col = 7 then
+     /* Select item CMD_CHANCE Push Button */
+     CALL VpSelect window,'CMD_CHANCE'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col
+
+return
+
+/* ##258_1066.0 */
+258_1066.0: /* Event Ñndere alle CMD_WRFL_INVERT, Clicked/selected */
+Arg window self
+
+/* Ñndert aktuellen wÅrfel-status halten/wÅrfeln fÅr */
+/* alle WÅrfel */
+
+/* geht nur nach wÅrfen */
+if anz_wurf=0 | anz_wurf=4 then return
+
+call invert ALLE
+return
+
+/* ##258_1067.0 */
+258_1067.0: /* Event NÑchster  CMD_NEXT_SPL, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then
+ do
+  return
+ end
+ 
+/* prÅfe, ob noch nicht gesetzt */
+if anz_wurf \= 4 then
+ do 
+  return
+ end
+
+/* wo und was sind als var noch von den setz-buttons */
+/* und nach nutzung durch setzen aktiv wg. evtl.     */
+/* RÅcknahme - jetzt droppen                         */
+drop wo was
+
+/* ab jetzt ist keine RÅcknahme mehr mîglich         */
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+/* Disable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','DISABLE'
+
+/* arbeitet Spielfeld um fÅr nÑchsten Spieler bzw. */
+/* beendet ...                                     */
+if spl_nr=anzahl then
+ runde=runde+1
+
+/* Schlu·bearbeitung */
+if runde > 13 then
+ do
+  /* Spielende - Ergebnisse prÑsentieren */
+
+  /* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\ergebnis */
+  value=VpOpenForm(window, 259, '')
+
+  return
+ end
+/* endif */
+
+/* Set item background color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'BACKCOLOR','PALEGRAY'
+/* Set item foreground color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'FORECOLOR','BLUE'
+
+/* Foreground der Tabellen ist schon richtig gesetzt */
+
+/* Set item background color TBL_SPL?_LO Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_LO','BACKCOLOR','PALEGRAY'
+
+/* Set item background color TBL_SPL?_HI Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_HI','BACKCOLOR','PALEGRAY'
+
+/* Spieler-Icon mu· kÅnstlich gelîscht werden ... */
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',leer_ico
+
+/* Spieler-ident auf nÑchsten oder 1. */
+if spl_nr < anzahl then
+  spl_nr=spl_nr+1
+else
+  spl_nr=1
+/* endif */
+
+/* WÅrfe zurÅcksetzen */
+anz_wurf=0
+
+/* Daten f. den nÑchsten Spieler */
+
+/* Set item value LBL_SPL_NAME Text */
+CALL VpSetItemValue window,'LBL_SPL_NAME',spl_lst.spl_nr.name
+
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',spl_lst.spl_nr.symbol
+
+/* Set item value LBL_SPL_WURF Text */
+CALL VpSetItemValue window,'LBL_SPL_WURF','1.'
+
+/* Set item value LBL_SPL_RUNDE Text */
+CALL VpSetItemValue window,'LBL_SPL_RUNDE',runde
+
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,1
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,2
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,3
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,4
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,5
+
+/* Set item value LBL_NAME? Text */
+CALL VpSetItemValue window,'LBL_NAME'||spl_nr,spl_lst.spl_nr.name
+
+/* Foreground der Tabellen ist schon richtig gesetzt */
+
+/* Set item background color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'BACKCOLOR','BLUE'
+/* Set item foreground color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'FORECOLOR','WHITE'
+/* Set item background color TBL_SPL?_LO Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_LO','BACKCOLOR','WHITE'
+/* Set item background color TBL_SPL?_HI Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_HI','BACKCOLOR','WHITE'
+
+/* Give item focus CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','FOCUS'
+
+/* wÅrfel-status zurÅck */
+do i = 1 to 5
+  /* Set item value CMD_WURF? Push Button */
+  CALL VpSetItemValue window,'CMD_WURF'||i,'*wÅrfeln*'
+  wurf.i.halten=0
+end /* end do */
+
+/* Rundenzeiger (windowtitle) setzen - mit global */
+/* var runde, titel_vorn, titel_hint              */
+CALL VpWindow window,'SETTITLE',titel_vorn||runde||titel_hint
+
+/* wenn der Spieler drei WÅrfe brauchte ist der */
+/* wÅrfel-button disabled - enablen */
+/* Is item enabled? CMD_WUERFELN Push Button */
+if VpItem(window,'CMD_WUERFELN','ISENABLED')=0 then
+ do
+  if show_typ='SYM' then
+    /* Show item BMP_WUERFELN_CMD Graphic */
+    CALL VpItem window,'BMP_WUERFELN_CMD','SHOW'
+
+  /* in jedem Fall, wenn disabled */  
+  /* Enable item CMD_WUERFELN Push Button */
+  CALL VpItem window,'CMD_WUERFELN','ENABLE'
+ end
+
+/* Durch disablete Setz-Buttons soll die visuelle öber- */
+/* sicht geschaffen werden, welche Setzmîglichkeiten der */
+/* aktuelle Spieler hat - es mu· also jeweils  evtl.   */
+/* erstmal wieder enabled werden (in AbhÑngigkeit zu */
+/* var show_typ) und dann in AbhÑngigkeit zu wert_lst */
+/* disabled werden - um Flashes zu vermeiden, immer */
+/* erst status prÅfen -nutzt global var buttons_list */
+do i = 1 to 13
+
+  if wert_lst.spl_nr.i \= '' then
+    /* Spieler hat Werteintrag - ggf. disablen, wenn */
+    /* nicht schon disabled ist */
+    
+    /* Is item enabled? CMD_??? Push Button */
+    if VpItem(window,buttons_list.i.cmd,'ISENABLED')=1 then
+     do
+      /* Disable item CMD_EINS Push Button */
+      CALL VpItem window,buttons_list.i.cmd,'DISABLE'
+      /* Hide item BMP_EINS_CMD Graphic */
+      CALL VpItem window,buttons_list.i.bmp,'HIDE'
+     end
+    else
+      nop
+    /* endif */
+  else
+    /* Spieler hat noch keinen Werteintrag - ggf. */
+    /* enablen, wenn nicht schon enabled ist      */
+    
+    /* Is item enabled? CMD_??? Push Button */
+    if VpItem(window,buttons_list.i.cmd,'ISENABLED')=0 then
+     do
+      if show_typ = 'SYM' then
+        /* Show item BMP_EINS_CMD Graphic */
+        CALL VpItem window,buttons_list.i.bmp,'SHOW'
+    
+      /* Enable item CMD_EINS Push Button */
+      CALL VpItem window,buttons_list.i.cmd,'ENABLE'
+     end
+    else
+      nop
+    /* endif */
+  /* endif */
+  
+end /* end do */
+
+/* es kann jetzt erst wieder der nÑchste kommen, */
+/* wenn gesetzt wurde - disablen, in routine setzen */
+/* enablen */
+/* Disable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','DISABLE'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+
+  
+
+
+
+return
+
+/* ##258_1068.0 */
+258_1068.0: /* Event  CMD_SPIEL_TIPS, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "4." = Spielfeld und Regeln */
+TOPIC='4. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC
+
+return
+
+/* ##258_1069.11 */
+258_1069.11: /* Event Graphic BMP_SPIEL_TIPSCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_SPIEL_TIPS Push Button */
+CALL VpItem window,'CMD_SPIEL_TIPS','SENDMSG','0x0123','1','0'
+/* Select item CMD_SPIEL_TIPS Push Button */
+CALL VpSelect window,'CMD_SPIEL_TIPS'
+/* Set button highlight off CMD_SPIEL_TIPS Push Button */
+CALL VpItem window,'CMD_SPIEL_TIPS','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1070.11 */
+258_1070.11: /* Event Graphic BMP_SPIEL_RUECKNCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','SENDMSG','0x0123','1','0'
+/* Select item CMD_SPIEL_RUECKN Push Button */
+CALL VpSelect window,'CMD_SPIEL_RUECKN'
+/* Set button highlight off CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1071.0 */
+258_1071.0: /* Event  CMD_SPIEL_RUECKN, Clicked/selected */
+Arg window self
+
+/* es findet etwas wie ein umgedrehtes Setzen statt */
+
+/* die var wo und was sind noch aktiv */
+
+/* Zur Zeit ist button nÑchster enabled - da erst */
+/* wieder gesetzt werden mu·, disablen */
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+/* Disable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','DISABLE'
+
+/* den disableten Setz-button wieder enablen */
+/* Enable item CMD_??? Push Button */
+CALL VpItem window,buttons_list.wo.cmd,'ENABLE'
+if show_typ ='SYM' then
+  /* Show item BMP_???_CMD Graphic */
+  CALL VpItem window,buttons_list.wo.bmp,'SHOW'
+/* endif */
+
+/* Ñndere form-var anz_wurf auf 3, damit  */
+/* wieder gesetzt (nur gesetzt !) werden  */
+/* kann */
+anz_wurf=3
+
+/* wert zurÅcksetzen */
+wert_lst.spl_nr.wo=''
+
+/* 14 ist zwi-su lo, 15 ist zw-su hi, 16 ist ges */
+wert_lst.spl_nr.14=0
+do i = 1 to 6
+  if wert_lst.spl_nr.i \='' then
+    wert_lst.spl_nr.14=wert_lst.spl_nr.14 + wert_lst.spl_nr.i
+end /* end do */
+if wert_lst.spl_nr.14 > 62 then
+  wert_lst.spl_nr.14=wert_lst.spl_nr.14 + 35
+  
+wert_lst.spl_nr.15=0
+do i = 7 to 13
+  if wert_lst.spl_nr.i \='' then
+    wert_lst.spl_nr.15=wert_lst.spl_nr.15 + wert_lst.spl_nr.i
+end /* end do */
+
+wert_lst.spl_nr.16=wert_lst.spl_nr.14 + wert_lst.spl_nr.15
+
+if wo < 7 then
+  /* Set cell value TBL_SPL?_LO Value Set */
+  CALL VpSetItemValue window,'TBL_SPL'||spl_nr||'_LO','-',1,wo
+else
+  /* Set cell value TBL_SPL?_HI Value Set */
+  CALL VpSetItemValue window,'TBL_SPL'||spl_nr||'_HI','-',1,value(wo-6)
+/* endif */
+
+if wert_lst.spl_nr.14 > 62 then
+ do
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFLO',wert_lst.spl_nr.14
+  /* Set item background color TXT_SPALTEN_INF_LO Text */
+  CALL VpItem window,'TXT_SPALTEN_INF_LO','BACKCOLOR','GREEN'
+  /* Set item foreground color TXT_SPL1_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||spl_nr||'_INFLO','FORECOLOR','BLACK'
+ end
+else
+ do
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFLO','-'||wert_lst.spl_nr.14
+  /* Set item foreground color TXT_SPL1_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||spl_nr||'_INFLO','FORECOLOR','RED'
+ end
+
+/* Set item value TXT_SPL?_INFHI Text */
+CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFHI',wert_lst.spl_nr.15
+
+/* Set item value TXT_SPL?_INFGES Text */
+CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFGES',wert_lst.spl_nr.16
+
+
+return
+
+/* ##258_1072.11 */
+258_1072.11: /* Event Graphic BMP_WUERFELN_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_WUERFELN Push Button */
+CALL VpSelect window,'CMD_WUERFELN'
+
+/* Set button highlight off CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1073.11 */
+258_1073.11: /* Event Graphic BMP_AENDERN_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_WRFL_INVERT Push Button */
+CALL VpSelect window,'CMD_WRFL_INVERT'
+
+/* Set button highlight off CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1074.11 */
+258_1074.11: /* Event Graphic BMP_WEITER_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_NEXT_SPL Push Button */
+CALL VpSelect window,'CMD_NEXT_SPL'
+
+/* Set button highlight off CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1075.11 */
+258_1075.11: /* Event Graphic BMP_ABBRUCH_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_ABBRUCH Push Button */
+CALL VpItem window,'CMD_ABBRUCH','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_ABBRUCH Push Button */
+CALL VpSelect window,'CMD_ABBRUCH'
+
+/* Set button highlight off CMD_ABBRUCH Push Button */
+CALL VpItem window,'CMD_ABBRUCH','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1076.11 */
+258_1076.11: /* Event Graphic BMP_EINS_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_EINS Push Button */
+CALL VpItem window,'CMD_EINS','SENDMSG','0x0123','1','0'
+/* Select item CMD_EINS Push Button */
+CALL VpSelect window,'CMD_EINS'
+/* Set button highlight off CMD_EINS Push Button */
+CALL VpItem window,'CMD_EINS','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1077.11 */
+258_1077.11: /* Event Graphic BMP_ZWEI_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_ZWEI Push Button */
+CALL VpItem window,'CMD_ZWEI','SENDMSG','0x0123','1','0'
+/* Select item CMD_ZWEI Push Button */
+CALL VpSelect window,'CMD_ZWEI'
+/* Set button highlight off CMD_ZWEI Push Button */
+CALL VpItem window,'CMD_ZWEI','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1078.11 */
+258_1078.11: /* Event Graphic BMP_DREI_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_DREI Push Button */
+CALL VpItem window,'CMD_DREI','SENDMSG','0x0123','1','0'
+/* Select item CMD_DREI Push Button */
+CALL VpSelect window,'CMD_DREI'
+/* Set button highlight off CMD_DREI Push Button */
+CALL VpItem window,'CMD_DREI','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1079.11 */
+258_1079.11: /* Event Graphic BMP_VIER_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_VIER Push Button */
+CALL VpItem window,'CMD_VIER','SENDMSG','0x0123','1','0'
+/* Select item CMD_VIER Push Button */
+CALL VpSelect window,'CMD_VIER'
+/* Set button highlight off CMD_VIER Push Button */
+CALL VpItem window,'CMD_VIER','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1080.11 */
+258_1080.11: /* Event Graphic BMP_FUENF_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_FUENF Push Button */
+CALL VpItem window,'CMD_FUENF','SENDMSG','0x0123','1','0'
+/* Select item CMD_FUENF Push Button */
+CALL VpSelect window,'CMD_FUENF'
+/* Set button highlight off CMD_FUENF Push Button */
+CALL VpItem window,'CMD_FUENF','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1081.11 */
+258_1081.11: /* Event Graphic BMP_SECHS_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_SECHS Push Button */
+CALL VpItem window,'CMD_SECHS','SENDMSG','0x0123','1','0'
+/* Select item CMD_SECHS Push Button */
+CALL VpSelect window,'CMD_SECHS'
+/* Set button highlight off CMD_SECHS Push Button */
+CALL VpItem window,'CMD_SECHS','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1082.11 */
+258_1082.11: /* Event Graphic BMP_DRILLING_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_DRILLING Push Button */
+CALL VpItem window,'CMD_DRILLING','SENDMSG','0x0123','1','0'
+/* Select item CMD_DRILLING Push Button */
+CALL VpSelect window,'CMD_DRILLING'
+/* Set button highlight off CMD_DRILLING Push Button */
+CALL VpItem window,'CMD_DRILLING','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1083.11 */
+258_1083.11: /* Event Graphic BMP_VIERLING_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_VIERLING Push Button */
+CALL VpItem window,'CMD_VIERLING','SENDMSG','0x0123','1','0'
+/* Select item CMD_VIERLING Push Button */
+CALL VpSelect window,'CMD_VIERLING'
+/* Set button highlight off CMD_VIERLING Push Button */
+CALL VpItem window,'CMD_VIERLING','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1084.11 */
+258_1084.11: /* Event Graphic BMP_FULLHOUSE_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_FULLHOUSE Push Button */
+CALL VpItem window,'CMD_FULLHOUSE','SENDMSG','0x0123','1','0'
+/* Select item CMD_FULLHOUSE Push Button */
+CALL VpSelect window,'CMD_FULLHOUSE'
+/* Set button highlight off CMD_FULLHOUSE Push Button */
+CALL VpItem window,'CMD_FULLHOUSE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1085.11 */
+258_1085.11: /* Event Graphic BMP_KLSTR_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_KLEINE Push Button */
+CALL VpItem window,'CMD_KLEINE','SENDMSG','0x0123','1','0'
+/* Select item CMD_KLEINE Push Button */
+CALL VpSelect window,'CMD_KLEINE'
+/* Set button highlight off CMD_KLEINE Push Button */
+CALL VpItem window,'CMD_KLEINE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1086.11 */
+258_1086.11: /* Event Graphic BMP_GRSTR_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_GROSSE Push Button */
+CALL VpItem window,'CMD_GROSSE','SENDMSG','0x0123','1','0'
+/* Select item CMD_GROSSE Push Button */
+CALL VpSelect window,'CMD_GROSSE'
+/* Set button highlight off CMD_GROSSE Push Button */
+CALL VpItem window,'CMD_GROSSE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1087.11 */
+258_1087.11: /* Event Graphic BMP_KNIFFEL_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_KNIFFEL Push Button */
+CALL VpItem window,'CMD_KNIFFEL','SENDMSG','0x0123','1','0'
+/* Select item CMD_KNIFFEL Push Button */
+CALL VpSelect window,'CMD_KNIFFEL'
+/* Set button highlight off CMD_KNIFFEL Push Button */
+CALL VpItem window,'CMD_KNIFFEL','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_1088.11 */
+258_1088.11: /* Event Graphic BMP_CHANCE_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_CHANCE Push Button */
+CALL VpItem window,'CMD_CHANCE','SENDMSG','0x0123','1','0'
+/* Select item CMD_CHANCE Push Button */
+CALL VpSelect window,'CMD_CHANCE'
+/* Set button highlight off CMD_CHANCE Push Button */
+CALL VpItem window,'CMD_CHANCE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##258_Form.1 */
+258_Form.1: /* Event Form events, Opened */
+Arg window 
+
+/* zeigt das Spielfeld;
+
+   nutzt projekt-var:
+      1. anzahl (der spieler)
+      2. show_typ (SYM oder TXT)
+         f. zentrale bmp:
+           weiter_bmp, abbruch_bmp, tips_bmp,
+           wuerfeln_bmp, aendern_bmp
+      3. leer_ico
+      4. spl_lst.
+      5. wert_lst.
+      
+   gibt an Main Kennung "spiel" Åber global var
+   form_typ zurÅck
+*/
+
+/* Window unten links in die Ecke ... */
+
+/* wie gro· ist der Bildschirm (problem bei 640x480) ? */
+parse value VpWindow(window,'GETSCREENSIZE') with screen_x screen_y
+
+/* wie gro· ist das Fenster ? */
+parse value VpWindow(window,'GETSIZE') with xsize ysize
+
+/* Standard-Position 10 / 10  - wenn zu gro·, verkleinern */
+if (screen_x - 10) < xsize then
+ do
+  xsize = screen_x - 3
+  xpos=1
+ end
+else
+  xpos=10
+
+if (screen_y - 10) < ysize then
+ do
+  ysize = screen_y - 3
+  ypos=1
+ end
+else
+  ypos=10
+
+/* Fenster setzen ... */
+CALL VpWindow window,'SETPOS', xpos, ypos, xsize, ysize
+
+drop screen_x screen_y xsize ysize xpos ypos
+
+/* FP17 ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* form-var anz_wurf - wÅrfe pro spieler max 3 -   */ 
+/* gleichzeitig PrÅf-var ob setzen mîglich (>0)    */
+anz_wurf=0
+
+/* form-stem wurf. - enthÑlt kennung halten und wert  */
+/* nach wurf - wird gesetzt durch werfen bzw. die     */
+/* button-routinen/dpclick auf WÅrferl                */
+wurf. = '0'
+
+/* form-var spl_nr = aktueller spieler */
+spl_nr=1
+
+/* (re-)init global stem-var wert_lst: tail1 = spieler,   */
+/* tail2= inkrement 1 - werte 1-13,             */
+/*        zw-summe-lo, zw-summe-hi, su_ges      */
+/* init auf '' -  erreichte Punkte u. Summen u. */
+/* 0 (!) mÅssen gesetzt werden */
+wert_lst.=''
+
+/* form-var Windowtitle u. RundenzÑhler */
+titel_vorn='Kniffel - Runde '
+titel_hint=' von 13'
+runde=1
+
+/* Rundenzeiger (windowtitle) setzen - mit global */
+/* var runde, titel_vorn, titel_hint              */
+CALL VpWindow window,'SETTITLE',titel_vorn||runde||titel_hint
+
+/* Set item value LBL_SPL_NAME Text */
+CALL VpSetItemValue window,'LBL_SPL_NAME',spl_lst.spl_nr.name
+
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',spl_lst.spl_nr.symbol
+
+/* Set item value LBL_SPL_WURF Text */
+CALL VpSetItemValue window,'LBL_SPL_WURF','1.'
+
+/* Set item value LBL_SPL_RUNDE Text */
+CALL VpSetItemValue window,'LBL_SPL_RUNDE',runde
+
+/* Set item value LBL_NAME1 Text */
+CALL VpSetItemValue window,'LBL_NAME1',spl_lst.spl_nr.name
+
+/* lade/init die WÅrfel-Bitmaps (immer) */
+call lad_wrfl
+
+/* lade die buttons entweder mit texten oder bildern */
+/* in abhÑngigkeit zu der global var von Main show_typ */
+/* SYM oder TXT */
+select
+  when show_typ='SYM' then
+    call lad_bild
+  otherwise
+    call lad_text
+end /* select */
+
+/* init Spielertabellen */
+call init_tbl
+
+/* der erste Spieler mu· wÅrfeln, invertieren kann */
+/* er noch nicht - weiter und invert disablen */
+/* Hide item BMP_AENDERN_CMD Graphic */
+CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+/* Disable item CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+/* Disable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','DISABLE'
+
+/* RÅcknahme setzen ist nur mîglich zwischen gesetzt */
+/* und weiter - disablen */
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+/* Disable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','DISABLE'
+
+/* wÅrfeln soll er ... */
+/* Give item focus CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','FOCUS'
+
+return
+
+/* ##258_Form.2 */
+258_Form.2: /* Event Form events, Closed */
+Arg window 
+
+/* deload bitmaps */
+CALL VpFreePicture wrfl_leer
+
+/* halten-leer wird nicht geladen .. */
+/* CALL VpFreePicture wrfl_h_leer */
+
+do i = 1 to 6
+  CALL VpFreePicture value('wrfl_'||i)
+  CALL VpFreePicture value('wrfl_h'||i)
+end /* end do */
+
+/* leer_ico ist immer geladen */
+CALL VpFreePicture leer_ico
+drop leer_ico
+
+/* wenn die buttons mit bildchen belegt sind ... */
+if show_typ='SYM' then
+ do
+  CALL VpFreePicture ruecknahme_bmp
+  CALL VpFreePicture zwei_ico
+  CALL VpFreePicture drei_ico
+  CALL VpFreePicture vier_ico
+  CALL VpFreePicture fuenf_ico
+  CALL VpFreePicture sechs_ico
+  CALL VpFreePicture drilling_ico
+  CALL VpFreePicture vierling_ico
+  CALL VpFreePicture fullhouse_ico
+  CALL VpFreePicture klstr_ico
+  CALL VpFreePicture grstr_ico
+  CALL VpFreePicture kniffel_ico
+  CALL VpFreePicture chance_ico
+
+  drop ruecknahme_bmp eins_ico zwei_ico drei_ico
+  drop vier_ico fuenf_ico sechs_ico drilling_ico
+  drop vierling_ico fullhouse_ico klstr_ico
+  drop grstr_ico kniffel_ico chance_ico
+ end
+/* endif */
+
+/* spieler-symbole lîschen */
+do i = 1 to anzahl
+  CALL VpFreePicture spl_lst.i.symbol
+end /* end do */
+
+/* einiges droppen - re-init */
+drop wurf. buttons_list.
+drop spl_nr runde titel_hint titel_vorn wrfl_leer gef
+drop wrfl_1 wrfl_2 wrfl_3 wrfl_4 wrfl_5 wrfl_6
+drop wrfl_h1 wrfl_h2 wrfl_h3 wrfl_h4 wrfl_h5 wrfl_h6
+drop anz_wurf x y i tmp value msg
+spl_lst.=''
+wert_lst.=''
+
+/* zur Identifikation der Form fÅr main... */
+form_typ='spiel'
+
+return
+
+/* ##258_Form.3 */
+258_Form.3: /* Event Form events, Secondary Close */
+Arg window fromtopic
+
+/* hierher kommen die sekundÑren Fenster der Form */
+
+/* in jedem Fall ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* nachschauen, was los ist (fromtopic ist immer */
+/* uppercase) */
+
+SELECT
+   WHEN fromtopic = 'SCHLUSS' THEN
+    do
+     /* Feierabend */
+     CALL VpWindow window,'CLOSE'
+     return
+    end
+   WHEN fromtopic = 'NOCHMAL' THEN
+    do
+     call nochmal
+     return
+    end
+   OTHERWISE
+     nop
+END
+
+return
+
+/* ##261_1000.0 */
+261_1000.0: /* Event  CMD_TIPS_ENDE, Clicked/selected */
+Arg window self
+
+CALL VpWindow window,'CLOSE'
+
+return
+
+/* ##261_1002.11 */
+261_1002.11: /* Event Graphic BMP_TIPS_ZURUECKCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_TIPS_ENDE Push Button */
+CALL VpItem window,'CMD_TIPS_ENDE','SENDMSG','0x0123','1','0'
+/* Select item CMD_TIPS_ENDE Push Button */
+CALL VpSelect window,'CMD_TIPS_ENDE'
+/* Set button highlight off CMD_TIPS_ENDE Push Button */
+CALL VpItem window,'CMD_TIPS_ENDE','SENDMSG','0x0123','0','0'
+
+return
+
+/* ##261_Form.1 */
+261_Form.1: /* Event Form events, Opened */
+Arg window 
+
+/* form zeigt Datei KNIFFEL.DOC, wenn
+   sie im Kniffel-Verzeichnis existiert;
+   
+   nutzt global var:
+   
+     1. show_typ
+     2. weiter_bmp
+     3. pfad_name
+     4. cr
+     
+     5. "Leitvariable" (TOPIC ??)
+*/
+
+/* das Tips-Fenster in die rechte untere */
+/* Ecke */
+xy=VpWindow(window,'GETSCREENSIZE')
+PARSE VAR xy x_scr y_scr
+xy=VpWindow(window,'GETSIZE')
+PARSE VAR xy x y
+
+CALL VpWindow window,'SETPOS', value(x_scr - x - 10), 20, x, y
+drop xy x y x_scr y_scr
+
+/* wg. FP17: */
+CALL VpWindow window,'ACTIVATE'
+
+if show_typ='SYM' then
+  /* Set item value BMP_TIPS_ZURUECKCMD Graphic */
+  CALL VpSetItemValue window,'BMP_TIPS_ZURUECKCMD',weiter_bmp
+else
+ do
+  /* Hide item BMP_TIPS_ZURUECKCMD Graphic */
+  CALL VpItem window,'BMP_TIPS_ZURUECKCMD','HIDE'
+  /* Set item value CMD_TIPS_ENDE Push Button */
+  CALL VpSetItemValue window,'CMD_TIPS_ENDE','~ZurÅck'
+ end
+/* endif */
+
+
+if stream(pfad_name||'KNIFFEL.TXT','c','query exists') \= '' then
+ do
+  /* Load item from file TXT_TIPS_DOC Multi-Line Entry Field */
+  CALL VpLoadFromFile window,'TXT_TIPS_DOC',pfad_name||'KNIFFEL.TXT'
+  
+  if TOPIC \= '' then
+   do
+    /* Find text TXT_TIPS_DOC Multi-Line Entry Field */
+    range=VpGetIndex(window,'TXT_TIPS_DOC',TOPIC)
+    PARSE VAR range first last
+    /* Scroll to character position TXT_TIPS_DOC Multi-Line Entry Field */
+    CALL VpItem window,'TXT_TIPS_DOC','SENDMSG','0x01d7',first,'0'
+    drop range first last
+   end
+  
+ end
+else
+ do
+  msg=cr||' Es sollte jetzt eigentlich die Datei'||cr
+  msg=msg||' KNIFFEL.TXT aus dem Verzeichnis angezeigt'||cr
+  msg=msg||' werden, in dem sich die Programmdatei'||cr
+  msg=msg||' befindet.'||cr||cr
+  msg=msg||' Leider konnte der Text nicht gefunden wer-'||cr
+  msg=msg||' den.'||cr||cr
+  msg=msg||' Das beste dÅrfte sein, da· Sie die Instal-'||cr
+  msg=msg||' lation noch einmal ÅberprÅfen.'||cr
+  
+  /* Set item value TXT_TIPS_DOC Multi-Line Entry Field */
+  CALL VpSetItemValue window,'TXT_TIPS_DOC',msg
+ end
+/* endif */
+
+     
+return
+
+/* ##261_Form.2 */
+261_Form.2: /* Event Form events, Closed */
+Arg window 
+
+/* TOPIC wieder rÅcksetzen */
+TOPIC=''
+
+drop msg
+return
+
+/* ##SUB_init_tbl */
+init_tbl: /* init Tabellen in Form: spiel */
+
+/* Foreground ist von Haus aus schwarz ... */
+
+/* Set item background color TBL_SPALTEN_LO Value Set */
+CALL VpItem window,'TBL_SPALTEN_LO','BACKCOLOR','YELLOW'
+/* Set item background color TBL_SPALTEN_HI Value Set */
+CALL VpItem window,'TBL_SPALTEN_HI','BACKCOLOR','YELLOW'
+
+/* Set cell value TBL_SPALTEN_LO Value Set */
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','1',1,1
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','2',1,2
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','3',1,3
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','4',1,4
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','5',1,5
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','6',1,6
+
+/* Set cell value TBL_SPALTEN_HI Value Set */
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','D',1,1
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','V',1,2
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','F',1,3
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','K',1,4
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','G',1,5
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','Y',1,6
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','C',1,7
+
+/* falls weniger als 5 Spieler Table bereinigen */
+if anzahl < 5 then
+  do i = 5 to (anzahl+1) by -1
+    /* Disable item LBL_NAME? Text */
+    CALL VpItem window,value('LBL_NAME'||i),'DISABLE'
+    /* Hide item TBL_SPL?_LO Value Set */
+    CALL VpItem window,value('TBL_SPL'||i||'_LO'),'HIDE'
+    /* Disable item TXT_SPL?_INFLO Text */
+    CALL VpItem window,value('TXT_SPL'||i||'_INFLO'),'DISABLE'
+    /* Hide item TBL_SPL?_HI Value Set */
+    CALL VpItem window,value('TBL_SPL'||i||'_HI'),'HIDE'
+    /* Disable item TXT_SPL?_INFHI Text */
+    CALL VpItem window,value('TXT_SPL'||i||'_INFHI'),'DISABLE'
+    /* Disable item TXT_SPL?_INFGES Text */
+    CALL VpItem window,value('TXT_SPL'||i||'_INFGES'),'DISABLE'
+  end /* end do */
+
+/* alle Spieler-EintrÑge auf - und spieler-namen */  
+do i = 1 to anzahl
+  do j = 1 to 6
+    /* Set cell value TBL_SPL?_LO Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_LO'),'-',1,j
+  end /* end do */
+
+  do j = 1 to 7
+    /* Set cell value TBL_SPL?_HI Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_HI'),'-',1,j
+  end /* end do */
+  
+  /* Set item value LBL_NAME1 Text */
+  CALL VpSetItemValue window,'LBL_NAME'||i,spl_lst.i.name
+
+end /* end do */
+
+drop j
+
+/* aktiver Spieler ist der erste - farblich markieren */
+/* Foreground der Tabellen ist von Haus aus schwarz */
+
+/* Set item background color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','BACKCOLOR','BLUE'
+/* Set item foreground color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','FORECOLOR','WHITE'
+/* Set item background color TBL_SPL1_LO Value Set */
+CALL VpItem window,'TBL_SPL1_LO','BACKCOLOR','WHITE'
+/* Set item background color TBL_SPL1_HI Value Set */
+CALL VpItem window,'TBL_SPL1_HI','BACKCOLOR','WHITE'
+
+
+return
+
+/* ##SUB_invert */
+invert: /* routine invert - invertiert 1 (arg) WÅrfel oder alle (all) */
+/* PrÅfung auf ZulÑssigkeit durch caller */
+
+parse arg param
+
+/* setzt global var wurf.?.halten auf 0 oder 1 */
+
+/* normalerweise wÑre das eine NOT-operation, aber
+   aus unbekannten GrÅnden "spinnt" die Routine
+   dann manchmal - setzt ersten, wenn der dritte
+   gemeint ist etc. - au·erdem mÅ·te sowieso ein
+   if-Konstrukt kommen */
+
+if param='ALLE' then
+ do i = 1 to 5
+  if wurf.i.halten = 0 then
+   do
+    wurf.i.halten = 1
+
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||i,'-halten-'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_h'||wurf.i.wert),1,i
+   end
+  else
+   do
+    wurf.i.halten = 0
+    
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||i,'*wÅrfeln*'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_'||wurf.i.wert),1,i
+   end
+  /* endif */
+ end /* end do */
+else
+ do
+  if wurf.param.halten = 0 then
+   do
+    wurf.param.halten = 1
+
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||param,'-halten-'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_h'||wurf.param.wert),1,param
+   end
+  else
+   do
+    wurf.param.halten = 0
+    
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||param,'*wÅrfeln*'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_'||wurf.param.wert),1,param
+   end
+  /* endif */
+
+ end
+/* endif */
+
+drop param
+
+
+return
+
+/* ##SUB_lad_bild */
+lad_bild: /* routine lÑdt die Buttons mit Bildchen */
+
+/* form-var button_list - wird gebraucht, weil die */
+/* buttons und bmp disabled/enabled werden mÅssen und */
+/* keine inkrementellen Namen tragen */
+buttons_list.=''
+buttons_list.1.bmp='BMP_EINS_CMD'
+buttons_list.1.cmd='CMD_EINS'
+buttons_list.2.bmp='BMP_ZWEI_CMD'
+buttons_list.2.cmd='CMD_ZWEI'
+buttons_list.3.bmp='BMP_DREI_CMD'
+buttons_list.3.cmd='CMD_DREI'
+buttons_list.4.bmp='BMP_VIER_CMD'
+buttons_list.4.cmd='CMD_VIER'
+buttons_list.5.bmp='BMP_FUENF_CMD'
+buttons_list.5.cmd='CMD_FUENF'
+buttons_list.6.bmp='BMP_SECHS_CMD'
+buttons_list.6.cmd='CMD_SECHS'
+buttons_list.7.bmp='BMP_DRILLING_CMD'
+buttons_list.7.cmd='CMD_DRILLING'
+buttons_list.8.bmp='BMP_VIERLING_CMD'
+buttons_list.8.cmd='CMD_VIERLING'
+buttons_list.9.bmp='BMP_FULLHOUSE_CMD'
+buttons_list.9.cmd='CMD_FULLHOUSE'
+buttons_list.10.bmp='BMP_KLSTR_CMD'
+buttons_list.10.cmd='CMD_KLEINE'
+buttons_list.11.bmp='BMP_GRSTR_CMD'
+buttons_list.11.cmd='CMD_GROSSE'
+buttons_list.12.bmp='BMP_KNIFFEL_CMD'
+buttons_list.12.cmd='CMD_KNIFFEL'
+buttons_list.13.bmp='BMP_CHANCE_CMD'
+buttons_list.13.cmd='CMD_CHANCE'
+
+/* button-icons - es sind im Grunde Icons, auch */
+/* wenn die Endung auf bmp lautet - icons passen */
+/* nicht gut */
+
+/* die zentralen button-bmp kommen von main */
+/* Set item value BMP_WUERFELN_CMD Graphic */
+CALL VpSetItemValue window,'BMP_WUERFELN_CMD',wuerfeln_bmp
+/* Set item value BMP_ABBRUCH_CMD Graphic */
+CALL VpSetItemValue window,'BMP_ABBRUCH_CMD',abbruch_bmp
+/* Set item value BMP_WEITER_CMD Graphic */
+CALL VpSetItemValue window,'BMP_WEITER_CMD',weiter_bmp
+/* Set item value BMP_AENDERN_CMD Graphic */
+CALL VpSetItemValue window,'BMP_AENDERN_CMD',aendern_bmp
+/* Set item value BMP_SPIEL_TIPSCMD Graphic */
+CALL VpSetItemValue window,'BMP_SPIEL_TIPSCMD',tips_bmp
+
+/* spezielle form-buttons */
+if stream(pfad_name||'RUECKNAH.BMP','c','query exists') \= '' then
+  ruecknahme_bmp = VpLoadPicture('FILE',pfad_name||'RUECKNAH.BMP')
+else
+  ruecknahme_bmp = VpLoadPicture('RESBMP',1034)
+/* endif */
+/* Set item value BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpSetItemValue window,'BMP_SPIEL_RUECKNCMD',ruecknahme_bmp
+
+if stream(pfad_name||'EINS.BMP','c','query exists') \= '' then
+  eins_ico = VpLoadPicture('FILE',pfad_name||'EINS.BMP')
+else
+  eins_ico = VpLoadPicture('RESBMP',1014)
+
+/* Set item value BMP_EINS_CMD Graphic */
+CALL VpSetItemValue window,'BMP_EINS_CMD',eins_ico
+
+if stream(pfad_name||'ZWEI.BMP','c','query exists') \= '' then
+  zwei_ico = VpLoadPicture('FILE',pfad_name||'ZWEI.BMP')
+else
+  zwei_ico = VpLoadPicture('RESBMP',1015)
+
+/* Set item value BMP_ZWEI_CMD Graphic */
+CALL VpSetItemValue window,'BMP_ZWEI_CMD',zwei_ico
+
+if stream(pfad_name||'DREI.BMP','c','query exists') \= '' then
+  drei_ico = VpLoadPicture('FILE',pfad_name||'DREI.BMP')
+else
+  drei_ico = VpLoadPicture('RESBMP',1016)
+
+/* Set item value BMP_DREI_CMD Graphic */
+CALL VpSetItemValue window,'BMP_DREI_CMD',drei_ico
+
+if stream(pfad_name||'VIER.BMP','c','query exists') \= '' then
+  vier_ico = VpLoadPicture('FILE',pfad_name||'VIER.BMP')
+else
+  vier_ico = VpLoadPicture('RESBMP',1017)
+
+/* Set item value BMP_VIER_CMD Graphic */
+CALL VpSetItemValue window,'BMP_VIER_CMD',vier_ico
+
+if stream(pfad_name||'FUENF.BMP','c','query exists') \= '' then
+  fuenf_ico = VpLoadPicture('FILE',pfad_name||'FUENF.BMP')
+else
+  fuenf_ico = VpLoadPicture('RESBMP',1018)
+
+/* Set item value BMP_FUENF_CMD Graphic */
+CALL VpSetItemValue window,'BMP_FUENF_CMD',fuenf_ico
+
+if stream(pfad_name||'SECHS.BMP','c','query exists') \= '' then
+  sechs_ico = VpLoadPicture('FILE',pfad_name||'SECHS.BMP')
+else
+  sechs_ico = VpLoadPicture('RESBMP',1019)
+
+/* Set item value BMP_SECHS_CMD Graphic */
+CALL VpSetItemValue window,'BMP_SECHS_CMD',sechs_ico
+
+if stream(pfad_name||'DRILLING.BMP','c','query exists') \= '' then
+  drilling_ico = VpLoadPicture('FILE',pfad_name||'DRILLING.BMP')
+else
+  drilling_ico = VpLoadPicture('RESBMP',1020)
+
+/* Set item value BMP_DRILLING_CMD Graphic */
+CALL VpSetItemValue window,'BMP_DRILLING_CMD',drilling_ico
+
+if stream(pfad_name||'VIERLING.BMP','c','query exists') \= '' then
+  vierling_ico = VpLoadPicture('FILE',pfad_name||'VIERLING.BMP')
+else
+  vierling_ico = VpLoadPicture('RESBMP',1021)
+
+/* Set item value BMP_VIERLING_CMD Graphic */
+CALL VpSetItemValue window,'BMP_VIERLING_CMD',vierling_ico
+
+if stream(pfad_name||'FULLHOUS.BMP','c','query exists') \= '' then
+  fullhouse_ico = VpLoadPicture('FILE',pfad_name||'FULLHOUS.BMP')
+else
+  fullhouse_ico = VpLoadPicture('RESBMP',1022)
+
+/* Set item value BMP_FULLHOUSE_CMD Graphic */
+CALL VpSetItemValue window,'BMP_FULLHOUSE_CMD',fullhouse_ico
+
+if stream(pfad_name||'KL_STR.BMP','c','query exists') \= '' then
+  klstr_ico = VpLoadPicture('FILE',pfad_name||'KL_STR.BMP')
+else
+  klstr_ico = VpLoadPicture('RESBMP',1023)
+
+/* Set item value BMP_KLSTR_CMD Graphic */
+CALL VpSetItemValue window,'BMP_KLSTR_CMD',klstr_ico
+
+if stream(pfad_name||'GR_STR.BMP','c','query exists') \= '' then
+  grstr_ico = VpLoadPicture('FILE',pfad_name||'GR_STR.BMP')
+else
+  grstr_ico = VpLoadPicture('RESBMP',1024)
+
+/* Set item value BMP_GRSTR_CMD Graphic */
+CALL VpSetItemValue window,'BMP_GRSTR_CMD',grstr_ico
+
+if stream(pfad_name||'KNIFFEL.BMP','c','query exists') \= '' then
+  kniffel_ico = VpLoadPicture('FILE',pfad_name||'KNIFFEL.BMP')
+else
+  kniffel_ico = VpLoadPicture('RESBMP',1025)
+
+/* Set item value BMP_KNIFFEL_CMD Graphic */
+CALL VpSetItemValue window,'BMP_KNIFFEL_CMD',kniffel_ico
+
+if stream(pfad_name||'CHANCE.BMP','c','query exists') \= '' then
+  chance_ico = VpLoadPicture('FILE',pfad_name||'CHANCE.BMP')
+else
+  chance_ico = VpLoadPicture('RESBMP',1026)
+
+/* Set item value BMP_CHANCE_CMD Graphic */
+CALL VpSetItemValue window,'BMP_CHANCE_CMD',chance_ico
+
+return
+
+/* ##SUB_lad_text */
+lad_text: /* routine lÑdt die Buttons mit Text */
+
+/* form-var button_list - wird gebraucht, weil die */
+/* buttons und bmp disabled/enabled werden mÅssen und */
+/* keine inkrementellen Namen tragen */
+buttons_list.=''
+buttons_list.1.bmp='BMP_EINS_CMD'
+buttons_list.1.cmd='CMD_EINS'
+buttons_list.2.bmp='BMP_ZWEI_CMD'
+buttons_list.2.cmd='CMD_ZWEI'
+buttons_list.3.bmp='BMP_DREI_CMD'
+buttons_list.3.cmd='CMD_DREI'
+buttons_list.4.bmp='BMP_VIER_CMD'
+buttons_list.4.cmd='CMD_VIER'
+buttons_list.5.bmp='BMP_FUENF_CMD'
+buttons_list.5.cmd='CMD_FUENF'
+buttons_list.6.bmp='BMP_SECHS_CMD'
+buttons_list.6.cmd='CMD_SECHS'
+buttons_list.7.bmp='BMP_DRILLING_CMD'
+buttons_list.7.cmd='CMD_DRILLING'
+buttons_list.8.bmp='BMP_VIERLING_CMD'
+buttons_list.8.cmd='CMD_VIERLING'
+buttons_list.9.bmp='BMP_FULLHOUSE_CMD'
+buttons_list.9.cmd='CMD_FULLHOUSE'
+buttons_list.10.bmp='BMP_KLSTR_CMD'
+buttons_list.10.cmd='CMD_KLEINE'
+buttons_list.11.bmp='BMP_GRSTR_CMD'
+buttons_list.11.cmd='CMD_GROSSE'
+buttons_list.12.bmp='BMP_KNIFFEL_CMD'
+buttons_list.12.cmd='CMD_KNIFFEL'
+buttons_list.13.bmp='BMP_CHANCE_CMD'
+buttons_list.13.cmd='CMD_CHANCE'
+
+/* Set item value CMD_WUERFELN Push Button */
+CALL VpSetItemValue window,'CMD_WUERFELN','WÅrfeln ..'
+/* Hide item BMP_WUERFELN_CMD Graphic */
+CALL VpItem window,'BMP_WUERFELN_CMD','HIDE'
+
+/* Set item value CMD_WRFL_INVERT Push Button */
+CALL VpSetItemValue window,'CMD_WRFL_INVERT','Alle Ñndern'
+/* Hide item BMP_AENDERN_CMD Graphic */
+CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+
+/* Set item value CMD_NEXT_SPL Push Button */
+CALL VpSetItemValue window,'CMD_NEXT_SPL','Weiter ..'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+
+/* Set item value CMD_SPIEL_RUECKN Push Button */
+CALL VpSetItemValue window,'CMD_SPIEL_RUECKN','RÅcknahme'
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+
+/* Set item value CMD_ABBRUCH Push Button */
+CALL VpSetItemValue window,'CMD_ABBRUCH','Abbruch'
+/* Hide item BMP_ABBRUCH_CMD Graphic */
+CALL VpItem window,'BMP_ABBRUCH_CMD','HIDE'
+
+/* Set item value CMD_EINS Push Button */
+CALL VpSetItemValue window,'CMD_EINS','auf ~1'
+/* Hide item BMP_EINS_CMD Graphic */
+CALL VpItem window,'BMP_EINS_CMD','HIDE'
+
+/* Set item value CMD_ZWEI Push Button */
+CALL VpSetItemValue window,'CMD_ZWEI','auf ~2'
+/* Hide item BMP_ZWEI_CMD Graphic */
+CALL VpItem window,'BMP_ZWEI_CMD','HIDE'
+
+/* Set item value CMD_DREI Push Button */
+CALL VpSetItemValue window,'CMD_DREI','auf ~3'
+/* Hide item BMP_DREI_CMD Graphic */
+CALL VpItem window,'BMP_DREI_CMD','HIDE'
+
+/* Set item value CMD_VIER Push Button */
+CALL VpSetItemValue window,'CMD_VIER','auf ~4'
+/* Hide item BMP_VIER_CMD Graphic */
+CALL VpItem window,'BMP_VIER_CMD','HIDE'
+
+/* Set item value CMD_FUENF Push Button */
+CALL VpSetItemValue window,'CMD_FUENF','auf ~5'
+/* Hide item BMP_FUENF_CMD Graphic */
+CALL VpItem window,'BMP_FUENF_CMD','HIDE'
+
+/* Set item value CMD_SECHS Push Button */
+CALL VpSetItemValue window,'CMD_SECHS','auf ~6'
+/* Hide item BMP_SECHS_CMD Graphic */
+CALL VpItem window,'BMP_SECHS_CMD','HIDE'
+
+/* Set item value CMD_DRILLING Push Button */
+CALL VpSetItemValue window,'CMD_DRILLING','~Drilling'
+/* Hide item BMP_DRILLING_CMD Graphic */
+CALL VpItem window,'BMP_DRILLING_CMD','HIDE'
+
+/* Set item value CMD_VIERLING Push Button */
+CALL VpSetItemValue window,'CMD_VIERLING','~Vierling'
+/* Hide item BMP_VIERLING_CMD Graphic */
+CALL VpItem window,'BMP_VIERLING_CMD','HIDE'
+
+/* Set item value CMD_FULLHOUSE Push Button */
+CALL VpSetItemValue window,'CMD_FULLHOUSE','~Fullhouse'
+/* Hide item BMP_FULLHOUSE_CMD Graphic */
+CALL VpItem window,'BMP_FULLHOUSE_CMD','HIDE'
+
+/* Set item value CMD_KLEINE Push Button */
+CALL VpSetItemValue window,'CMD_KLEINE','~kl. Stra·e'
+/* Hide item BMP_KLSTR_CMD Graphic */
+CALL VpItem window,'BMP_KLSTR_CMD','HIDE'
+
+/* Set item value CMD_GROSSE Push Button */
+CALL VpSetItemValue window,'CMD_GROSSE','~gr. Stra·e'
+/* Hide item BMP_GRSTR_CMD Graphic */
+CALL VpItem window,'BMP_GRSTR_CMD','HIDE'
+
+/* Set item value CMD_KNIFFEL Push Button */
+CALL VpSetItemValue window,'CMD_KNIFFEL','Kn~iffel'
+/* Hide item BMP_KNIFFEL_CMD Graphic */
+CALL VpItem window,'BMP_KNIFFEL_CMD','HIDE'
+
+/* Set item value CMD_CHANCE Push Button */
+CALL VpSetItemValue window,'CMD_CHANCE','~Chance'
+/* Hide item BMP_CHANCE_CMD Graphic */
+CALL VpItem window,'BMP_CHANCE_CMD','HIDE'
+
+/* Set item value CMD_SPIEL_TIPS Push Button */
+CALL VpSetItemValue window,'CMD_SPIEL_TIPS','~Tips'
+/* Hide item BMP_SPIEL_TIPSCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_TIPSCMD','HIDE'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return
+
+/* ##SUB_lad_wrfl */
+lad_wrfl: /* routine lÑdt WÅrfel-bilder */
+
+/* init Bitmaps - Vorgehen: wenns im Verzeichnis */
+/* Bitmaps mit bestimmten Namen gibt, diese la-  */
+/* den, ansonsten die ressourcen                 */
+if stream(pfad_name||'wrfl.bmp','c','query exists') \= '' then
+  wrfl_leer = VpLoadPicture('FILE','wrfl.bmp')
+else
+  wrfl_leer = VpLoadPicture('RESBMP',1000)
+  
+if stream(pfad_name||'wrfl_1.bmp','c','query exists') \= '' then
+  wrfl_1 = VpLoadPicture('FILE','wrfl_1.bmp')
+else
+  wrfl_1 = VpLoadPicture('RESBMP',1001)
+  
+if stream(pfad_name||'wrfl_2.bmp','c','query exists') \= '' then
+  wrfl_2 = VpLoadPicture('FILE','wrfl_2.bmp')
+else
+  wrfl_2 = VpLoadPicture('RESBMP',1002)
+
+if stream(pfad_name||'wrfl_3.bmp','c','query exists') \= '' then
+  wrfl_3 = VpLoadPicture('FILE','wrfl_3.bmp')
+else
+  wrfl_3 = VpLoadPicture('RESBMP',1003)
+
+if stream(pfad_name||'wrfl_4.bmp','c','query exists') \= '' then
+  wrfl_4 = VpLoadPicture('FILE','wrfl_4.bmp')
+else
+  wrfl_4 = VpLoadPicture('RESBMP',1004)
+
+if stream(pfad_name||'wrfl_5.bmp','c','query exists') \= '' then
+  wrfl_5 = VpLoadPicture('FILE','wrfl_5.bmp')
+else
+  wrfl_5 =VpLoadPicture('RESBMP',1005)
+
+if stream(pfad_name||'wrfl_6.bmp','c','query exists') \= '' then
+  wrfl_6 = VpLoadPicture('FILE','wrfl_6.bmp')
+else
+  wrfl_6 = VpLoadPicture('RESBMP',1006)
+
+/* die halten-bmp ... */
+
+/* halten-leer wird nie gebraucht */
+/* wrfl_h_leer = VpLoadPicture('RESBMP',1007) */
+
+if stream(pfad_name||'wrfl_h1.bmp','c','query exists') \= '' then
+  wrfl_h1 = VpLoadPicture('FILE','wrfl_h1.bmp')
+else
+  wrfl_h1 = VpLoadPicture('RESBMP',1008)
+
+if stream(pfad_name||'wrfl_h2.bmp','c','query exists') \= '' then
+  wrfl_h2 = VpLoadPicture('FILE','wrfl_h2.bmp')
+else
+  wrfl_h2 = VpLoadPicture('RESBMP',1010)
+
+if stream(pfad_name||'wrfl_h3.bmp','c','query exists') \= '' then
+  wrfl_h3 = VpLoadPicture('FILE','wrfl_h3.bmp')
+else
+  wrfl_h3 = VpLoadPicture('RESBMP',1009)
+
+if stream(pfad_name||'wrfl_h4.bmp','c','query exists') \= '' then
+  wrfl_h4 = VpLoadPicture('FILE','wrfl_h4.bmp')
+else
+  wrfl_h4 = VpLoadPicture('RESBMP',1011)
+
+if stream(pfad_name||'wrfl_h5.bmp','c','query exists') \= '' then
+  wrfl_h5 = VpLoadPicture('FILE','wrfl_h5.bmp')
+else
+  wrfl_h5 = VpLoadPicture('RESBMP',1012)
+
+if stream(pfad_name||'wrfl_h6.bmp','c','query exists') \= '' then
+  wrfl_h6 = VpLoadPicture('FILE','wrfl_h6.bmp')
+else
+  wrfl_h6 = VpLoadPicture('RESBMP',1013)
+  
+
+/* wÅrfel zeigen ... */
+
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,1
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,2
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,3
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,4
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,5
+
+
+return
+
+/* ##SUB_l_cmdbmp */
+l_cmdbmp: /* routine lade cmd mit bitmaps (start) */
+/*   routine wird gerufen durch ein chg- */
+/*   event der rad-buttons, aber es darf */
+/*   nur einmal ein ladeproze· erfolgen  */
+
+/* wenn die bmp geladen sind, ist eine var */
+/* besetzt, sonst '' */
+
+if abbruch_bmp = '' then
+ do
+  /* diese werden schon in main gebraucht */
+  if stream(pfad_name||'ABBRUCH.BMP','c','query exists') \= '' then
+    abbruch_bmp = VpLoadPicture('FILE',pfad_name||'ABBRUCH.BMP')
+  else
+    abbruch_bmp = VpLoadPicture('RESBMP',1031)
+  /* endif */
+
+  if stream(pfad_name||'WUERFELN.BMP','c','query exists') \= '' then
+    wuerfeln_bmp = VpLoadPicture('FILE',pfad_name||'WUERFELN.BMP')
+  else
+    wuerfeln_bmp = VpLoadPicture('RESBMP',1028)
+  /* endif */
+
+  if stream(pfad_name||'TIPS.BMP','c','query exists') \= '' then
+    tips_bmp = VpLoadPicture('FILE',pfad_name||'TIPS.BMP')
+  else
+    tips_bmp = VpLoadPicture('RESBMP',1030)
+  /* endif */
+
+  if stream(pfad_name||'SIEGER.BMP','c','query exists') \= '' then
+    list_bmp = VpLoadPicture('FILE',pfad_name||'SIEGER.BMP')
+  else
+    list_bmp = VpLoadPicture('RESBMP',1032)
+  /* endif */
+
+  /* jetzt noch die, die in anderen forms zentral */
+  /* benîtigt werden */
+  if stream(pfad_name||'WEITER.BMP','c','query exists') \= '' then
+    weiter_bmp = VpLoadPicture('FILE',pfad_name||'WEITER.BMP')
+  else
+    weiter_bmp = VpLoadPicture('RESBMP',1029)
+  /* endif */
+
+  if stream(pfad_name||'AENDERN.BMP','c','query exists') \= '' then
+    aendern_bmp = VpLoadPicture('FILE',pfad_name||'AENDERN.BMP')
+  else
+    aendern_bmp = VpLoadPicture('RESBMP',1027)
+  /* endif */
+  
+  /* bei start zwar laden, aber nicht unbedingt */
+  /* zeigen */
+  /* Set item value BMP_LIST_CMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_CMD',list_bmp
+
+ end
+/* endif */
+
+/* evtl. vorhandene texte auf cmd lîschen */
+/* Set item value CMD_START Push Button */
+CALL VpSetItemValue window,'CMD_START',''
+/* Set item value CMD_ENDE Push Button */
+CALL VpSetItemValue window,'CMD_ENDE',''
+/* Set item value CMD_BOOK Push Button */
+CALL VpSetItemValue window,'CMD_BOOK',''
+
+/* immer erst bmp show, da Åber hide umschal- */
+/* tung txt/bmp stattfindet - bei allem ande- */
+/* reagieren die Bitmaps weiter auf events    */
+/* Show item BMP_START_CMD Graphic */
+CALL VpItem window,'BMP_START_CMD','SHOW'
+/* Show item BMP_ENDE_CMD Graphic */
+CALL VpItem window,'BMP_ENDE_CMD','SHOW'
+/* Show item BMP_BOOK_CMD Graphic */
+CALL VpItem window,'BMP_BOOK_CMD','SHOW'
+
+/* Set item value BMP_ENDE_CMD Graphic */
+CALL VpSetItemValue window,'BMP_ENDE_CMD',abbruch_bmp
+
+/* Set item value BMP_START_CMD Graphic */
+CALL VpSetItemValue window,'BMP_START_CMD',wuerfeln_bmp
+
+/* Set item value BMP_BOOK_CMD Graphic */
+CALL VpSetItemValue window,'BMP_BOOK_CMD',tips_bmp
+
+/* Is item showing? CMD_LISTE Push Button */
+if VpItem(window,'CMD_LISTE','ISSHOWING') = 1 then
+ do
+  /* Set item value CMD_LISTE Push Button */
+  CALL VpSetItemValue window,'CMD_LISTE',''
+ 
+  /* Show item BMP_LIST_CMD Graphic */
+  CALL VpItem window,'BMP_LIST_CMD','SHOW'
+
+ end
+/* endif */
+
+/* setzt global var show_typ */
+/* legt fest: sym als anzeige */
+show_typ='SYM'
+
+
+return
+
+/* ##SUB_l_cmdtxt */
+l_cmdtxt: /* routine lade cmd mit Text (start) */
+
+/* die buttons mit Text laden */
+/* Set item value CMD_START Push Button */
+CALL VpSetItemValue window,'CMD_START','~Spielstart'
+/* Set item value CMD_LISTE Push Button */
+CALL VpSetItemValue window,'CMD_LISTE','~Bestenliste'
+/* Set item value CMD_ENDE Push Button */
+CALL VpSetItemValue window,'CMD_ENDE','~Ende'
+/* Set item value CMD_BOOK Push Button */
+CALL VpSetItemValue window,'CMD_BOOK','~Tips'
+
+/* alle Bitmaps hiden - sonst reagieren sie */
+/* weiter auf events */
+/* Hide item BMP_START_CMD Graphic */
+CALL VpItem window,'BMP_START_CMD','HIDE'
+/* Hide item BMP_LIST_CMD Graphic */
+CALL VpItem window,'BMP_LIST_CMD','HIDE'
+/* Hide item BMP_ENDE_CMD Graphic */
+CALL VpItem window,'BMP_ENDE_CMD','HIDE'
+/* Hide item BMP_BOOK_CMD Graphic */
+CALL VpItem window,'BMP_BOOK_CMD','HIDE'
+
+/* setzt global var show_typ */
+/* legt fest: text als anzeige */
+show_typ='TXT'
+
+
+
+
+return
+
+/* ##SUB_nochmal */
+nochmal: /* routine nochmal startet mit den jetzigen */
+/* Werten auf 0 nochal */
+
+/* form-var anz_wurf - wÅrfe pro spieler max 3 - */ 
+/* gleichzeitig PrÅf-var ob setzen mîglich (>0)    */
+anz_wurf=0
+
+/* form-stem wurf. - enthÑlt kennung halten und wert */
+/* nach wurf - wird gesetzt durch werfen bzw. die     */
+/* button-routinen/dpclick auf WÅrferl                */
+wurf. = '0'
+
+/* spl_nr = aktueller spieler */
+spl_nr=1
+
+/* wert_lst: tail1 = spieler,                    */
+/* tail2= inkrement 1 - werte 1-13, zw-summe-lo, */
+/*        zw-summe-hi, su_ges                    */
+/* init auf '' -  erreichte Punkte u. Summen u.  */
+/* 0 (!) mÅssen gesetzt werden */
+wert_lst.=''
+
+/* runde init */
+runde=1
+
+/* Set item value LBL_SPL_NAME Text */
+CALL VpSetItemValue window,'LBL_SPL_NAME',spl_lst.spl_nr.name
+
+/* Spieler-Icon mu· kÅnstlich gelîscht werden ... */
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',leer_ico
+
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',spl_lst.spl_nr.symbol
+
+/* Set item value LBL_SPL_WURF Text */
+CALL VpSetItemValue window,'LBL_SPL_WURF','1.'
+
+/* Set item value LBL_SPL_RUNDE Text */
+CALL VpSetItemValue window,'LBL_SPL_RUNDE',runde
+
+/* Set item value LBL_NAME1 Text */
+CALL VpSetItemValue window,'LBL_NAME1',spl_lst.spl_nr.name
+
+/* init Spielfeld */
+
+/* erneut leere WÅrfel zeigen ... */
+
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,1
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,2
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,3
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,4
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,5
+
+/* wÅrfel-status zurÅck */
+do i = 1 to 5
+  /* Set item value CMD_WURF? Push Button */
+  CALL VpSetItemValue window,'CMD_WURF'||i,'*wÅrfeln*'
+  wurf.i.halten=0
+end /* end do */
+
+/* init Spielertabellen */
+call init_tbl
+
+/* alle buttons enabled */
+do i = 1 to 13
+  if show_typ = 'SYM' then
+    /* Show item BMP_???_CMD Graphic */
+    CALL VpItem window,buttons_list.i.bmp,'SHOW'
+    
+  /* Enable item CMD_??? Push Button */
+  CALL VpItem window,buttons_list.i.cmd,'ENABLE'
+end
+
+/* alle Spieler-EintrÑge auf - und spieler-namen */  
+do i = 1 to anzahl
+  do j = 1 to 6
+    /* Set cell value TBL_SPL?_LO Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_LO'),'-',1,j
+  end /* end do */
+
+  /* Set item foreground color TXT_SPL?_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||i||'_INFLO','FORECOLOR','RED'
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||i||'_INFLO','- 0'
+
+  do j = 1 to 7
+    /* Set cell value TBL_SPL?_HI Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_HI'),'-',1,j
+  end /* end do */
+
+  /* Set item value TXT_SPL?_INFHI Text */
+  CALL VpSetItemValue window,'TXT_SPL'||i||'_INFHI','0'
+  
+  /* Set item value TXT_SPL?_INFGES Text */
+  CALL VpSetItemValue window,'TXT_SPL'||i||'_INFGES','0'
+  
+  /* Set item value LBL_NAME? Text */
+  CALL VpSetItemValue window,'LBL_NAME'||i,spl_lst.i.name
+
+  /* Set item background color LBL_NAME? Text */
+  CALL VpItem window,'LBL_NAME'||i,'BACKCOLOR','PALEGRAY'
+  /* Set item foreground color LBL_NAME? Text */
+  CALL VpItem window,'LBL_NAME'||i,'FORECOLOR','BLUE'
+
+  /* Foreground der Tabellen ist schon richtig gesetzt */
+
+  /* Set item background color TBL_SPL?_LO Value Set */
+  CALL VpItem window,'TBL_SPL'||i||'_LO','BACKCOLOR','PALEGRAY'
+
+  /* Set item background color TBL_SPL?_HI Value Set */
+  CALL VpItem window,'TBL_SPL'||i||'_HI','BACKCOLOR','PALEGRAY'
+
+end /* end do */
+
+drop j
+
+/* aktiver Spieler ist der erste - farblich markieren */
+/* Foreground der Tabellen ist von Haus aus schwarz */
+
+/* Set item background color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','BACKCOLOR','BLUE'
+/* Set item foreground color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','FORECOLOR','WHITE'
+/* Set item background color TBL_SPL1_LO Value Set */
+CALL VpItem window,'TBL_SPL1_LO','BACKCOLOR','WHITE'
+/* Set item background color TBL_SPL1_HI Value Set */
+CALL VpItem window,'TBL_SPL1_HI','BACKCOLOR','WHITE'
+
+/* Rundenzeiger (windowtitle) setzen - mit global */
+/* var runde, titel_vorn, titel_hint              */
+CALL VpWindow window,'SETTITLE',titel_vorn||runde||titel_hint
+
+/* der erste Spieler mu· wÅrfeln, invertieren kann */
+/* er noch nicht - weiter und invert disablen */
+if show_typ='SYM' then
+  /* Show item BMP_WUERFELN_CMD Graphic */
+  CALL VpItem window,'BMP_WUERFELN_CMD','SHOW'
+  
+/* Enable item CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','ENABLE'
+/* Hide item BMP_AENDERN_CMD Graphic */
+CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+/* Disable item CMD_WRFL_INVERT Push Button */
+CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+/* Disable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','DISABLE'
+
+/* RÅcknahme setzen ist nur mîglich zwischen gesetzt */
+/* und weiter - disablen */
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+/* Disable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','DISABLE'
+
+/* Give item focus CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','FOCUS'
+
+
+
+
+return
+
+/* ##SUB_setzen */
+setzen: /* setzen - routine fÅr Kniffel       */
+
+/* - setzt global stem-var spl_wert   */
+/* - Ñndert/aktualisiert Form spiel   */
+/* - Ñndert spl_nr, pa·t Form an      */
+/* - ruft ggf. Abschlu·               */
+
+/* - bekomt 2 param:                  */
+/*   1: Kennung wo setzen=            */
+/*      (öbergabe basiert auf stem-   */
+/*       ordnun von spl_wert)         */
+/*      1, 2,  3,  4,  5,  6,         */
+/*      7, 8, 9, 10, 11, 12, 13       */
+/*      (f. tbl-hi: -6)               */
+/*   2: zu setzenden Wert (auch 0!)   */
+/*                                    */
+/*   Vorbesetzung ist '', d.h. Vorsicht */
+/*   bei den additionen wg. Nicht-Zahl  */
+
+parse arg wo, was
+
+/* Ñndere form-var anz_wurf auf 4,        */
+/* dadurch ist weitergehendes DrÅcken     */
+/* auf Setzknîpfe oder WÅrfeln ohne Aus-  */
+/* wirkung                                */
+anz_wurf=4
+
+wert_lst.spl_nr.wo=was
+
+/* 14 ist zwi-su lo, 15 ist zw-su hi, 16 ist ges */
+wert_lst.spl_nr.14=0
+do i = 1 to 6
+  if wert_lst.spl_nr.i \='' then
+    wert_lst.spl_nr.14=wert_lst.spl_nr.14 + wert_lst.spl_nr.i
+end /* end do */
+if wert_lst.spl_nr.14 > 62 then
+  wert_lst.spl_nr.14=wert_lst.spl_nr.14 + 35
+  
+wert_lst.spl_nr.15=0
+do i = 7 to 13
+  if wert_lst.spl_nr.i \='' then
+    wert_lst.spl_nr.15=wert_lst.spl_nr.15 + wert_lst.spl_nr.i
+end /* end do */
+
+wert_lst.spl_nr.16=wert_lst.spl_nr.14 + wert_lst.spl_nr.15
+
+if wo < 7 then
+  /* Set cell value TBL_SPL?_LO Value Set */
+  CALL VpSetItemValue window,'TBL_SPL'||spl_nr||'_LO',was,1,wo
+else
+  /* Set cell value TBL_SPL?_HI Value Set */
+  CALL VpSetItemValue window,'TBL_SPL'||spl_nr||'_HI',was,1,value(wo-6)
+/* endif */
+
+if wert_lst.spl_nr.14 > 62 then
+ do
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFLO',wert_lst.spl_nr.14
+  /* Set item background color TXT_SPALTEN_INF_LO Text */
+  CALL VpItem window,'TXT_SPALTEN_INF_LO','BACKCOLOR','GREEN'
+  /* Set item foreground color TXT_SPL1_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||spl_nr||'_INFLO','FORECOLOR','BLACK'
+ end
+else
+ do
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFLO','-'||wert_lst.spl_nr.14
+  /* Set item foreground color TXT_SPL1_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||spl_nr||'_INFLO','FORECOLOR','RED'
+ end
+
+/* Set item value TXT_SPL?_INFHI Text */
+CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFHI',wert_lst.spl_nr.15
+
+/* Set item value TXT_SPL?_INFGES Text */
+CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFGES',wert_lst.spl_nr.16
+
+/* Zur Zeit ist button nÑchster disabled - enablen */
+if show_typ = 'SYM' then
+  /* Show item BMP_WEITER_CMD Graphic */
+  CALL VpItem window,'BMP_WEITER_CMD','SHOW'
+  
+/* Enable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','ENABLE'
+
+/* der Spieler kann gesetzt haben, bevor er seine */
+/* drei WÅrfe komplett hatte - prÅfen, ggf. disablen */
+/* Is item enabled? CMD_WUERFELN Push Button */
+if VpItem(window,'CMD_WUERFELN','ISENABLED')=1 then
+ do
+  /* Hide item BMP_WUERFELN_CMD Graphic */
+  CALL VpItem window,'BMP_WUERFELN_CMD','HIDE'
+  /* Disable item CMD_WUERFELN Push Button */
+  CALL VpItem window,'CMD_WUERFELN','DISABLE'
+  
+  /* Hide item BMP_AENDERN_CMD Graphic */
+  CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+  /* Disable item CMD_WRFL_INVERT Push Button */
+  CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+ end
+
+/* wo und was werden von rÅcknahme evtl. benîtigt - */
+/* daher werden sie von weiter gedropt */
+
+/* jetzt ist eine RÅcknahme mîglich - bis weiter */
+if show_typ = 'SYM' then
+  /* Show item BMP_SPIEL_RUECKNCMD Graphic */
+  CALL VpItem window,'BMP_SPIEL_RUECKNCMD','SHOW'
+/* endif */
+/* Enable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','ENABLE'
+
+/* Give item focus CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','FOCUS'
+
+return
+
+/* ##SUB_sort */
+sort: /* sortier-routine - so eine Art "Linear sort" */
+
+/* nutzt daten aus form-var wurf.?.wert;
+   anzahl der zu sortierenden WÅrfel ist immer 5;
+   gibt einen sortierten String zurÅck ohne
+   Leerzeichen wie "12234"
+   
+   oder bei param ERGEBNIS direkt die var-anteile
+   spl_lst.?.name u. zugehîriger wert_lst.?.16
+   weil sie nur noch zur Ausgabe benîtigt werden
+*/
+
+parse arg param
+
+if param = 'ERGEBNIS' then
+ do
+  oben=anzahl
+  unten=1
+  do hoch = oben to unten+1 by -1
+    gross=unten
+    do i = unten+1 to hoch
+      if wert_lst.i.16 > wert_lst.gross.16 then
+        gross=i
+      /* endif */
+    end /* end do */
+    swp1=wert_lst.hoch.16
+    swp2=spl_lst.hoch.name
+    wert_lst.hoch.16=wert_lst.gross.16
+    spl_lst.hoch.name=spl_lst.gross.name
+    wert_lst.gross.16=swp1
+    spl_lst.gross.name=swp2
+  end /* end do */
+  
+  /* sortierfolge ist jetzt aufsteigend von unten nach oben */
+  /* drehen ... */
+
+  /* vorsicht, tmp. ist zur Zeit in Benutzung */  
+  tmp1.=''
+  tmp2.=''
+  j=anzahl
+  do i = 1 to anzahl
+    tmp1.i=wert_lst.j.16
+    tmp2.i=spl_lst.j.name
+    j=j-1
+  end /* end do */
+  
+  do i = 1 to anzahl
+    wert_lst.i.16=tmp1.i
+    spl_lst.i.name=tmp2.i
+  end /* end do */
+
+  drop oben unten hoch gross swp1 swp2 tmp1. tmp2. param
+ 
+  return 0
+ end
+else
+ nop
+/* endif */
+
+oben=5
+unten=1
+do hoch = oben to unten+1 by -1
+  
+  gross=unten
+  
+  do i = unten+1 to hoch
+    if wurf.i.wert > wurf.gross.wert then
+      gross=i
+    /* endif */
+    
+  end /* end do */
+  
+  tmp=wurf.hoch.wert
+  wurf.hoch.wert=wurf.gross.wert
+  wurf.gross.wert=tmp
+  
+end /* end do */
+
+drop oben unten hoch gross tmp param
+
+return wurf.1.wert||wurf.2.wert||wurf.3.wert||wurf.4.wert||wurf.5.wert
+
+/* ##SUB_werfen */
+werfen: /* wÅrfelt und setzt bitmap in Tabelle */
+
+/* mu· schlu·endlich global var wurf   */
+/* auf gewÅrfelte Augen setzen         */
+
+do i=1 to 5
+  /* durch innere schleife ein bi·chen action simulieren */
+  do j = 1 to 10
+
+    if wurf.i.halten = 0 then
+     do
+      zahl=random(1,6)
+      /* Set cell value TBL_WRFL Value Set */
+      CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_'||zahl),1,i
+
+      /* bi·chen verlangsamen - sonst wirkt die WÅrfelei */
+      /* nicht */  
+      do z = 1 to 500
+        nop
+      end /* end do */
+
+      wurf.i.wert=zahl
+     end
+    else
+      iterate
+    /* endif */
+
+  end /* do j */
+end   /* do i */
+
+drop j z zahl
+
+return
+

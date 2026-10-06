@@ -1,0 +1,25 @@
+/* Event Form events, Closed */
+Arg window 
+
+tmp=''
+
+/* das spezielle Icon "LEER.ICO" wird auch von Spiel */
+/* gebraucht - Spiel soll nachher lîschen */
+
+/* namen und symbole sind in global var spl_lst */
+
+do i = 1 to anzahl
+  /* wird gleich zum Icon-deload gebraucht */
+  tmp=tmp||' '||spl_lst.i.symbol
+end /* end do */
+
+do i = 1 to anz_ico
+ if pos(strip(icons.i), tmp) = 0 then
+   CALL VpFreePicture icons.i
+ /* endif */
+end /* end do */
+
+drop icons. spin_lst. gesetzt anz_ico tmp i index value
+
+/* Form-Ident "name" zurÅck */
+form_typ='name'

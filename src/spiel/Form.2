@@ -1,0 +1,58 @@
+/* Event Form events, Closed */
+Arg window 
+
+/* deload bitmaps */
+CALL VpFreePicture wrfl_leer
+
+/* halten-leer wird nicht geladen .. */
+/* CALL VpFreePicture wrfl_h_leer */
+
+do i = 1 to 6
+  CALL VpFreePicture value('wrfl_'||i)
+  CALL VpFreePicture value('wrfl_h'||i)
+end /* end do */
+
+/* leer_ico ist immer geladen */
+CALL VpFreePicture leer_ico
+drop leer_ico
+
+/* wenn die buttons mit bildchen belegt sind ... */
+if show_typ='SYM' then
+ do
+  CALL VpFreePicture ruecknahme_bmp
+  CALL VpFreePicture zwei_ico
+  CALL VpFreePicture drei_ico
+  CALL VpFreePicture vier_ico
+  CALL VpFreePicture fuenf_ico
+  CALL VpFreePicture sechs_ico
+  CALL VpFreePicture drilling_ico
+  CALL VpFreePicture vierling_ico
+  CALL VpFreePicture fullhouse_ico
+  CALL VpFreePicture klstr_ico
+  CALL VpFreePicture grstr_ico
+  CALL VpFreePicture kniffel_ico
+  CALL VpFreePicture chance_ico
+
+  drop ruecknahme_bmp eins_ico zwei_ico drei_ico
+  drop vier_ico fuenf_ico sechs_ico drilling_ico
+  drop vierling_ico fullhouse_ico klstr_ico
+  drop grstr_ico kniffel_ico chance_ico
+ end
+/* endif */
+
+/* spieler-symbole lîschen */
+do i = 1 to anzahl
+  CALL VpFreePicture spl_lst.i.symbol
+end /* end do */
+
+/* einiges droppen - re-init */
+drop wurf. buttons_list.
+drop spl_nr runde titel_hint titel_vorn wrfl_leer gef
+drop wrfl_1 wrfl_2 wrfl_3 wrfl_4 wrfl_5 wrfl_6
+drop wrfl_h1 wrfl_h2 wrfl_h3 wrfl_h4 wrfl_h5 wrfl_h6
+drop anz_wurf x y i tmp value msg
+spl_lst.=''
+wert_lst.=''
+
+/* zur Identifikation der Form fÅr main... */
+form_typ='spiel'

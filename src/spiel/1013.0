@@ -1,0 +1,43 @@
+/* Event auf ~4 CMD_VIER, Clicked/selected */
+Arg window self
+
+/* die "Zul„ssigkeitsprfungen" sind im Grunde ber-
+   flssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prfe, ob schon gewrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.4 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prft auf min 3 * 4 - setzt gef * 4 - 0 ist */
+/* vorbesetzt - callt schluáendlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=4 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 4
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_VIER Push Button */
+CALL VpItem window,'CMD_VIER','DISABLE'
+/* Hide item BMP_VIER_CMD Graphic */
+CALL VpItem window,'BMP_VIER_CMD','HIDE'
+
+call setzen '4', gef
+ 
+

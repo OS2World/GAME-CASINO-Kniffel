@@ -1,0 +1,38 @@
+/* Event Kn~iffel CMD_KNIFFEL, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.12 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf Kniffel - wenn ja, 50 -            */
+/* ansonsten 0                                  */
+
+gef=''
+do i = 1 to 5
+  gef=gef||wurf.i.wert
+end /* end do */
+
+if gef=copies('1',5) | gef=copies('2',5) | gef=copies('3',5) | gef=copies('4',5) | gef=copies('5',5) | gef=copies('6',5) then
+  gef=50
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_KNIFFEL Push Button */
+CALL VpItem window,'CMD_KNIFFEL','DISABLE'
+
+/* Hide item BMP_KNIFFEL_CMD Graphic */
+CALL VpItem window,'BMP_KNIFFEL_CMD','HIDE'
+
+call setzen '12', gef

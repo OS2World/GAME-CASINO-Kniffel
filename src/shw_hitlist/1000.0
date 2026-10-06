@@ -1,0 +1,4 @@
+/* Event ~ZurÅck zum Spiel CMD_ENDE, Clicked/selected */
+Arg window self
+
+CALL VpWindow window,'CLOSE'

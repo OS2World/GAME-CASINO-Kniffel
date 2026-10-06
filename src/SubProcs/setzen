@@ -1,0 +1,114 @@
+/* setzen - routine fÅr Kniffel       */
+
+/* - setzt global stem-var spl_wert   */
+/* - Ñndert/aktualisiert Form spiel   */
+/* - Ñndert spl_nr, pa·t Form an      */
+/* - ruft ggf. Abschlu·               */
+
+/* - bekomt 2 param:                  */
+/*   1: Kennung wo setzen=            */
+/*      (öbergabe basiert auf stem-   */
+/*       ordnun von spl_wert)         */
+/*      1, 2,  3,  4,  5,  6,         */
+/*      7, 8, 9, 10, 11, 12, 13       */
+/*      (f. tbl-hi: -6)               */
+/*   2: zu setzenden Wert (auch 0!)   */
+/*                                    */
+/*   Vorbesetzung ist '', d.h. Vorsicht */
+/*   bei den additionen wg. Nicht-Zahl  */
+
+parse arg wo, was
+
+/* Ñndere form-var anz_wurf auf 4,        */
+/* dadurch ist weitergehendes DrÅcken     */
+/* auf Setzknîpfe oder WÅrfeln ohne Aus-  */
+/* wirkung                                */
+anz_wurf=4
+
+wert_lst.spl_nr.wo=was
+
+/* 14 ist zwi-su lo, 15 ist zw-su hi, 16 ist ges */
+wert_lst.spl_nr.14=0
+do i = 1 to 6
+  if wert_lst.spl_nr.i \='' then
+    wert_lst.spl_nr.14=wert_lst.spl_nr.14 + wert_lst.spl_nr.i
+end /* end do */
+if wert_lst.spl_nr.14 > 62 then
+  wert_lst.spl_nr.14=wert_lst.spl_nr.14 + 35
+  
+wert_lst.spl_nr.15=0
+do i = 7 to 13
+  if wert_lst.spl_nr.i \='' then
+    wert_lst.spl_nr.15=wert_lst.spl_nr.15 + wert_lst.spl_nr.i
+end /* end do */
+
+wert_lst.spl_nr.16=wert_lst.spl_nr.14 + wert_lst.spl_nr.15
+
+if wo < 7 then
+  /* Set cell value TBL_SPL?_LO Value Set */
+  CALL VpSetItemValue window,'TBL_SPL'||spl_nr||'_LO',was,1,wo
+else
+  /* Set cell value TBL_SPL?_HI Value Set */
+  CALL VpSetItemValue window,'TBL_SPL'||spl_nr||'_HI',was,1,value(wo-6)
+/* endif */
+
+if wert_lst.spl_nr.14 > 62 then
+ do
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFLO',wert_lst.spl_nr.14
+  /* Set item background color TXT_SPALTEN_INF_LO Text */
+  CALL VpItem window,'TXT_SPALTEN_INF_LO','BACKCOLOR','GREEN'
+  /* Set item foreground color TXT_SPL1_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||spl_nr||'_INFLO','FORECOLOR','BLACK'
+ end
+else
+ do
+  /* Set item value TXT_SPL?_INFLO Text */
+  CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFLO','-'||wert_lst.spl_nr.14
+  /* Set item foreground color TXT_SPL1_INFLO Text */
+  CALL VpItem window,'TXT_SPL'||spl_nr||'_INFLO','FORECOLOR','RED'
+ end
+
+/* Set item value TXT_SPL?_INFHI Text */
+CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFHI',wert_lst.spl_nr.15
+
+/* Set item value TXT_SPL?_INFGES Text */
+CALL VpSetItemValue window,'TXT_SPL'||spl_nr||'_INFGES',wert_lst.spl_nr.16
+
+/* Zur Zeit ist button nÑchster disabled - enablen */
+if show_typ = 'SYM' then
+  /* Show item BMP_WEITER_CMD Graphic */
+  CALL VpItem window,'BMP_WEITER_CMD','SHOW'
+  
+/* Enable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','ENABLE'
+
+/* der Spieler kann gesetzt haben, bevor er seine */
+/* drei WÅrfe komplett hatte - prÅfen, ggf. disablen */
+/* Is item enabled? CMD_WUERFELN Push Button */
+if VpItem(window,'CMD_WUERFELN','ISENABLED')=1 then
+ do
+  /* Hide item BMP_WUERFELN_CMD Graphic */
+  CALL VpItem window,'BMP_WUERFELN_CMD','HIDE'
+  /* Disable item CMD_WUERFELN Push Button */
+  CALL VpItem window,'CMD_WUERFELN','DISABLE'
+  
+  /* Hide item BMP_AENDERN_CMD Graphic */
+  CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+  /* Disable item CMD_WRFL_INVERT Push Button */
+  CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+ end
+
+/* wo und was werden von rÅcknahme evtl. benîtigt - */
+/* daher werden sie von weiter gedropt */
+
+/* jetzt ist eine RÅcknahme mîglich - bis weiter */
+if show_typ = 'SYM' then
+  /* Show item BMP_SPIEL_RUECKNCMD Graphic */
+  CALL VpItem window,'BMP_SPIEL_RUECKNCMD','SHOW'
+/* endif */
+/* Enable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','ENABLE'
+
+/* Give item focus CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','FOCUS'

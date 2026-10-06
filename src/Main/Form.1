@@ -1,0 +1,140 @@
+/* Event Form events, Opened */
+Arg window 
+
+/* 
+   start-form fÅr Kniffel - bietet die Eingabe der
+   Anzahl der Spieler an, holt mit einer 2. Form
+   die Namen und startet danach das eigentliche
+   Spiel 
+   
+   benîtigt REXXUTIL wg. Datei-Operationen
+   
+*/
+
+/* Ermittlung diverser Standard-Infos */
+/* ********************************** */
+parse source akt_os routine_ident source_name
+pfad_name=left(source_name,lastpos('\',source_name))
+/* ************************************* */
+/* Im allgemeinen stehen jetzt folgende  */
+/* Werte zur VerfÅgung:                  */
+/* pfad_name     = lw+pfad mit schl. BSl */
+/* ************************************* */
+drop source akt_os routine_ident source_name
+
+/* ********************************** */
+/* prÅfe/lade RexxUtil, setze var:    */
+/* rexxutil_state=0 nicht geladen     */
+/*                1 geladen/entladen  */
+/*                2 vorher geladen,   */
+/*                  nicht entladen    */
+/* ********************************** */
+rexxutil_state=0
+rc=rxfuncquery('SysOS2Ver')     /* Test ...*/
+if rc=1 then
+  /* RexxUtil nicht geladen ... */
+  do
+    rc=RxFuncAdd('SysLoadFuncs', 'RexxUtil', 'SysLoadFuncs')
+    if rc=0 then
+      /* RexxUtil laden gelungen, initialisieren ... */
+      do
+        call SysLoadFuncs
+        rc=rxfuncquery('SysOS2Ver')
+        if rc=0 then
+          rexxutil_state=1
+        else
+          /* irgendwas hat nicht geklappt */
+          do
+            call rxfuncdrop 'SysLoadFuncs'
+            rexxutil_state=0
+          end
+        /* endiff */
+      end
+    else
+      /* RexxUtil laden nicht gekungen - kînnte */
+      /* theoretisch sein, da· RexxUtil geladen, */
+      /* aber nicht registriert */
+      do
+        call SysLoadFuncs
+        rc=rxfuncquery('SysOS2Ver')
+        if rc=1 then
+          /* RexxUtil ist definitiv NICHT ladbar */
+          rexxutil_state=0
+        else
+          /* alles klar - lie· sich doch laden */
+          /* da zwar die DLL geladen, jedoch nicht */
+          /* registriert war, wird Zustand als */
+          /* ungeladen angenommen */
+          rexxutil_state=1
+        /* endif */
+      end
+    /* endif */
+  end
+else
+  /* RexxUtil war schon vorher geladen und ist */
+  /* vollaktiv */
+  rexxutil_state=2
+/* endif */
+/* ************************************** */
+/* öber die var rexxutil_state kann jetzt */
+/* je nach Notwendigkeit eine Aktion      */
+/* stattfinden                            */
+/* ************************************** */
+
+if rexxutil_state=0 then
+ do
+  msg='Die zum Ablauf des Programms nîtige Zusatz-Datei REXXUTI '
+  msg=msg||'konnte nicht geladen werden. Das Programm mu· abgebrochen '
+  msg=msg||'werden.'
+  
+  response=VpMessageBox(window,'Probleme bei Programmstart ...',msg)
+  CALL VpWindow window,'CLOSE'
+  return
+ end
+
+/* rexxutil geladen - kann losgehen */
+
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+  /* Show item CMD_LISTE Push Button */
+  CALL VpItem window,'CMD_LISTE','SHOW'
+
+/* global var f. projekt */
+cr=d2c(13)||d2c(10)
+show_typ=''
+anzahl=0
+spl_lst.=''
+wert_lst.=''
+abbruch_bmp=''
+wuerfeln_bmp=''
+aendern_bmp=''
+weiter_bmp=''
+tips_bmp=''
+list_bmp=''
+   
+/* Set range SPN_ANZAHL Spin Button */
+CALL VpSetRange window,'SPN_ANZAHL',1,5  /* Set spin button range*/
+
+/* Set item value SPN_ANZAHL Spin Button */
+CALL VpSetItemValue window,'SPN_ANZAHL',1
+
+/* gibts eine hitlist.hgh - wenn ja, cmd */
+/* bestenliste enablen */
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+  /* Enable item CMD_LISTE Push Button */
+  CALL VpItem window,'CMD_LISTE','ENABLE'
+else
+  /* auch die zugehîrige Bitmap hiden - das */
+  /* lÑ·t sich Åber settings nicht machen */
+  /* Hide item BMP_LIST_CMD Graphic */
+  CALL VpItem window,'BMP_LIST_CMD','HIDE'
+/* endif */
+
+/* das Spielfeld kann entweder Åber Bildchen oder */
+/* Åber TexteintrÑge auf den Buttons gesteuert */
+/* werden - std: Symbole */
+/* der check ruft gleichzeitig ein Change-event */
+/* der die bmp in die buttons lÑdt */
+/* Check the item  RAD_SYMBOLE Radio Button */
+CALL VpSelect window,'RAD_SYMBOLE',1
+
+call l_cmdbmp

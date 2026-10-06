@@ -1,0 +1,68 @@
+/* Event WÅrfeln ... CMD_WUERFELN, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* zuerst prÅfen, ob schon gesetzt - nur setzen */
+/* vergibt 4                                    */
+if anz_wurf > 3 then
+  do
+   return
+  end
+
+/* anz_wurf ist bei start oder Spielerwechsel auf 0; */
+/* dadurch ist ein Setzen ohne Wurf nicht mîglich - */
+/* zur Unterscheidung darf jedoch nur setzen auf 4 */
+/* wechseln */
+if anz_wurf < 3 then
+  anz_wurf=anz_wurf + 1
+else
+  /* hat schon 3 ... */
+  do
+    return
+  end
+/* endif */
+
+/* bei anz_wurf > 3 kommts nicht bis hierher ... */
+
+/* wÅrfeln lassen */
+call werfen 
+
+/* wenn 1. oder mehr WÅrfe gemacht invert aktivieren */
+/* falls inaktiv */
+/* Is item enabled? CMD_WRFL_INVERT Push Button */
+if VpItem(window,'CMD_WRFL_INVERT','ISENABLED')=0 then
+ do
+  if show_typ='SYM' then
+    /* Show item BMP_AENDERN_CMD Graphic */
+    CALL VpItem window,'BMP_AENDERN_CMD','SHOW'
+    
+  /* Enable item CMD_WRFL_INVERT Push Button */
+  CALL VpItem window,'CMD_WRFL_INVERT','ENABLE'
+ end   
+
+/* Info auf nÑchstkommenden Wurf setzen */
+if anz_wurf < 3 then
+  /* Set item value LBL_SPL_WURF Text */
+  CALL VpSetItemValue window,'LBL_SPL_WURF',value(anz_wurf+1)||'.'
+else
+ do
+  /* Set item value LBL_SPL_WURF Text */
+  CALL VpSetItemValue window,'LBL_SPL_WURF','-'
+  
+  /* temporÑr wÅrfel- und - invert-button au·er */
+  /* Kraft setzen */
+  
+  /* Disable item CMD_WUERFELN Push Button */
+  CALL VpItem window,'CMD_WUERFELN','DISABLE'
+  /* Hide item BMP_WUERFELN_CMD Graphic */
+  CALL VpItem window,'BMP_WUERFELN_CMD','HIDE'
+  /* Disable item CMD_WRFL_INVERT Push Button */
+  CALL VpItem window,'CMD_WRFL_INVERT','DISABLE'
+  /* Hide item BMP_AENDERN_CMD Graphic */
+  CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+ end
+  
+

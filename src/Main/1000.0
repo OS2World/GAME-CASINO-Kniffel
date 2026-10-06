@@ -1,0 +1,12 @@
+/* Event ~Spielstart  1000, Clicked/selected */
+Arg window self
+
+/* ermittle Anzahl der Spieler .. */
+/* Get item value SPN_ANZAHL Spin Button */
+anzahl = VpGetItemValue(window,'SPN_ANZAHL')
+
+CALL VpWindow window,'HIDE'
+
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\namen_holen */
+/* namen spÑter in sec-close weitergeben Åber queue ! */
+value=VpOpenForm(window, 257, '')

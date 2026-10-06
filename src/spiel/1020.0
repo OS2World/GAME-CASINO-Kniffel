@@ -1,0 +1,41 @@
+/* Event ~gr. Straáe CMD_GROSSE, Clicked/selected */
+Arg window self
+
+/* die "Zul„ssigkeitsprfungen" sind im Grunde ber-
+   flssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prfe, ob schon gewrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.11 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prft auf groáe Straáe - wenn ja, 40 -      */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+if pos('12345',tmp)>0 | pos('23456',tmp)>0 then
+  gef=40
+else
+ gef=0
+/* endif */
+
+/* Disable item CMD_GROSSE Push Button */
+CALL VpItem window,'CMD_GROSSE','DISABLE'
+/* Hide item BMP_GRSTR_CMD Graphic */
+CALL VpItem window,'BMP_GRSTR_CMD','HIDE'
+
+drop tmp
+
+call setzen '11', gef
+ 

@@ -1,0 +1,11 @@
+/* Event Value Set TBL_WRFL, Clicked/selected */
+Arg window self
+
+/* Get index of selected cell TBL_WRFL Value Set */
+rowcol=VpGetIndex(window,'TBL_WRFL')
+PARSE VAR rowcol row col
+
+/* select zutreffenden pushbutton */
+CALL VpSelect window,value('CMD_WURF'||col)
+
+drop rowcol row col

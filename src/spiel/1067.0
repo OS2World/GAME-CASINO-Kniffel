@@ -1,0 +1,197 @@
+/* Event NÑchster  CMD_NEXT_SPL, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then
+ do
+  return
+ end
+ 
+/* prÅfe, ob noch nicht gesetzt */
+if anz_wurf \= 4 then
+ do 
+  return
+ end
+
+/* wo und was sind als var noch von den setz-buttons */
+/* und nach nutzung durch setzen aktiv wg. evtl.     */
+/* RÅcknahme - jetzt droppen                         */
+drop wo was
+
+/* ab jetzt ist keine RÅcknahme mehr mîglich         */
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+/* Disable item CMD_SPIEL_RUECKN Push Button */
+CALL VpItem window,'CMD_SPIEL_RUECKN','DISABLE'
+
+/* arbeitet Spielfeld um fÅr nÑchsten Spieler bzw. */
+/* beendet ...                                     */
+if spl_nr=anzahl then
+ runde=runde+1
+
+/* Schlu·bearbeitung */
+if runde > 13 then
+ do
+  /* Spielende - Ergebnisse prÑsentieren */
+
+  /* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\ergebnis */
+  value=VpOpenForm(window, 259, '')
+
+  return
+ end
+/* endif */
+
+/* Set item background color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'BACKCOLOR','PALEGRAY'
+/* Set item foreground color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'FORECOLOR','BLUE'
+
+/* Foreground der Tabellen ist schon richtig gesetzt */
+
+/* Set item background color TBL_SPL?_LO Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_LO','BACKCOLOR','PALEGRAY'
+
+/* Set item background color TBL_SPL?_HI Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_HI','BACKCOLOR','PALEGRAY'
+
+/* Spieler-Icon mu· kÅnstlich gelîscht werden ... */
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',leer_ico
+
+/* Spieler-ident auf nÑchsten oder 1. */
+if spl_nr < anzahl then
+  spl_nr=spl_nr+1
+else
+  spl_nr=1
+/* endif */
+
+/* WÅrfe zurÅcksetzen */
+anz_wurf=0
+
+/* Daten f. den nÑchsten Spieler */
+
+/* Set item value LBL_SPL_NAME Text */
+CALL VpSetItemValue window,'LBL_SPL_NAME',spl_lst.spl_nr.name
+
+/* Set item value BTM_SPL_ICO Graphic */
+CALL VpSetItemValue window,'BTM_SPL_ICO',spl_lst.spl_nr.symbol
+
+/* Set item value LBL_SPL_WURF Text */
+CALL VpSetItemValue window,'LBL_SPL_WURF','1.'
+
+/* Set item value LBL_SPL_RUNDE Text */
+CALL VpSetItemValue window,'LBL_SPL_RUNDE',runde
+
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,1
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,2
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,3
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,4
+/* Set cell value TBL_WRFL Value Set */
+CALL VpSetItemValue window,'TBL_WRFL',wrfl_leer,1,5
+
+/* Set item value LBL_NAME? Text */
+CALL VpSetItemValue window,'LBL_NAME'||spl_nr,spl_lst.spl_nr.name
+
+/* Foreground der Tabellen ist schon richtig gesetzt */
+
+/* Set item background color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'BACKCOLOR','BLUE'
+/* Set item foreground color LBL_NAME? Text */
+CALL VpItem window,'LBL_NAME'||spl_nr,'FORECOLOR','WHITE'
+/* Set item background color TBL_SPL?_LO Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_LO','BACKCOLOR','WHITE'
+/* Set item background color TBL_SPL?_HI Value Set */
+CALL VpItem window,'TBL_SPL'||spl_nr||'_HI','BACKCOLOR','WHITE'
+
+/* Give item focus CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','FOCUS'
+
+/* wÅrfel-status zurÅck */
+do i = 1 to 5
+  /* Set item value CMD_WURF? Push Button */
+  CALL VpSetItemValue window,'CMD_WURF'||i,'*wÅrfeln*'
+  wurf.i.halten=0
+end /* end do */
+
+/* Rundenzeiger (windowtitle) setzen - mit global */
+/* var runde, titel_vorn, titel_hint              */
+CALL VpWindow window,'SETTITLE',titel_vorn||runde||titel_hint
+
+/* wenn der Spieler drei WÅrfe brauchte ist der */
+/* wÅrfel-button disabled - enablen */
+/* Is item enabled? CMD_WUERFELN Push Button */
+if VpItem(window,'CMD_WUERFELN','ISENABLED')=0 then
+ do
+  if show_typ='SYM' then
+    /* Show item BMP_WUERFELN_CMD Graphic */
+    CALL VpItem window,'BMP_WUERFELN_CMD','SHOW'
+
+  /* in jedem Fall, wenn disabled */  
+  /* Enable item CMD_WUERFELN Push Button */
+  CALL VpItem window,'CMD_WUERFELN','ENABLE'
+ end
+
+/* Durch disablete Setz-Buttons soll die visuelle öber- */
+/* sicht geschaffen werden, welche Setzmîglichkeiten der */
+/* aktuelle Spieler hat - es mu· also jeweils  evtl.   */
+/* erstmal wieder enabled werden (in AbhÑngigkeit zu */
+/* var show_typ) und dann in AbhÑngigkeit zu wert_lst */
+/* disabled werden - um Flashes zu vermeiden, immer */
+/* erst status prÅfen -nutzt global var buttons_list */
+do i = 1 to 13
+
+  if wert_lst.spl_nr.i \= '' then
+    /* Spieler hat Werteintrag - ggf. disablen, wenn */
+    /* nicht schon disabled ist */
+    
+    /* Is item enabled? CMD_??? Push Button */
+    if VpItem(window,buttons_list.i.cmd,'ISENABLED')=1 then
+     do
+      /* Disable item CMD_EINS Push Button */
+      CALL VpItem window,buttons_list.i.cmd,'DISABLE'
+      /* Hide item BMP_EINS_CMD Graphic */
+      CALL VpItem window,buttons_list.i.bmp,'HIDE'
+     end
+    else
+      nop
+    /* endif */
+  else
+    /* Spieler hat noch keinen Werteintrag - ggf. */
+    /* enablen, wenn nicht schon enabled ist      */
+    
+    /* Is item enabled? CMD_??? Push Button */
+    if VpItem(window,buttons_list.i.cmd,'ISENABLED')=0 then
+     do
+      if show_typ = 'SYM' then
+        /* Show item BMP_EINS_CMD Graphic */
+        CALL VpItem window,buttons_list.i.bmp,'SHOW'
+    
+      /* Enable item CMD_EINS Push Button */
+      CALL VpItem window,buttons_list.i.cmd,'ENABLE'
+     end
+    else
+      nop
+    /* endif */
+  /* endif */
+  
+end /* end do */
+
+/* es kann jetzt erst wieder der nÑchste kommen, */
+/* wenn gesetzt wurde - disablen, in routine setzen */
+/* enablen */
+/* Disable item CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','DISABLE'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+
+  
+
+

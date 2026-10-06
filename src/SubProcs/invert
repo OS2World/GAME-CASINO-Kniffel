@@ -1,0 +1,70 @@
+/* routine invert - invertiert 1 (arg) WÅrfel oder alle (all) */
+/* PrÅfung auf ZulÑssigkeit durch caller */
+
+parse arg param
+
+/* setzt global var wurf.?.halten auf 0 oder 1 */
+
+/* normalerweise wÑre das eine NOT-operation, aber
+   aus unbekannten GrÅnden "spinnt" die Routine
+   dann manchmal - setzt ersten, wenn der dritte
+   gemeint ist etc. - au·erdem mÅ·te sowieso ein
+   if-Konstrukt kommen */
+
+if param='ALLE' then
+ do i = 1 to 5
+  if wurf.i.halten = 0 then
+   do
+    wurf.i.halten = 1
+
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||i,'-halten-'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_h'||wurf.i.wert),1,i
+   end
+  else
+   do
+    wurf.i.halten = 0
+    
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||i,'*wÅrfeln*'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_'||wurf.i.wert),1,i
+   end
+  /* endif */
+ end /* end do */
+else
+ do
+  if wurf.param.halten = 0 then
+   do
+    wurf.param.halten = 1
+
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||param,'-halten-'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_h'||wurf.param.wert),1,param
+   end
+  else
+   do
+    wurf.param.halten = 0
+    
+    /* Zustand zeigen .. */
+    
+    /* Set item value CMD_WURF? Push Button */
+    CALL VpSetItemValue window,'CMD_WURF'||param,'*wÅrfeln*'
+    /* Set cell value TBL_WRFL Value Set */
+    CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_'||wurf.param.wert),1,param
+   end
+  /* endif */
+
+ end
+/* endif */
+
+drop param
+

@@ -1,0 +1,48 @@
+/* Event ~Drilling CMD_DRILLING, Clicked/selected */
+Arg window self
+
+/* die "ZulÑssigkeitsprÅfungen" sind im Grunde Åber-
+   flÅssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prÅfe, ob schon gewÅrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.7 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prÅft auf drilling - wenn ja, addition aller */
+/* ansonsten 0                                  */
+
+/* aus purer Bequemlichkeit erfolgt eine Art */
+/* Mustervergleich - der setzt eine Sortierung */
+/* voraus */
+
+tmp=sort()
+
+if pos('111',tmp)>0 | pos('222',tmp)>0 | pos('333',tmp)>0 | pos('444',tmp)>0 | pos('555',tmp)>0 | pos('666',tmp)>0 then
+ /* es ist ein Drilling drin, alle WÅrfel addieren */
+ do
+  gef=0
+  do i = 1 to 5
+    gef=gef+substr(tmp,i,1)
+  end /* end do */
+ end
+else
+ gef=0
+/* endif */
+
+/* Disable item CMD_DRILLING Push Button */
+CALL VpItem window,'CMD_DRILLING','DISABLE'
+/* Hide item BMP_DRILLING_CMD Graphic */
+CALL VpItem window,'BMP_DRILLING_CMD','HIDE'
+
+drop tmp
+
+call setzen '7', gef
+ 
+

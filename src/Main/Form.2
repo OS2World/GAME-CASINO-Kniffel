@@ -1,0 +1,26 @@
+/* Event Form events, Closed */
+Arg window 
+
+/* entl„dt ggf. bei Programmende irgendwelche Dinge */
+/* andere Deload-Maánahmen (Icons u. Bilder werden  */
+/* z. T. in den jeweiligen Schluábearbeitungen      */
+/* entladen - zentrale hier)                        */
+
+CALL VpFreePicture abbruch_bmp
+CALL VpFreePicture wuerfeln_bmp
+CALL VpFreePicture tips_bmp
+CALL VpFreePicture list_bmp
+CALL VpFreePicture weiter_bmp
+CALL VpFreePicture aendern_bmp
+
+/* RexxUtil-Abschluábehandlung */
+if rexxutil_state = 1 THEN
+  /* RexxUtil bei ProgStart geladen, wieder */
+  /* entladen */
+  do
+    call SysDropFuncs
+    rc=RxFuncDrop('SysLoadFuncs')
+  end
+/* endif - no else! */
+drop rc rexxutil_state
+/* RexxUtil-Abschlussbehandlung Ende */

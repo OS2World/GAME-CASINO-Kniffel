@@ -1,0 +1,9 @@
+/* Event Graphic BMP_TIPS_ZURUECKCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_TIPS_ENDE Push Button */
+CALL VpItem window,'CMD_TIPS_ENDE','SENDMSG','0x0123','1','0'
+/* Select item CMD_TIPS_ENDE Push Button */
+CALL VpSelect window,'CMD_TIPS_ENDE'
+/* Set button highlight off CMD_TIPS_ENDE Push Button */
+CALL VpItem window,'CMD_TIPS_ENDE','SENDMSG','0x0123','0','0'

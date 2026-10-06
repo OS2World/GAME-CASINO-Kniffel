@@ -1,0 +1,31 @@
+/* wÅrfelt und setzt bitmap in Tabelle */
+
+/* mu· schlu·endlich global var wurf   */
+/* auf gewÅrfelte Augen setzen         */
+
+do i=1 to 5
+  /* durch innere schleife ein bi·chen action simulieren */
+  do j = 1 to 10
+
+    if wurf.i.halten = 0 then
+     do
+      zahl=random(1,6)
+      /* Set cell value TBL_WRFL Value Set */
+      CALL VpSetItemValue window,'TBL_WRFL',value('wrfl_'||zahl),1,i
+
+      /* bi·chen verlangsamen - sonst wirkt die WÅrfelei */
+      /* nicht */  
+      do z = 1 to 500
+        nop
+      end /* end do */
+
+      wurf.i.wert=zahl
+     end
+    else
+      iterate
+    /* endif */
+
+  end /* do j */
+end   /* do i */
+
+drop j z zahl

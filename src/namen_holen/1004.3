@@ -1,0 +1,73 @@
+/* Event Spin Button SPN_ICO_SHW, Changed */
+Arg window self
+
+/* der spin ist ein bl”des control - man kriegt
+   es nicht sauber kontrolliert, um wieviel in-
+   dexe jeweils gespinnt wird - wnschenswert
+   w„re der Change jeweils + oder - 1, tats„ch-
+   lich l„uft er aber viel schneller durch; der
+   change-event kommt da nicht mit
+*/
+
+/* 
+   spin_lst. enth„lt zeiger auf Bitmaps - wenn chgd,
+   Icons in BMP_ICO_SHW anpassen
+*/
+
+/* 
+   es scheint, als ob man icons nicht "l”schen" 
+   kann, bevor eine neue Ausgabe erfolgt - da manche
+   icons jedoch durchsichtig sind, bleiben oft
+   Artefakte des vorherigen zurck. Brutale Methode:
+   es gibt ein "leeres" Icon zum L”schen namens
+   LEER.ICO das immer erst mal zeigen, dann neu
+*/
+
+/* Painting disable SPN_ICO_SHW Spin Button */
+CALL VpItem window,'SPN_ICO_SHW','DISABLEPAINT'
+
+/* Set item value BMP_ICO_SHW Graphic */
+CALL VpSetItemValue window,'BMP_ICO_SHW',leer_ico
+
+/* Repaint item BMP_ICO_SHW Graphic */
+rc=VpItem(window,'BMP_ICO_SHW','PAINT')
+
+/* Get item value SPN_ICO_SHW Spin Button */
+/* value = VpGetItemValue(window,'SPN_ICO_SHW') */
+/* Get current index SPN_ICO_SHW Spin Button */
+value=VpGetItemValue(window, 'SPN_ICO_SHW', 'INDEX')
+
+if value >= akt_icn then
+ do
+  /* nach oben = addieren */
+  akt_icn = akt_icn + 1
+  if akt_icn > anz_ico then
+    akt_icn = 1
+ end
+else
+ do
+  /* nach unten = subtrahieren */
+  akt_icn = akt_icn - 1
+  if akt_icn <= 0 then
+    akt_icn = 1
+ end
+  
+/* Set item value BMP_ICO_SHW Graphic */
+CALL VpSetItemValue window,'BMP_ICO_SHW',spin_lst.akt_icn
+
+/* Painting enable SPN_ICO_SHW Spin Button */
+CALL VpItem window,'SPN_ICO_SHW','ENABLEPAINT'
+
+/* das Spin-Feld l„át sich nicht ganz verdecken, */
+/* deshalb verursacht der Cursor Flashes unter- */
+/* halb/neben dem Icon - der Fokus wird aber so- */
+/* wieso im textfeld gebraucht */
+
+/* Painting disable TXT_NAMEN Entry Field */
+CALL VpItem window,'TXT_NAMEN','DISABLEPAINT'
+
+/* Give item focus TXT_NAMEN Entry Field */
+CALL VpItem window,'TXT_NAMEN','FOCUS'
+
+/* Painting enable TXT_NAMEN Entry Field */
+CALL VpItem window,'TXT_NAMEN','ENABLEPAINT'

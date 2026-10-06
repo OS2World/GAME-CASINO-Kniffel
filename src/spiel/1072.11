@@ -1,0 +1,11 @@
+/* Event Graphic BMP_WUERFELN_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_WUERFELN Push Button */
+CALL VpSelect window,'CMD_WUERFELN'
+
+/* Set button highlight off CMD_WUERFELN Push Button */
+CALL VpItem window,'CMD_WUERFELN','SENDMSG','0x0123','0','0'

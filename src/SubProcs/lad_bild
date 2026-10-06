@@ -1,0 +1,161 @@
+/* routine lÑdt die Buttons mit Bildchen */
+
+/* form-var button_list - wird gebraucht, weil die */
+/* buttons und bmp disabled/enabled werden mÅssen und */
+/* keine inkrementellen Namen tragen */
+buttons_list.=''
+buttons_list.1.bmp='BMP_EINS_CMD'
+buttons_list.1.cmd='CMD_EINS'
+buttons_list.2.bmp='BMP_ZWEI_CMD'
+buttons_list.2.cmd='CMD_ZWEI'
+buttons_list.3.bmp='BMP_DREI_CMD'
+buttons_list.3.cmd='CMD_DREI'
+buttons_list.4.bmp='BMP_VIER_CMD'
+buttons_list.4.cmd='CMD_VIER'
+buttons_list.5.bmp='BMP_FUENF_CMD'
+buttons_list.5.cmd='CMD_FUENF'
+buttons_list.6.bmp='BMP_SECHS_CMD'
+buttons_list.6.cmd='CMD_SECHS'
+buttons_list.7.bmp='BMP_DRILLING_CMD'
+buttons_list.7.cmd='CMD_DRILLING'
+buttons_list.8.bmp='BMP_VIERLING_CMD'
+buttons_list.8.cmd='CMD_VIERLING'
+buttons_list.9.bmp='BMP_FULLHOUSE_CMD'
+buttons_list.9.cmd='CMD_FULLHOUSE'
+buttons_list.10.bmp='BMP_KLSTR_CMD'
+buttons_list.10.cmd='CMD_KLEINE'
+buttons_list.11.bmp='BMP_GRSTR_CMD'
+buttons_list.11.cmd='CMD_GROSSE'
+buttons_list.12.bmp='BMP_KNIFFEL_CMD'
+buttons_list.12.cmd='CMD_KNIFFEL'
+buttons_list.13.bmp='BMP_CHANCE_CMD'
+buttons_list.13.cmd='CMD_CHANCE'
+
+/* button-icons - es sind im Grunde Icons, auch */
+/* wenn die Endung auf bmp lautet - icons passen */
+/* nicht gut */
+
+/* die zentralen button-bmp kommen von main */
+/* Set item value BMP_WUERFELN_CMD Graphic */
+CALL VpSetItemValue window,'BMP_WUERFELN_CMD',wuerfeln_bmp
+/* Set item value BMP_ABBRUCH_CMD Graphic */
+CALL VpSetItemValue window,'BMP_ABBRUCH_CMD',abbruch_bmp
+/* Set item value BMP_WEITER_CMD Graphic */
+CALL VpSetItemValue window,'BMP_WEITER_CMD',weiter_bmp
+/* Set item value BMP_AENDERN_CMD Graphic */
+CALL VpSetItemValue window,'BMP_AENDERN_CMD',aendern_bmp
+/* Set item value BMP_SPIEL_TIPSCMD Graphic */
+CALL VpSetItemValue window,'BMP_SPIEL_TIPSCMD',tips_bmp
+
+/* spezielle form-buttons */
+if stream(pfad_name||'RUECKNAH.BMP','c','query exists') \= '' then
+  ruecknahme_bmp = VpLoadPicture('FILE',pfad_name||'RUECKNAH.BMP')
+else
+  ruecknahme_bmp = VpLoadPicture('RESBMP',1034)
+/* endif */
+/* Set item value BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpSetItemValue window,'BMP_SPIEL_RUECKNCMD',ruecknahme_bmp
+
+if stream(pfad_name||'EINS.BMP','c','query exists') \= '' then
+  eins_ico = VpLoadPicture('FILE',pfad_name||'EINS.BMP')
+else
+  eins_ico = VpLoadPicture('RESBMP',1014)
+
+/* Set item value BMP_EINS_CMD Graphic */
+CALL VpSetItemValue window,'BMP_EINS_CMD',eins_ico
+
+if stream(pfad_name||'ZWEI.BMP','c','query exists') \= '' then
+  zwei_ico = VpLoadPicture('FILE',pfad_name||'ZWEI.BMP')
+else
+  zwei_ico = VpLoadPicture('RESBMP',1015)
+
+/* Set item value BMP_ZWEI_CMD Graphic */
+CALL VpSetItemValue window,'BMP_ZWEI_CMD',zwei_ico
+
+if stream(pfad_name||'DREI.BMP','c','query exists') \= '' then
+  drei_ico = VpLoadPicture('FILE',pfad_name||'DREI.BMP')
+else
+  drei_ico = VpLoadPicture('RESBMP',1016)
+
+/* Set item value BMP_DREI_CMD Graphic */
+CALL VpSetItemValue window,'BMP_DREI_CMD',drei_ico
+
+if stream(pfad_name||'VIER.BMP','c','query exists') \= '' then
+  vier_ico = VpLoadPicture('FILE',pfad_name||'VIER.BMP')
+else
+  vier_ico = VpLoadPicture('RESBMP',1017)
+
+/* Set item value BMP_VIER_CMD Graphic */
+CALL VpSetItemValue window,'BMP_VIER_CMD',vier_ico
+
+if stream(pfad_name||'FUENF.BMP','c','query exists') \= '' then
+  fuenf_ico = VpLoadPicture('FILE',pfad_name||'FUENF.BMP')
+else
+  fuenf_ico = VpLoadPicture('RESBMP',1018)
+
+/* Set item value BMP_FUENF_CMD Graphic */
+CALL VpSetItemValue window,'BMP_FUENF_CMD',fuenf_ico
+
+if stream(pfad_name||'SECHS.BMP','c','query exists') \= '' then
+  sechs_ico = VpLoadPicture('FILE',pfad_name||'SECHS.BMP')
+else
+  sechs_ico = VpLoadPicture('RESBMP',1019)
+
+/* Set item value BMP_SECHS_CMD Graphic */
+CALL VpSetItemValue window,'BMP_SECHS_CMD',sechs_ico
+
+if stream(pfad_name||'DRILLING.BMP','c','query exists') \= '' then
+  drilling_ico = VpLoadPicture('FILE',pfad_name||'DRILLING.BMP')
+else
+  drilling_ico = VpLoadPicture('RESBMP',1020)
+
+/* Set item value BMP_DRILLING_CMD Graphic */
+CALL VpSetItemValue window,'BMP_DRILLING_CMD',drilling_ico
+
+if stream(pfad_name||'VIERLING.BMP','c','query exists') \= '' then
+  vierling_ico = VpLoadPicture('FILE',pfad_name||'VIERLING.BMP')
+else
+  vierling_ico = VpLoadPicture('RESBMP',1021)
+
+/* Set item value BMP_VIERLING_CMD Graphic */
+CALL VpSetItemValue window,'BMP_VIERLING_CMD',vierling_ico
+
+if stream(pfad_name||'FULLHOUS.BMP','c','query exists') \= '' then
+  fullhouse_ico = VpLoadPicture('FILE',pfad_name||'FULLHOUS.BMP')
+else
+  fullhouse_ico = VpLoadPicture('RESBMP',1022)
+
+/* Set item value BMP_FULLHOUSE_CMD Graphic */
+CALL VpSetItemValue window,'BMP_FULLHOUSE_CMD',fullhouse_ico
+
+if stream(pfad_name||'KL_STR.BMP','c','query exists') \= '' then
+  klstr_ico = VpLoadPicture('FILE',pfad_name||'KL_STR.BMP')
+else
+  klstr_ico = VpLoadPicture('RESBMP',1023)
+
+/* Set item value BMP_KLSTR_CMD Graphic */
+CALL VpSetItemValue window,'BMP_KLSTR_CMD',klstr_ico
+
+if stream(pfad_name||'GR_STR.BMP','c','query exists') \= '' then
+  grstr_ico = VpLoadPicture('FILE',pfad_name||'GR_STR.BMP')
+else
+  grstr_ico = VpLoadPicture('RESBMP',1024)
+
+/* Set item value BMP_GRSTR_CMD Graphic */
+CALL VpSetItemValue window,'BMP_GRSTR_CMD',grstr_ico
+
+if stream(pfad_name||'KNIFFEL.BMP','c','query exists') \= '' then
+  kniffel_ico = VpLoadPicture('FILE',pfad_name||'KNIFFEL.BMP')
+else
+  kniffel_ico = VpLoadPicture('RESBMP',1025)
+
+/* Set item value BMP_KNIFFEL_CMD Graphic */
+CALL VpSetItemValue window,'BMP_KNIFFEL_CMD',kniffel_ico
+
+if stream(pfad_name||'CHANCE.BMP','c','query exists') \= '' then
+  chance_ico = VpLoadPicture('FILE',pfad_name||'CHANCE.BMP')
+else
+  chance_ico = VpLoadPicture('RESBMP',1026)
+
+/* Set item value BMP_CHANCE_CMD Graphic */
+CALL VpSetItemValue window,'BMP_CHANCE_CMD',chance_ico

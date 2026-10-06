@@ -1,0 +1,6 @@
+/* Event Anzeige mit Symbolen RAD_SYMBOLE, Clicked/selected */
+Arg window self
+
+/* ruft bitmap-lade-routine */
+call l_cmdbmp
+

@@ -1,0 +1,31 @@
+/* Event ~Chance CMD_CHANCE, Clicked/selected */
+Arg window self
+
+/* die "Zul„ssigkeitsprfungen" sind im Grunde ber-
+   flssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prfe, ob schon gewrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.13 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* errechnet chance  */
+
+gef=0
+
+do i= 1 to 5
+ gef=gef + wurf.i.wert
+end /* end do */
+
+/* Disable item CMD_CHANCE Push Button */
+CALL VpItem window,'CMD_CHANCE','DISABLE'
+/* Hide item BMP_CHANCE_CMD Graphic */
+CALL VpItem window,'BMP_CHANCE_CMD','HIDE'
+
+call setzen '13', gef

@@ -1,0 +1,74 @@
+/* init Tabellen in Form: spiel */
+
+/* Foreground ist von Haus aus schwarz ... */
+
+/* Set item background color TBL_SPALTEN_LO Value Set */
+CALL VpItem window,'TBL_SPALTEN_LO','BACKCOLOR','YELLOW'
+/* Set item background color TBL_SPALTEN_HI Value Set */
+CALL VpItem window,'TBL_SPALTEN_HI','BACKCOLOR','YELLOW'
+
+/* Set cell value TBL_SPALTEN_LO Value Set */
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','1',1,1
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','2',1,2
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','3',1,3
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','4',1,4
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','5',1,5
+CALL VpSetItemValue window,'TBL_SPALTEN_LO','6',1,6
+
+/* Set cell value TBL_SPALTEN_HI Value Set */
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','D',1,1
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','V',1,2
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','F',1,3
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','K',1,4
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','G',1,5
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','Y',1,6
+CALL VpSetItemValue window,'TBL_SPALTEN_HI','C',1,7
+
+/* falls weniger als 5 Spieler Table bereinigen */
+if anzahl < 5 then
+  do i = 5 to (anzahl+1) by -1
+    /* Disable item LBL_NAME? Text */
+    CALL VpItem window,value('LBL_NAME'||i),'DISABLE'
+    /* Hide item TBL_SPL?_LO Value Set */
+    CALL VpItem window,value('TBL_SPL'||i||'_LO'),'HIDE'
+    /* Disable item TXT_SPL?_INFLO Text */
+    CALL VpItem window,value('TXT_SPL'||i||'_INFLO'),'DISABLE'
+    /* Hide item TBL_SPL?_HI Value Set */
+    CALL VpItem window,value('TBL_SPL'||i||'_HI'),'HIDE'
+    /* Disable item TXT_SPL?_INFHI Text */
+    CALL VpItem window,value('TXT_SPL'||i||'_INFHI'),'DISABLE'
+    /* Disable item TXT_SPL?_INFGES Text */
+    CALL VpItem window,value('TXT_SPL'||i||'_INFGES'),'DISABLE'
+  end /* end do */
+
+/* alle Spieler-Eintr„ge auf - und spieler-namen */  
+do i = 1 to anzahl
+  do j = 1 to 6
+    /* Set cell value TBL_SPL?_LO Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_LO'),'-',1,j
+  end /* end do */
+
+  do j = 1 to 7
+    /* Set cell value TBL_SPL?_HI Value Set */
+    CALL VpSetItemValue window,value('TBL_SPL'||i||'_HI'),'-',1,j
+  end /* end do */
+  
+  /* Set item value LBL_NAME1 Text */
+  CALL VpSetItemValue window,'LBL_NAME'||i,spl_lst.i.name
+
+end /* end do */
+
+drop j
+
+/* aktiver Spieler ist der erste - farblich markieren */
+/* Foreground der Tabellen ist von Haus aus schwarz */
+
+/* Set item background color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','BACKCOLOR','BLUE'
+/* Set item foreground color LBL_NAME1 Text */
+CALL VpItem window,'LBL_NAME1','FORECOLOR','WHITE'
+/* Set item background color TBL_SPL1_LO Value Set */
+CALL VpItem window,'TBL_SPL1_LO','BACKCOLOR','WHITE'
+/* Set item background color TBL_SPL1_HI Value Set */
+CALL VpItem window,'TBL_SPL1_HI','BACKCOLOR','WHITE'
+

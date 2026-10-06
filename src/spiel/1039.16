@@ -1,0 +1,31 @@
+/* Event Value Set TBL_SPL1_LO, Mouse button 1 double click */
+Arg window self
+
+/* Get index of selected cell TBL_SPL1_LO Value Set */
+rowcol=VpGetIndex(window,'TBL_SPL1_LO')
+PARSE VAR rowcol row col
+
+SELECT
+   WHEN col = 1 then
+     /* Select item CMD_EINS Push Button */
+     CALL VpSelect window,'CMD_EINS'
+   WHEN col = 2 then
+     /* Select item CMD_ZWEI Push Button */
+     CALL VpSelect window,'CMD_ZWEI'
+   WHEN col = 3 then
+     /* Select item CMD_DREI Push Button */
+     CALL VpSelect window,'CMD_DREI'
+   WHEN col = 4 then
+     /* Select item CMD_VIER Push Button */
+     CALL VpSelect window,'CMD_VIER'
+   WHEN col = 5 then
+     /* Select item CMD_FUENF Push Button */
+     CALL VpSelect window,'CMD_FUENF'
+   WHEN col = 6 then
+     /* Select item CMD_SECHS Push Button */
+     CALL VpSelect window,'CMD_SECHS'
+   OTHERWISE
+     nop
+END
+
+drop rowcol row col

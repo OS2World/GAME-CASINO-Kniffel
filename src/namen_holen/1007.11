@@ -1,0 +1,9 @@
+/* Event Graphic BMP_NAME_OK_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NAME_FERTIG Push Button */
+CALL VpItem window,'CMD_NAME_FERTIG','SENDMSG','0x0123','1','0'
+/* Select item CMD_NAME_FERTIG Push Button */
+CALL VpSelect window,'CMD_NAME_FERTIG'
+/* Set button highlight off CMD_NAME_FERTIG Push Button */
+CALL VpItem window,'CMD_NAME_FERTIG','SENDMSG','0x0123','0','0'

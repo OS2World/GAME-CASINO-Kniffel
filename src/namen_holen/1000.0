@@ -1,0 +1,7 @@
+/* Event  CMD_NAME_TIPS, Clicked/selected */
+Arg window self
+
+/* ruft tips mit TOPIC "3." = Spielereingabe */
+TOPIC='3. '
+/* Open the form E:\APPS_OS2\VISPRORX\PROJECTS\kniffel\tips */
+call VpOpenForm window, 261, TOPIC

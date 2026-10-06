@@ -1,0 +1,11 @@
+/* Event Graphic BMP_WEITER_CMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','SENDMSG','0x0123','1','0'
+
+/* Select item CMD_NEXT_SPL Push Button */
+CALL VpSelect window,'CMD_NEXT_SPL'
+
+/* Set button highlight off CMD_NEXT_SPL Push Button */
+CALL VpItem window,'CMD_NEXT_SPL','SENDMSG','0x0123','0','0'

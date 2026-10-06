@@ -1,0 +1,75 @@
+/* Event Form events, Opened */
+Arg window 
+
+/* form zeigt Datei KNIFFEL.DOC, wenn
+   sie im Kniffel-Verzeichnis existiert;
+   
+   nutzt global var:
+   
+     1. show_typ
+     2. weiter_bmp
+     3. pfad_name
+     4. cr
+     
+     5. "Leitvariable" (TOPIC ??)
+*/
+
+/* das Tips-Fenster in die rechte untere */
+/* Ecke */
+xy=VpWindow(window,'GETSCREENSIZE')
+PARSE VAR xy x_scr y_scr
+xy=VpWindow(window,'GETSIZE')
+PARSE VAR xy x y
+
+CALL VpWindow window,'SETPOS', value(x_scr - x - 10), 20, x, y
+drop xy x y x_scr y_scr
+
+/* wg. FP17: */
+CALL VpWindow window,'ACTIVATE'
+
+if show_typ='SYM' then
+  /* Set item value BMP_TIPS_ZURUECKCMD Graphic */
+  CALL VpSetItemValue window,'BMP_TIPS_ZURUECKCMD',weiter_bmp
+else
+ do
+  /* Hide item BMP_TIPS_ZURUECKCMD Graphic */
+  CALL VpItem window,'BMP_TIPS_ZURUECKCMD','HIDE'
+  /* Set item value CMD_TIPS_ENDE Push Button */
+  CALL VpSetItemValue window,'CMD_TIPS_ENDE','~ZurÅck'
+ end
+/* endif */
+
+
+if stream(pfad_name||'KNIFFEL.TXT','c','query exists') \= '' then
+ do
+  /* Load item from file TXT_TIPS_DOC Multi-Line Entry Field */
+  CALL VpLoadFromFile window,'TXT_TIPS_DOC',pfad_name||'KNIFFEL.TXT'
+  
+  if TOPIC \= '' then
+   do
+    /* Find text TXT_TIPS_DOC Multi-Line Entry Field */
+    range=VpGetIndex(window,'TXT_TIPS_DOC',TOPIC)
+    PARSE VAR range first last
+    /* Scroll to character position TXT_TIPS_DOC Multi-Line Entry Field */
+    CALL VpItem window,'TXT_TIPS_DOC','SENDMSG','0x01d7',first,'0'
+    drop range first last
+   end
+  
+ end
+else
+ do
+  msg=cr||' Es sollte jetzt eigentlich die Datei'||cr
+  msg=msg||' KNIFFEL.TXT aus dem Verzeichnis angezeigt'||cr
+  msg=msg||' werden, in dem sich die Programmdatei'||cr
+  msg=msg||' befindet.'||cr||cr
+  msg=msg||' Leider konnte der Text nicht gefunden wer-'||cr
+  msg=msg||' den.'||cr||cr
+  msg=msg||' Das beste dÅrfte sein, da· Sie die Instal-'||cr
+  msg=msg||' lation noch einmal ÅberprÅfen.'||cr
+  
+  /* Set item value TXT_TIPS_DOC Multi-Line Entry Field */
+  CALL VpSetItemValue window,'TXT_TIPS_DOC',msg
+ end
+/* endif */
+
+     

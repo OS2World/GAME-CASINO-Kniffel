@@ -1,0 +1,106 @@
+/* Event ~Fertig, weiter ... CMD_NAME_FERTIG, Clicked/selected */
+Arg window self
+
+/* ein Name - evtl. die Default-Vorgabe - wird */
+/* geholt (ggf. gesetzt) und das angezeigte Symbol */
+/* damit verknÅpft */
+
+/* Fall: nÑchster (..) Name */
+select
+  when gesetzt = 0 then
+   /* Init */
+   do
+    gesetzt=gesetzt+1
+  
+    /* Set item value LBL_SPL_INFO Text */
+    CALL VpSetItemValue window,'LBL_SPL_INFO','Spieler '||gesetzt||':'
+  
+    /* entry-field vorbesetzen mit selection */
+    CALL VpSetItemValue window,'TXT_NAMEN','Spieler '||gesetzt
+  
+    /* Select all items TXT_NAMEN Entry Field */
+    CALL VpSelect window,'TXT_NAMEN','ALL',1
+  
+    /* Give item focus TXT_NAMEN Entry Field */
+    CALL VpItem window,'TXT_NAMEN','FOCUS'
+  
+   end
+
+  otherwise
+   /* weiter ... */
+
+   do
+    /* Get item value TXT_NAMEN Entry Field */
+    value = VpGetItemValue(window,'TXT_NAMEN')
+    if strip(value) = '' then
+      spl_lst.gesetzt.name='Spieler' gesetzt
+    else
+      spl_lst.gesetzt.name=strip(value)
+    /* endif */
+
+    spl_lst.gesetzt.symbol = spin_lst.akt_icn
+     
+    /* es darf nicht ein icon fÅr mehrere Spieler vergeben */
+    /* werden - lîsche Icon aus Spin-Liste, deload wird */
+    /* Åber icons. gemacht */
+  
+    do i = 1 to spin_lst.0
+      if spin_lst.i = spl_lst.gesetzt.symbol then
+       do
+        if i < spin_lst.0 then
+         do
+          /* swappen */
+          tmp=spin_lst.0
+          spin_lst.i=spin_lst.tmp
+         end
+        /* endif */
+      
+        /* wenn es das letzte icon ist, nur anzahl */
+        /* dekremtieren */
+        spin_lst.0=spin_lst.0 - 1
+       end
+
+      else
+        iterate
+      /* endif */
+
+    end /* end do */
+
+    gesetzt=gesetzt+1
+
+    /* ggf. neu laden ... */
+    if gesetzt <= anzahl then
+     do
+      /* Add items from list SPN_ICO_SHW Spin Button */
+      /* wird als index-geber trotzdem gebraucht */
+      index=VpAddItem(window, 'SPN_ICO_SHW', 'LIST', 'spin_lst.')
+      akt_icn = 1
+      /* Set item value BMP_ICO_SHW Graphic */
+      CALL VpSetItemValue window,'BMP_ICO_SHW',spin_lst.akt_icn
+
+      /* Set item value LBL_SPL_INFO Text */
+      CALL VpSetItemValue window,'LBL_SPL_INFO','Spieler '||gesetzt||':'
+  
+      /* entry-field vorbesetzen mit selection */
+      CALL VpSetItemValue window,'TXT_NAMEN','Spieler '||gesetzt
+  
+      /* Select all items TXT_NAMEN Entry Field */
+      CALL VpSelect window,'TXT_NAMEN','ALL',1
+  
+      /* Give item focus TXT_NAMEN Entry Field */
+      CALL VpItem window,'TXT_NAMEN','FOCUS'
+
+     end
+
+   end
+
+end /* select */
+
+/* fertig ? */
+if gesetzt > anzahl then
+ do
+  /* fertig, raus - Rest macht closed ... */
+  CALL VpWindow window,'CLOSE'
+  return
+ end
+

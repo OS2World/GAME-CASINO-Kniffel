@@ -1,0 +1,43 @@
+/* Event auf ~2 CMD_ZWEI, Clicked/selected */
+Arg window self
+
+/* die "Zul„ssigkeitsprfungen" sind im Grunde ber-
+   flssig, da durch Button-disable/enable reali-
+   siert - rein sicherheitshalber dringelassen */
+   
+/* prfe, ob schon gewrfelt: */
+if anz_wurf = 0 then return
+
+if anz_wurf > 3 then return
+
+if wert_lst.spl_nr.2 \= '' then return
+  
+/* nutzt global stem-var wurf.?.wert - besetzt aus */
+/* routine werfen                                  */
+
+/* prft auf min 3 * 2 - setzt gef * 2 - 0 ist */
+/* vorbesetzt - callt schluáendlich Setz/Runden- */
+/* routine */
+
+gef=0
+
+do i = 1 to 5
+  if wurf.i.wert=2 then
+    gef=gef+1
+
+end /* end do */
+
+if gef>2 then
+  gef=gef * 2
+else
+  gef=0
+/* endif */
+
+/* Disable item CMD_ZWEI Push Button */
+CALL VpItem window,'CMD_ZWEI','DISABLE'
+/* Hide item BMP_ZWEI_CMD Graphic */
+CALL VpItem window,'BMP_ZWEI_CMD','HIDE'
+
+call setzen '2', gef
+ 
+

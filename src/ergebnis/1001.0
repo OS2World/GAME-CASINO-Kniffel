@@ -1,0 +1,9 @@
+/* Event ~Weiter, neues Spiel CMD_NEU_SPIEL, Clicked/selected */
+Arg window self
+
+/* gesehen, neues Spiel mit den jetzigen
+   Einstellungen (Leuten) */
+   
+/* Kennung: nochmal */
+TOPIC='nochmal'
+CALL VpWindow window,'CLOSE'

@@ -1,0 +1,54 @@
+/* Event Ergebnis speichern CMD_SPEICHERN, Clicked/selected */
+Arg window self
+
+/* die jetzigen Ergebnisse sollen abgespeichert */
+/* werden - es wird die Datei hitlist.hgh geschrieben */
+/* oder fortgeschrieben */
+
+if stream(pfad_name||'hitlist.hgh','c','query exists') \= '' then
+ do
+   /* hitlist existiert, ans ende schreiben */
+
+   /* zur Zeit schreibt OS2-REXXSAA IMMER ans Ende */
+   /* einer existierenden Datei - auch ohne explizit */
+   /* den filepointer dorthin zu setzen.             */
+   /* Das ist aber in Cowlishaw's Sprachdefinition   */
+   /* nicht vorgegeben/verlangt und kann sich auch   */
+   /* mal „ndern - also auf der sicheren Seite blei- */
+   /* ben.                                           */
+ 
+   r=stream(pfad_name||'hitlist.hgh','c','open')
+   g=stream(pfad_name||'hitlist.hgh','c','query size')
+   
+   /* Get item value TXT_ERGEBNISSE Multi-Line Entry Field */
+   value = VpGetItemValue(window,'TXT_ERGEBNISSE')
+   call charout pfad_name||'hitlist.hgh', value, g
+   
+   r=stream(pfad_name||'hitlist.hgh','c','close')
+
+   drop value g r
+   
+ end
+else
+ do
+  /* es gibt keine hitlist, neu ... */
+   
+  r=stream(pfad_name||'hitlist.hgh','c','open')
+  
+  /* Get item value TXT_ERGEBNISSE Multi-Line Entry Field */
+  value = VpGetItemValue(window,'TXT_ERGEBNISSE')
+  call charout pfad_name||'hitlist.hgh', value
+   
+  r=stream(pfad_name||'hitlist.hgh','c','close')
+
+  drop value r
+
+ end
+/* endif */
+
+/* action gelaufen, button wird nicht mehr ge- */
+/* braucht */
+/* Disable item CMD_SPEICHERN Push Button */
+CALL VpItem window,'CMD_SPEICHERN','DISABLE'
+/* Hide item BMP_ERG_SPEICHCMD Graphic */
+CALL VpItem window,'BMP_ERG_SPEICHCMD','HIDE'

@@ -1,0 +1,6 @@
+/* Event WÅrfeln CMD_WURF5, Clicked/selected */
+Arg window self
+
+if anz_wurf = 0 | anz_wurf = 4 then return
+
+call invert 5

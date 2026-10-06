@@ -1,0 +1,81 @@
+/* sortier-routine - so eine Art "Linear sort" */
+
+/* nutzt daten aus form-var wurf.?.wert;
+   anzahl der zu sortierenden Wrfel ist immer 5;
+   gibt einen sortierten String zurck ohne
+   Leerzeichen wie "12234"
+   
+   oder bei param ERGEBNIS direkt die var-anteile
+   spl_lst.?.name u. zugeh”riger wert_lst.?.16
+   weil sie nur noch zur Ausgabe ben”tigt werden
+*/
+
+parse arg param
+
+if param = 'ERGEBNIS' then
+ do
+  oben=anzahl
+  unten=1
+  do hoch = oben to unten+1 by -1
+    gross=unten
+    do i = unten+1 to hoch
+      if wert_lst.i.16 > wert_lst.gross.16 then
+        gross=i
+      /* endif */
+    end /* end do */
+    swp1=wert_lst.hoch.16
+    swp2=spl_lst.hoch.name
+    wert_lst.hoch.16=wert_lst.gross.16
+    spl_lst.hoch.name=spl_lst.gross.name
+    wert_lst.gross.16=swp1
+    spl_lst.gross.name=swp2
+  end /* end do */
+  
+  /* sortierfolge ist jetzt aufsteigend von unten nach oben */
+  /* drehen ... */
+
+  /* vorsicht, tmp. ist zur Zeit in Benutzung */  
+  tmp1.=''
+  tmp2.=''
+  j=anzahl
+  do i = 1 to anzahl
+    tmp1.i=wert_lst.j.16
+    tmp2.i=spl_lst.j.name
+    j=j-1
+  end /* end do */
+  
+  do i = 1 to anzahl
+    wert_lst.i.16=tmp1.i
+    spl_lst.i.name=tmp2.i
+  end /* end do */
+
+  drop oben unten hoch gross swp1 swp2 tmp1. tmp2. param
+ 
+  return 0
+ end
+else
+ nop
+/* endif */
+
+oben=5
+unten=1
+do hoch = oben to unten+1 by -1
+  
+  gross=unten
+  
+  do i = unten+1 to hoch
+    if wurf.i.wert > wurf.gross.wert then
+      gross=i
+    /* endif */
+    
+  end /* end do */
+  
+  tmp=wurf.hoch.wert
+  wurf.hoch.wert=wurf.gross.wert
+  wurf.gross.wert=tmp
+  
+end /* end do */
+
+drop oben unten hoch gross tmp param
+
+return wurf.1.wert||wurf.2.wert||wurf.3.wert||wurf.4.wert||wurf.5.wert

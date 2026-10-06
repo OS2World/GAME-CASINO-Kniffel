@@ -1,0 +1,13 @@
+/* Event Value Set TBL_WRFL, Mouse button 1 double click */
+Arg window self
+
+/* wie single click */
+
+/* Get index of selected cell TBL_WRFL Value Set */
+rowcol=VpGetIndex(window,'TBL_WRFL')
+PARSE VAR rowcol row col
+
+/* select zutreffenden pushbutton */
+CALL VpSelect window,value('CMD_WURF'||col)
+
+drop rowcol row col

@@ -1,0 +1,9 @@
+/* Event Graphic BMP_ERG_WEITERCMD, Mouse button 1 up */
+Arg window self x y
+
+/* Set button highlight on CMD_NEU_SPIEL Push Button */
+CALL VpItem window,'CMD_NEU_SPIEL','SENDMSG','0x0123','1','0'
+/* Select item CMD_NEU_SPIEL Push Button */
+CALL VpSelect window,'CMD_NEU_SPIEL'
+/* Set button highlight off CMD_NEU_SPIEL Push Button */
+CALL VpItem window,'CMD_NEU_SPIEL','SENDMSG','0x0123','0','0'

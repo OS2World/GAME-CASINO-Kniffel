@@ -1,0 +1,70 @@
+/* Event Form events, Opened */
+Arg window 
+
+/* 
+   zeigt von Main her kommend die
+   aktuelle Bestenliste; wird nur
+   gerufen, wenn es eine Datei
+   hitlist.hgh im Verzeichnis gibt
+   
+   nutzt global var:
+     1. form_typ
+     2. pfad_name
+     3. show_typ
+     4. weiter_bmp
+     5. tips_bmp
+*/
+
+/* fp17 ... */
+CALL VpWindow window,'ACTIVATE'
+
+/* sieger_bmp ist ein zentrales BMP von main */
+/* Set item value BTMP_SIEGERICO Graphic */
+CALL VpSetItemValue window,'BTMP_SIEGERICO',list_bmp
+
+weg_bmp=''
+
+if show_typ='SYM' then
+ do
+  /* eine spezielle BMP laden ... */
+  if stream(pfad_name||'BEST_WEG.BMP','c','query exists') \= '' then
+    weg_bmp = VpLoadPicture('FILE',pfad_name||'BEST_WEG.BMP')
+  else
+    weg_bmp = VpLoadPicture('RESBMP',1007)
+  /* endif */
+  
+  /* weiter_bmp u. tips_bmp von main */  
+  /* Set item value BMP_LIST_OKCMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_OKCMD',weiter_bmp
+  /* Set item value BMP_LIST_TIPCMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_TIPCMD',tips_bmp
+  
+  /* Set item value BMP_LIST_DELCMD Graphic */
+  CALL VpSetItemValue window,'BMP_LIST_DELCMD',weg_bmp
+ end
+else
+ do
+  /* Hide item BMP_LIST_OKCMD Graphic */
+  CALL VpItem window,'BMP_LIST_OKCMD','HIDE'
+  /* Hide item BMP_LIST_DELCMD Graphic */
+  CALL VpItem window,'BMP_LIST_DELCMD','HIDE'
+  /* Hide item BMP_LIST_TIPCMD Graphic */
+  CALL VpItem window,'BMP_LIST_TIPCMD','HIDE'
+
+  /* Set item value CMD_ENDE Push Button */
+  CALL VpSetItemValue window,'CMD_ENDE','~ZurÅck zum Spiel'
+  /* Set item value CMD_LOESCHEN Push Button */
+  CALL VpSetItemValue window,'CMD_LOESCHEN','Bestenliste ~lîschen'
+  /* Set item value CMD_LIST_TIP Push Button */
+  CALL VpSetItemValue window,'CMD_LIST_TIP','~Tips'
+ end
+/* endif */
+
+dat_name=pfad_name||'hitlist.hgh'
+
+/* Load item from file TXT_LISTE Multi-Line Entry Field */
+
+CALL VpLoadFromFile window,'TXT_LISTE',dat_name
+
+drop dat_name
+

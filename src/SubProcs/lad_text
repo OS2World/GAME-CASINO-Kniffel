@@ -1,0 +1,142 @@
+/* routine lÑdt die Buttons mit Text */
+
+/* form-var button_list - wird gebraucht, weil die */
+/* buttons und bmp disabled/enabled werden mÅssen und */
+/* keine inkrementellen Namen tragen */
+buttons_list.=''
+buttons_list.1.bmp='BMP_EINS_CMD'
+buttons_list.1.cmd='CMD_EINS'
+buttons_list.2.bmp='BMP_ZWEI_CMD'
+buttons_list.2.cmd='CMD_ZWEI'
+buttons_list.3.bmp='BMP_DREI_CMD'
+buttons_list.3.cmd='CMD_DREI'
+buttons_list.4.bmp='BMP_VIER_CMD'
+buttons_list.4.cmd='CMD_VIER'
+buttons_list.5.bmp='BMP_FUENF_CMD'
+buttons_list.5.cmd='CMD_FUENF'
+buttons_list.6.bmp='BMP_SECHS_CMD'
+buttons_list.6.cmd='CMD_SECHS'
+buttons_list.7.bmp='BMP_DRILLING_CMD'
+buttons_list.7.cmd='CMD_DRILLING'
+buttons_list.8.bmp='BMP_VIERLING_CMD'
+buttons_list.8.cmd='CMD_VIERLING'
+buttons_list.9.bmp='BMP_FULLHOUSE_CMD'
+buttons_list.9.cmd='CMD_FULLHOUSE'
+buttons_list.10.bmp='BMP_KLSTR_CMD'
+buttons_list.10.cmd='CMD_KLEINE'
+buttons_list.11.bmp='BMP_GRSTR_CMD'
+buttons_list.11.cmd='CMD_GROSSE'
+buttons_list.12.bmp='BMP_KNIFFEL_CMD'
+buttons_list.12.cmd='CMD_KNIFFEL'
+buttons_list.13.bmp='BMP_CHANCE_CMD'
+buttons_list.13.cmd='CMD_CHANCE'
+
+/* Set item value CMD_WUERFELN Push Button */
+CALL VpSetItemValue window,'CMD_WUERFELN','WÅrfeln ..'
+/* Hide item BMP_WUERFELN_CMD Graphic */
+CALL VpItem window,'BMP_WUERFELN_CMD','HIDE'
+
+/* Set item value CMD_WRFL_INVERT Push Button */
+CALL VpSetItemValue window,'CMD_WRFL_INVERT','Alle Ñndern'
+/* Hide item BMP_AENDERN_CMD Graphic */
+CALL VpItem window,'BMP_AENDERN_CMD','HIDE'
+
+/* Set item value CMD_NEXT_SPL Push Button */
+CALL VpSetItemValue window,'CMD_NEXT_SPL','Weiter ..'
+/* Hide item BMP_WEITER_CMD Graphic */
+CALL VpItem window,'BMP_WEITER_CMD','HIDE'
+
+/* Set item value CMD_SPIEL_RUECKN Push Button */
+CALL VpSetItemValue window,'CMD_SPIEL_RUECKN','RÅcknahme'
+/* Hide item BMP_SPIEL_RUECKNCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_RUECKNCMD','HIDE'
+
+/* Set item value CMD_ABBRUCH Push Button */
+CALL VpSetItemValue window,'CMD_ABBRUCH','Abbruch'
+/* Hide item BMP_ABBRUCH_CMD Graphic */
+CALL VpItem window,'BMP_ABBRUCH_CMD','HIDE'
+
+/* Set item value CMD_EINS Push Button */
+CALL VpSetItemValue window,'CMD_EINS','auf ~1'
+/* Hide item BMP_EINS_CMD Graphic */
+CALL VpItem window,'BMP_EINS_CMD','HIDE'
+
+/* Set item value CMD_ZWEI Push Button */
+CALL VpSetItemValue window,'CMD_ZWEI','auf ~2'
+/* Hide item BMP_ZWEI_CMD Graphic */
+CALL VpItem window,'BMP_ZWEI_CMD','HIDE'
+
+/* Set item value CMD_DREI Push Button */
+CALL VpSetItemValue window,'CMD_DREI','auf ~3'
+/* Hide item BMP_DREI_CMD Graphic */
+CALL VpItem window,'BMP_DREI_CMD','HIDE'
+
+/* Set item value CMD_VIER Push Button */
+CALL VpSetItemValue window,'CMD_VIER','auf ~4'
+/* Hide item BMP_VIER_CMD Graphic */
+CALL VpItem window,'BMP_VIER_CMD','HIDE'
+
+/* Set item value CMD_FUENF Push Button */
+CALL VpSetItemValue window,'CMD_FUENF','auf ~5'
+/* Hide item BMP_FUENF_CMD Graphic */
+CALL VpItem window,'BMP_FUENF_CMD','HIDE'
+
+/* Set item value CMD_SECHS Push Button */
+CALL VpSetItemValue window,'CMD_SECHS','auf ~6'
+/* Hide item BMP_SECHS_CMD Graphic */
+CALL VpItem window,'BMP_SECHS_CMD','HIDE'
+
+/* Set item value CMD_DRILLING Push Button */
+CALL VpSetItemValue window,'CMD_DRILLING','~Drilling'
+/* Hide item BMP_DRILLING_CMD Graphic */
+CALL VpItem window,'BMP_DRILLING_CMD','HIDE'
+
+/* Set item value CMD_VIERLING Push Button */
+CALL VpSetItemValue window,'CMD_VIERLING','~Vierling'
+/* Hide item BMP_VIERLING_CMD Graphic */
+CALL VpItem window,'BMP_VIERLING_CMD','HIDE'
+
+/* Set item value CMD_FULLHOUSE Push Button */
+CALL VpSetItemValue window,'CMD_FULLHOUSE','~Fullhouse'
+/* Hide item BMP_FULLHOUSE_CMD Graphic */
+CALL VpItem window,'BMP_FULLHOUSE_CMD','HIDE'
+
+/* Set item value CMD_KLEINE Push Button */
+CALL VpSetItemValue window,'CMD_KLEINE','~kl. Stra·e'
+/* Hide item BMP_KLSTR_CMD Graphic */
+CALL VpItem window,'BMP_KLSTR_CMD','HIDE'
+
+/* Set item value CMD_GROSSE Push Button */
+CALL VpSetItemValue window,'CMD_GROSSE','~gr. Stra·e'
+/* Hide item BMP_GRSTR_CMD Graphic */
+CALL VpItem window,'BMP_GRSTR_CMD','HIDE'
+
+/* Set item value CMD_KNIFFEL Push Button */
+CALL VpSetItemValue window,'CMD_KNIFFEL','Kn~iffel'
+/* Hide item BMP_KNIFFEL_CMD Graphic */
+CALL VpItem window,'BMP_KNIFFEL_CMD','HIDE'
+
+/* Set item value CMD_CHANCE Push Button */
+CALL VpSetItemValue window,'CMD_CHANCE','~Chance'
+/* Hide item BMP_CHANCE_CMD Graphic */
+CALL VpItem window,'BMP_CHANCE_CMD','HIDE'
+
+/* Set item value CMD_SPIEL_TIPS Push Button */
+CALL VpSetItemValue window,'CMD_SPIEL_TIPS','~Tips'
+/* Hide item BMP_SPIEL_TIPSCMD Graphic */
+CALL VpItem window,'BMP_SPIEL_TIPSCMD','HIDE'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
