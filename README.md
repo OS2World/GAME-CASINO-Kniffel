@@ -3,6 +3,8 @@
 Kniffel is the German name of the dice game Yahtzee, for one to five players,
 for the OS/2 Presentation Manager.
 
+![Kniffel ScreenShot](/doc/Kniffel.png)
+
 Originally written by Andreas Kieser in 1996-1999 (VisPro/REXX).
 
 ## Version
