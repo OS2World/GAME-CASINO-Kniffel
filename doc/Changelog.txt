@@ -1,0 +1,29 @@
+Kniffel - Changelog
+===================
+
+1.10 (2026-10-06)
+- Rewrote the program in C for Open Watcom 2.0 (wmake, wcc386, wlink, wrc,
+  wipfc); the VisPro/REXX source is kept in the legacy folder
+- License changed to GNU GPL v3
+- New project layout: src/, bin/, doc/, help/, icons/, legacy/
+- Menus: Game (New Game Ctrl+N, Quit Game Ctrl+Q, High Scores Ctrl+H, Exit
+  Ctrl+X), Options (Picture Buttons, Language, Frame Controls Ctrl+F, Save
+  settings on exit), Help
+- Six language user interface: English, Spanish, Dutch, German, French,
+  Italian, switchable at run time; the original was German only
+- Online help in six languages (help\Kniffel_xx.hlp) replaces the Tips window
+  and KNIFFEL.TXT
+- Standard About dialog (Close button, no email address)
+- Main window opens at 1024x768, centered (or the whole screen if smaller)
+- Picture or text buttons are chosen in the Options menu (Ctrl+B, text by default)
+- The player symbols are read from the "icons" folder next to the exe
+- Settings are saved in Kniffel.cfg
+- Space, 1-5, I, Enter and Backspace work as keyboard shortcuts
+- The hit list (hitlist.hgh) is still a plain text file, results are appended
+- BLDLEVEL string added to the executable
+- The program no longer loads replacement bitmaps (WRFL*.BMP etc.) from its
+  folder; the pictures are part of the executable
+
+1.00 (1999-11)
+- Last release of the VisPro/REXX version by Andreas Kieser
+  (first release May 1996)
